@@ -1,0 +1,53 @@
+%%***********************************************
+%% Plantilla para TFM. DSIC
+%%***********************************************
+
+%%-----------------------------------------------
+%% Importar Preámbulo:
+\input{include/Preambulo}
+%%-----------------------------------------------
+%% Cargar datos relativos al TFM:
+%% (actualizar estos datos en secciones/DatosTFM.tex)
+\input{secciones/00_DatosTFM}
+
+%%***********************************************
+%% Plantilla para la memoria del TFM. DSIC (UPV)
+%%***********************************************
+
+%%-----------------------------------------------
+%% Documento:
+\begin{document}
+
+\nocite{*}
+\bibliographystyle{apacite}
+\input{include/Portada}
+%%-----------------------------------------------
+%% Numeración romana:
+\frontmatter
+%%-----------------------------------------------
+\input{secciones/01_Resumen}
+\tableofcontents
+
+%%-----------------------------------------------
+%% Numeración arábiga:
+\mainmatter
+%%-----------------------------------------------
+\input{secciones/02_Introduccion}
+
+\input{secciones/03_Desarrollo}
+
+\input{secciones/04_Resultados}
+
+\input{secciones/05_Conclusiones}
+
+% \input{secciones/06_Bibliografia}
+% \addcontentsline{toc}{chapter}{Bibliografía}
+%%-----------------------------------------------
+%% Anexos
+% \appendix
+\clearpage
+% \addcontentsline{toc}{chapter}{Anexo}
+% \input{secciones/07_Anexos}
+\bibliography{bibliografia} % Archivo que contiene la bibliografía
+%%---------------------------------------------------------
+\end{document}

@@ -1,0 +1,183 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Clarberg%
+\ \protect \BOthers {.}}{%
+Clarberg%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2022}}%
+}]{%
+Clarberg2022}
+\APACinsertmetastar {%
+Clarberg2022}%
+\begin{APACrefauthors}%
+Clarberg, P.%
+, Kallweit, S.%
+, Kolb, C.%
+, Kozlowski, P.%
+, He, Y.%
+, Wu, L.%
+\BCBL {}\ \BBA {} Liu, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{March}{}.
+\newblock
+\APACrefbtitle {{Research Advances Toward Real-Time Path Tracing}.} {{Research
+  Advances Toward Real-Time Path Tracing}.}
+\newblock
+\APAChowpublished {Game Developers Conference (GDC)}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lefrançois%
+}{%
+Lefrançois%
+}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+VulkanRaytracingTutorial}
+\APACinsertmetastar {%
+VulkanRaytracingTutorial}%
+\begin{APACrefauthors}%
+Lefrançois, M\BHBI K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+\APACrefbtitle {NVIDIA Vulkan Ray Tracing Tutorial.} {Nvidia vulkan ray tracing
+  tutorial.}
+\newblock
+\APAChowpublished {\url{https://vulkan-tutorial.com}}.
+\newblock
+\APACrefnote{Accessed: 2022-08-03}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+McGuire%
+}{%
+McGuire%
+}{%
+{\protect \APACyear {2022}}%
+}]{%
+McGuire2022Data}
+\APACinsertmetastar {%
+McGuire2022Data}%
+\begin{APACrefauthors}%
+McGuire, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{August}{}.
+\newblock
+\APACrefbtitle {Computer Graphics Archive.} {Computer graphics archive.}
+\newblock
+\begin{APACrefURL} \url{https://casual-effects.com/data} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Nviidia%
+}{%
+Nviidia%
+}{%
+{\protect \APACyear {2022}}%
+}]{%
+Nvpro}
+\APACinsertmetastar {%
+Nvpro}%
+\begin{APACrefauthors}%
+Nviidia.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{August}{}.
+\newblock
+\APACrefbtitle {nvpro core.} {nvpro core.}
+\newblock
+\begin{APACrefURL} \url{https://github.com/nvpro-samples/nvpro_core}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Overvoorde%
+}{%
+Overvoorde%
+}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+VulkanTutorial}
+\APACinsertmetastar {%
+VulkanTutorial}%
+\begin{APACrefauthors}%
+Overvoorde, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+\APACrefbtitle {Vulkan Tutorial.} {Vulkan tutorial.}
+\newblock
+\APAChowpublished {\url{https://vulkan-tutorial.com}}.
+\newblock
+\APACrefnote{Accessed: 2022-08-01}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sawichi%
+}{%
+Sawichi%
+}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+GpuMemUsageVulkan}
+\APACinsertmetastar {%
+GpuMemUsageVulkan}%
+\begin{APACrefauthors}%
+Sawichi, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+\APACrefbtitle {There is a way to query GPU memory usage in Vulkan - use DXGI.}
+  {There is a way to query gpu memory usage in vulkan - use dxgi.}
+\newblock
+\APAChowpublished
+  {\url{https://www.asawicki.info/news_1695_there_is_a_way_to_query_gpu_memory_usage_in_vulkan_-_use_dxgi}}.
+\newblock
+\APACrefnote{Accessed: 2022-08-03}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+White%
+\ \protect \BOthers {.}}{%
+White%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+DXGI}
+\APACinsertmetastar {%
+DXGI}%
+\begin{APACrefauthors}%
+White, S.%
+, Batchelor, D.%
+, Sharkey, K.%
+, Coulter, D.%
+, Kelly, J.%
+, Jacobs, M.%
+\BCBL {}\ \BBA {} Satran, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+\APACrefbtitle {DXGI Overview.} {Dxgi overview.}
+\newblock
+\APAChowpublished
+  {\url{https://docs.microsoft.com/en-us/windows/win32/direct3ddxgi/d3d10-graphics-programming-guide-dxgi}}.
+\newblock
+\APACrefnote{Accessed: 2022-08-03}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
