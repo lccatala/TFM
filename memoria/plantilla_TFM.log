@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.31)  6 AUG 2022 14:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.31)  7 AUG 2022 21:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -608,7 +608,7 @@ LaTeX Info: Redefining \BHBI on input line 139.
 \c@lstlisting=\count321
 
 (./include/Portada.tex
-<include/logo-upv.png, id=52, 136.8312pt x 158.2713pt>
+<include/logo-upv.png, id=68, 136.8312pt x 158.2713pt>
 File: include/logo-upv.png Graphic file (type png)
 <use include/logo-upv.png>
 Package pdftex.def Info: include/logo-upv.png  used on input line 12.
@@ -640,7 +640,7 @@ LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <14.4> not available
 (Font)              Font shape `T1/pbk/l/n' tried instead on input line 18.
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <14.4> not available
 (Font)              Font shape `T1/pbk/db/n' tried instead on input line 18.
-<include/DSIC.png, id=54, 92.7465pt x 64.3203pt>
+<include/DSIC.png, id=70, 92.7465pt x 64.3203pt>
 File: include/DSIC.png Graphic file (type png)
 <use include/DSIC.png>
 Package pdftex.def Info: include/DSIC.png  used on input line 22.
@@ -713,7 +713,7 @@ l.1 \chapter
 
 ]
 Chapter 2.
-<figuras/vulkan-7680x4320viking_room-textures-frametimes.png, id=126, 462.528pt
+<figuras/vulkan-7680x4320viking_room-textures-frametimes.png, id=146, 462.528pt
  x 346.896pt>
 File: figuras/vulkan-7680x4320viking_room-textures-frametimes.png Graphic file 
 (type png)
@@ -727,7 +727,7 @@ Underfull \vbox (badness 3108) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
  [4 <./figuras/vulkan-7680x4320viking_room-textures-frametimes.png>]
-<figuras/scenes-geometry.png, id=148, 462.528pt x 346.896pt>
+<figuras/scenes-geometry.png, id=169, 462.528pt x 346.896pt>
 File: figuras/scenes-geometry.png Graphic file (type png)
 <use figuras/scenes-geometry.png>
 Package pdftex.def Info: figuras/scenes-geometry.png  used on input line 44.
@@ -782,13 +782,19 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [10]
 Chapter 3.
+<figuras/vulkan-memory-usage-comparison.png, id=221, 462.528pt x 346.896pt>
+File: figuras/vulkan-memory-usage-comparison.png Graphic file (type png)
+<use figuras/vulkan-memory-usage-comparison.png>
+Package pdftex.def Info: figuras/vulkan-memory-usage-comparison.png  used on in
+put line 13.
+(pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
 ) (./secciones/05_Conclusiones.tex [11
 
-] [12
-
-]
+] [12 <./figuras/vulkan-memory-usage-comparison.png>]
 Chapter 4.
-) [13] (./plantilla_TFM.bbl
+) [13
+
+] (./plantilla_TFM.bbl
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 52
 .
 
@@ -802,13 +808,13 @@ LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
 )
 Package rerunfilecheck Info: File `plantilla_TFM.out' has not changed.
-(rerunfilecheck)             Checksum: D09CCDDD3E0DFAA0BD600DE8FC9C8674;1474.
+(rerunfilecheck)             Checksum: C8C30C81007A3524F5593BD0376088F9;2082.
  ) 
 Here is how much of TeX's memory you used:
- 15504 strings out of 478268
- 241056 string characters out of 5846347
- 557622 words of memory out of 5000000
- 33380 multiletter control sequences out of 15000+600000
+ 15521 strings out of 478268
+ 241510 string characters out of 5846347
+ 557919 words of memory out of 5000000
+ 33391 multiletter control sequences out of 15000+600000
  496366 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,11n,66p,1120b,628s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -817,10 +823,10 @@ exlive/2022/texmf-dist/fonts/type1/urw/bookman/ubkd8a.pfb></usr/local/texlive/2
 022/texmf-dist/fonts/type1/urw/bookman/ubkl8a.pfb></usr/local/texlive/2022/texm
 f-dist/fonts/type1/urw/bookman/ubkli8a.pfb></usr/local/texlive/2022/texmf-dist/
 fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on plantilla_TFM.pdf (24 pages, 194438 bytes).
+Output written on plantilla_TFM.pdf (24 pages, 220536 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
- 216 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 117 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 288 PDF objects out of 1000 (max. 8388607)
+ 241 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import matplotlib.pyplot as plt
+import numpy as np
 import os
+
 
 resolutions = [(1280, 720), (1920, 1080), (2560, 1440), (3840, 2160), (7680, 4320)]
 models = ['bmw', 'viking_room', 'sponza', 'hairball']
@@ -56,8 +58,41 @@ def plot_raytraced():
         plot_memory_usage(raytraced_memory_usage_values, f'{model}-raytraced')
         raytraced_memory_usage_values.clear()
 
+def read_value(filename):
+    with open(filename) as f:
+        value = int(f.readline())
+        return value
+def plot_compared_memory_usages():
+    rasterized_path = 'VulkanRasterized2070super'
+    raytraced_path = 'VulkanRaytraced2070super'
+    model = 'viking_room'
+    rasterized_memory_usages = []
+    raytraced_memory_usages = []
+    for w, h in resolutions:
+        filename = os.path.join(rasterized_path, f'vulkan-{w}x{h}-rasterized-memoryusage.txt')
+        rasterized_memory_usages.append(read_value(filename))
 
+        filename = os.path.join(raytraced_path, f'vulkan-{w}x{h}{model}-textures-memoryusage.txt')
+        raytraced_memory_usages.append(read_value(filename))
+
+    labels = [f'{x[0]}x{x[1]}' for x in resolutions]
+    x = np.arange(len(labels))
+    bar_width = 0.35
+    fig, ax = plt.subplots()
+    rects1 = ax.bar(x - bar_width/2, rasterized_memory_usages, bar_width, label='Rasterized')
+    rects2 = ax.bar(x + bar_width/2, raytraced_memory_usages, bar_width, label='Raytraced')
+
+    ax.set_ylabel('Memory (MB)')
+    ax.set_title('Memory usage for rasterized and raytraced rendering')
+    ax.set_xticks(x, labels)
+    ax.legend()
+    ax.bar_label(rects1, padding=3)
+    ax.bar_label(rects2, padding=3)
+
+    fig.tight_layout()
+    plt.savefig('vulkan-memory-usage-comparison.png')
 if __name__ == '__main__':
     # plot_rasterized()
-    plot_raytraced()
+    # plot_raytraced()
+    plot_compared_memory_usages()
 
