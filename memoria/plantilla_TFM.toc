@@ -10,8 +10,8 @@
 \contentsline {subsection}{\numberline {2.2.3}Automation and Plotting}{10}{subsection.2.2.3}%
 \contentsline {chapter}{\numberline {3}Results}{11}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Rasterization Baseline}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Memory Usage}{11}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Acceleration Structure Build Time}{11}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Frame Time}{11}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Conclusiones}{13}{chapter.4}%
-\contentsline {section}{Referencias}{14}{section*.5}%
+\contentsline {section}{\numberline {3.2}Memory Usage}{12}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Acceleration Structure Build Time}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Frame Time}{13}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Conclusiones}{15}{chapter.4}%
+\contentsline {section}{Referencias}{16}{section*.5}%
