@@ -28,7 +28,7 @@ To finish this part, we will compare frame times from both renderers in the same
 \section{Memory Usage}
 To start the real comparison between Vulkan and OptiX we will look at the memory usage in GPU across both libraries, all models and all resolutions. We can see how much each model consumes in graph \ref{memory-usage-raytraced-comparison-graph}.
 
-This is the first example of a trend we will start seeing throughout this chapter. Vulkan, either despite or thanks to it's explicitness when developing applications, is able to load and render the same ammount of geometry and detail as OptiX while requiring only a fraction of the resources, in this case video memory. This remains true while increasing the frame buffer size, with both libraries increasing the required memory at a similar rate. One last remarkable thing is how the results stack up to one another in the Hairball test case. Here we see how the memory consumed for both libraries is very similar, which suggests the two technologies tend to use a similar ammount of resources when triangle counts tend to infinity.
+This is the first example of a trend we will start seeing throughout this chapter. Vulkan, either despite or thanks to it's explicitness when developing applications, is able to load and render the same ammount of geometry and detail as OptiX while requiring only a fraction of the resources, in this case video memory. This remains true while increasing the frame buffer size, with both libraries increasing the required memory at a similar rate. One last remarkable thing is the Hairball test case. Here we see the memory consumption for both libraries is very similar, which suggests the two technologies tend to use a similar ammount of resources when triangle counts tend to infinity.
 
 \begin{figure}
     \subfloat[BMW]{\includegraphics[width = 3in]{figuras/bmw-memory-usage-comparison.png}}
@@ -38,5 +38,35 @@ This is the first example of a trend we will start seeing throughout this chapte
     \caption{Memory consumption of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball.}
     \label{memory-usage-raytraced-comparison-graph}
 \end{figure}
+
+\clearpage
 \section{Acceleration Structure Build Time}
+Next up we will be looking at the Acceleration Structure Build time across both libraries. Although in our experiments this was only done once per program execution, applications that perform animations or other form of dynamic geometry may need to partly rebuild their AS as frequent as once per frame. Thus, the time it takes to do so (although not all of it) could be counting towards the total time it takes to process a full application cycle (along with rendering, and simulation, etc.).
+
+If we plot the Acceleration Structure Building Times in the same way as we did with the memory consumption, we get the graphs at figure \ref{as-build-time-comparison-graph}.
+
+\begin{figure}
+    \subfloat[BMW]{\includegraphics[width = 3in]{figuras/bmw-acceleration-structure-build-time-comparison.png}}
+    \subfloat[Sponza]{\includegraphics[width = 3in]{figuras/sponza-acceleration-structure-build-time-comparison.png}}\\
+    \centering
+    \subfloat[Hairball]{\includegraphics[width = 3in]{figuras/hairball-acceleration-structure-build-time-comparison.png}}
+    \caption{Acceleration Structure Build Time of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball. Sorted by rendering resolution.}
+    \label{as-build-time-comparison-graph}
+\end{figure}
+
+We can plainly see how the rendering resolution does not affect the accel build time. This is to be expected, since a higher pixel count works with the same Acceleration Structure as a lower pixel count. We will now rearrange the plots in figure \ref{as-build-time-geometry-comparison-graph} to see how geometry ammount affects acceleration structure build times.
+
+A curious phenomenon is shown here. We initially expected the Hairball model to have the greatest acceleration structure build time. This is true for Vulkan where the triangle count is directly proportional to the build time. In OptiX however, the first spot is granted to Sponza, with about 10 times less triangles than the Hairball. This could be due to this model having a wider variety of shapes formed by it's triangles, which could be harder to optimize, as opposed to the hairball, where everything is more similar and packed together.
+
+When comparing both libraries, even in the most discrepant case (Hairball), we see Vulkan being at least slightly faster, around a 20\% on average across all cases and in most of them simply a lot faster than OptiX when building the AS.
+
+\begin{figure}
+    \subfloat[1280x720]{\includegraphics[width = 3in]{figuras/1280x720-acceleration-structure-geometry-build-time-comparison.png}}
+    \subfloat[1920x1080]{\includegraphics[width = 3in]{figuras/1920x1080-acceleration-structure-geometry-build-time-comparison.png}}\\
+    \subfloat[2560x1440]{\includegraphics[width = 3in]{figuras/2560x1440-acceleration-structure-geometry-build-time-comparison.png}}
+    \subfloat[3840x2160]{\includegraphics[width = 3in]{figuras/3840x2160-acceleration-structure-geometry-build-time-comparison.png}}
+    \caption{Acceleration Structure Build Time of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball. Sorted by model.}
+    \label{as-build-time-geometry-comparison-graph}
+\end{figure}
+\clearpage
 \section{Frame Time}

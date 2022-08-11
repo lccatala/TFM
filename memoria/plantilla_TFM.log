@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.31)  9 AUG 2022 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.31)  11 AUG 2022 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -852,30 +852,102 @@ File: figuras/hairball-memory-usage-comparison.png Graphic file (type png)
 Package pdftex.def Info: figuras/hairball-memory-usage-comparison.png  used on 
 input line 37.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-)
-(./secciones/05_Conclusiones.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
 
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [12 <./figuras/vulkan-memory-usage-comparison.png>]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [13 <./figuras/vulkan-frametimes-comparison.png>]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+[12 <./figuras/vulkan-memory-usage-comparison.png>] [13 <./figuras/vulkan-frame
+times-comparison.png>]
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
  [14 <./figuras/bmw-memory-usage-comparison.png> <./figuras/sponza-memory-usage
 -comparison.png> <./figuras/hairball-memory-usage-comparison.png>]
-Chapter 4.
-) [15
+<figuras/bmw-acceleration-structure-build-time-comparison.png, id=256, 462.528p
+t x 346.896pt>
+File: figuras/bmw-acceleration-structure-build-time-comparison.png Graphic file
+ (type png)
+<use figuras/bmw-acceleration-structure-build-time-comparison.png>
+Package pdftex.def Info: figuras/bmw-acceleration-structure-build-time-comparis
+on.png  used on input line 49.
+(pdftex.def)             Requested size: 216.81pt x 162.60709pt.
+<figuras/sponza-acceleration-structure-build-time-comparison.png, id=257, 462.5
+28pt x 346.896pt>
+File: figuras/sponza-acceleration-structure-build-time-comparison.png Graphic f
+ile (type png)
+<use figuras/sponza-acceleration-structure-build-time-comparison.png>
+Package pdftex.def Info: figuras/sponza-acceleration-structure-build-time-compa
+rison.png  used on input line 50.
+(pdftex.def)             Requested size: 216.81pt x 162.60709pt.
+<figuras/hairball-acceleration-structure-build-time-comparison.png, id=258, 462
+.528pt x 346.896pt>
+File: figuras/hairball-acceleration-structure-build-time-comparison.png Graphic
+ file (type png)
+<use figuras/hairball-acceleration-structure-build-time-comparison.png>
+Package pdftex.def Info: figuras/hairball-acceleration-structure-build-time-com
+parison.png  used on input line 52.
+(pdftex.def)             Requested size: 216.81pt x 162.60709pt.
+LaTeX Info: Redefining \. on input line 60.
+LaTeX Info: Redefining \% on input line 60.
+ [15
 
-] (./plantilla_TFM.bbl
+ <./figuras/bmw-acceleration-structure-build-time-comparison.png> <./figuras/sp
+onza-acceleration-structure-build-time-comparison.png> <./figuras/hairball-acce
+leration-structure-build-time-comparison.png>]
+<figuras/1280x720-acceleration-structure-geometry-build-time-comparison.png, id
+=273, 462.528pt x 346.896pt>
+File: figuras/1280x720-acceleration-structure-geometry-build-time-comparison.pn
+g Graphic file (type png)
+<use figuras/1280x720-acceleration-structure-geometry-build-time-comparison.png
+>
+Package pdftex.def Info: figuras/1280x720-acceleration-structure-geometry-build
+-time-comparison.png  used on input line 64.
+(pdftex.def)             Requested size: 216.81pt x 162.60709pt.
+<figuras/1920x1080-acceleration-structure-geometry-build-time-comparison.png, i
+d=274, 462.528pt x 346.896pt>
+File: figuras/1920x1080-acceleration-structure-geometry-build-time-comparison.p
+ng Graphic file (type png)
+<use figuras/1920x1080-acceleration-structure-geometry-build-time-comparison.pn
+g>
+Package pdftex.def Info: figuras/1920x1080-acceleration-structure-geometry-buil
+d-time-comparison.png  used on input line 65.
+(pdftex.def)             Requested size: 216.81pt x 162.60709pt.
+<figuras/2560x1440-acceleration-structure-geometry-build-time-comparison.png, i
+d=275, 462.528pt x 346.896pt>
+File: figuras/2560x1440-acceleration-structure-geometry-build-time-comparison.p
+ng Graphic file (type png)
+<use figuras/2560x1440-acceleration-structure-geometry-build-time-comparison.pn
+g>
+Package pdftex.def Info: figuras/2560x1440-acceleration-structure-geometry-buil
+d-time-comparison.png  used on input line 66.
+(pdftex.def)             Requested size: 216.81pt x 162.60709pt.
+<figuras/3840x2160-acceleration-structure-geometry-build-time-comparison.png, i
+d=276, 462.528pt x 346.896pt>
+File: figuras/3840x2160-acceleration-structure-geometry-build-time-comparison.p
+ng Graphic file (type png)
+<use figuras/3840x2160-acceleration-structure-geometry-build-time-comparison.pn
+g>
+Package pdftex.def Info: figuras/3840x2160-acceleration-structure-geometry-buil
+d-time-comparison.png  used on input line 67.
+(pdftex.def)             Requested size: 216.81pt x 162.60709pt.
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
+ [16 <./figuras/1280x720-acceleration-structure-geometry-build-time-comparison.
+png> <./figuras/1920x1080-acceleration-structure-geometry-build-time-comparison
+.png> <./figuras/2560x1440-acceleration-structure-geometry-build-time-compariso
+n.png> <./figuras/3840x2160-acceleration-structure-geometry-build-time-comparis
+on.png>])
+(./secciones/05_Conclusiones.tex [17
+
+] [18
+
+]
+Chapter 4.
+) [19] (./plantilla_TFM.bbl
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 52
 .
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)) [16
+)) [20
 
 ]
 (./plantilla_TFM.aux
@@ -886,10 +958,10 @@ Package rerunfilecheck Info: File `plantilla_TFM.out' has not changed.
 (rerunfilecheck)             Checksum: C8C30C81007A3524F5593BD0376088F9;2082.
  ) 
 Here is how much of TeX's memory you used:
- 16542 strings out of 478268
- 262684 string characters out of 5846347
- 575316 words of memory out of 5000000
- 34393 multiletter control sequences out of 15000+600000
+ 16606 strings out of 478268
+ 266480 string characters out of 5846347
+ 575657 words of memory out of 5000000
+ 34437 multiletter control sequences out of 15000+600000
  497842 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,11n,66p,1120b,627s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -898,10 +970,10 @@ exlive/2022/texmf-dist/fonts/type1/urw/bookman/ubkd8a.pfb></usr/local/texlive/2
 022/texmf-dist/fonts/type1/urw/bookman/ubkl8a.pfb></usr/local/texlive/2022/texm
 f-dist/fonts/type1/urw/bookman/ubkli8a.pfb></usr/local/texlive/2022/texmf-dist/
 fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on plantilla_TFM.pdf (26 pages, 316439 bytes).
+Output written on plantilla_TFM.pdf (30 pages, 490473 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
- 256 compressed objects within 3 object streams
- 65 named destinations out of 1000 (max. 500000)
- 174 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 357 PDF objects out of 1000 (max. 8388607)
+ 282 compressed objects within 3 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

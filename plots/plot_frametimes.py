@@ -152,9 +152,74 @@ def plot_compared_frame_times():
 
     fig.tight_layout()
     plt.savefig('vulkan-frametimes-comparison.png')
+
+def plot_compared_raytraced_as_build_times():
+    optix_path = 'optix'
+    vulkan_path = 'VulkanRaytraced2070super'
+    for model in models:
+        optix_as_build_times = []
+        vulkan_build_times = []
+        for w, h in resolutions:
+            filename = os.path.join(optix_path, f'optix-{w}x{h}{model}-shadows-accelbuildtime.txt')
+            optix_as_build_times.append(read_value(filename))
+
+            filename = os.path.join(vulkan_path, f'vulkan-{w}x{h}{model}-textures-accelbuildtime.txt')
+            vulkan_build_times.append(read_value(filename))
+
+        labels = [f'{x[0]}x{x[1]}' for x in resolutions]
+        x = np.arange(len(labels))
+        bar_width = 0.35
+        fig, ax = plt.subplots()
+        rects2 = ax.bar(x + bar_width/2, vulkan_build_times, bar_width, label='Vulkan')
+        rects1 = ax.bar(x - bar_width/2, optix_as_build_times, bar_width, label='OptiX')
+
+        ax.set_ylabel('AS Build Time (microseconds)')
+        ax.set_title(f'AS Build Time for raytraced rendering of {model} model')
+        ax.set_xticks(x, labels)
+        ax.legend()
+        ax.bar_label(rects1, padding=3)
+        ax.bar_label(rects2, padding=3)
+
+        fig.tight_layout()
+        plt.savefig(f'{model}-acceleration-structure-build-time-comparison.png')
+
+def plot_compared_raytraced_as_build_times_geometry():
+    optix_path = 'optix'
+    vulkan_path = 'VulkanRaytraced2070super'
+    for w, h in resolutions:
+        optix_as_build_times = []
+        vulkan_build_times = []
+        for model in models:
+            filename = os.path.join(optix_path, f'optix-{w}x{h}{model}-shadows-accelbuildtime.txt')
+            optix_as_build_times.append(read_value(filename))
+
+            filename = os.path.join(vulkan_path, f'vulkan-{w}x{h}{model}-textures-accelbuildtimes.txt')
+            with open(filename) as f:
+                values = [int(x) for x in f.readlines()]
+                avg = sum(values) / len(values)
+                vulkan_build_times.append(avg)
+                print(avg)
+
+        labels = models
+        x = np.arange(len(labels))
+        bar_width = 0.35
+        fig, ax = plt.subplots()
+        rects2 = ax.bar(x + bar_width/2, vulkan_build_times, bar_width, label='Vulkan')
+        rects1 = ax.bar(x - bar_width/2, optix_as_build_times, bar_width, label='OptiX')
+
+        ax.set_ylabel('AS Build Time (microseconds)')
+        ax.set_title(f'AS Build Time for raytraced rendering at resolution {w}x{h}')
+        ax.set_xticks(x, labels)
+        ax.legend()
+        ax.bar_label(rects1, padding=3)
+        ax.bar_label(rects2, padding=3)
+
+        fig.tight_layout()
+        plt.savefig(f'{w}x{h}-acceleration-structure-geometry-build-time-comparison.png')
 if __name__ == '__main__':
     # plot_rasterized()
     # plot_raytraced()
     # plot_compared_memory_usages()
     # plot_compared_frame_times()
-    plot_compared_raytraced_memory_usages()
+    # plot_compared_raytraced_memory_usages()
+    plot_compared_raytraced_as_build_times_geometry()
