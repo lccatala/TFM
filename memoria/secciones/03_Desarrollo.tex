@@ -46,16 +46,22 @@ In order to better gauge how these scene sizes compare, we have plotted them in 
   \label{scenes-geometry-graph}
 \end{figure}
 
-Finally, we considered it will be of use compare how each library performed in different hardware configurations. We gathered all the available hardware compatible with the software we were attempting to run, and used it to run the same experiments. This hardware is summarized in table \ref{pc-specs-table}.
+Finally, we considered it will be of use compare how each library performed in different hardware configurations. We gathered all the available hardware compatible with GPU accelerated ray tracing, and used it to run the same experiments. This hardware is summarized in table \ref{pc-specs-table}. This will not only allow us to check how different GPUs handle the same workload, but also how they do it inside a virtualized environment: the Intel Core i9 machine is not running the software in bare metal, but rather virtualizing Windows under \textit{QEMU}.
 
 \begin{center}
   \begin{tabular}{ | m{5cm} | m{3.5cm}| m{2cm}|m{4cm} |}
   \hline
   CPU& GPU& RAM& OS\\
   \hline
-    12th Gen Intel(R) Core(TM) i7-12700K, 3.60 GHz& Nvidia GeForce RTX 3070& 16 GB& Windows 11, 64 bit\\
+    Intel Core i7-12700K, 3.60 GHz& Nvidia GeForce RTX 3070& 16 GB& Windows 11, 64 bit\\ % Paco
   \hline
     AMD Ryzen 5 3600 3.6GHz BOX& Nvidia GeForce RTX 2070 Super& 16 GB& Windows 10, 64 bit\\
+  \hline
+    Intel Core i5-9600K, 3.7GHz& Nvidia GeForce RTX 3060 Ti& 16 GB& Windows 10, 64 bit\\ % Juan Carlos
+  \hline
+    Intel Core i9-9900K (12/16 cores), 3.6GHz& Nvidia GeForce RTX 3080& 16 GB& Windows 10, 64 bit\\ % Roobre
+  \hline
+    ???& Nvidia GeForce RTX 3080& ???& Windows 10, 64 bit\\ % Roobre
   \label{pc-specs-table}
 \end{tabular}
   % \caption{Hardware information of the different PCs we managed to run our tests on.}

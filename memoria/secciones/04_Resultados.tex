@@ -68,5 +68,43 @@ When comparing both libraries, even in the most discrepant case (Hairball), we s
     \caption{Acceleration Structure Build Time of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball. Sorted by model.}
     \label{as-build-time-geometry-comparison-graph}
 \end{figure}
+
 \clearpage
 \section{Frame Time}
+Finally we will look at how long each technology takes to render a full frame. This could be considered the most important metric to monitor, since rendering a frame is something that will happen as often as possible, and therefore the ammount of time it takes to do so will be more prevalent than updating or initializing geometry structures.
+
+As mentioned before, each frame will be rendered to a frame buffer and we will only count the time it takes to do exactly that, although we will then display them in a window so we can see what the renderer is doing.
+
+In a modern operating system, the time it takes to perform a certain task can vary a lot depending on what other processes are running at the time. To counteract this, we timed the render of 1000 frames for each parameter combination and averaged them. An example of that can be seen in figure \ref{frametimes-outlier-graph}.
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figuras/frametime-outlier.png}
+    \caption{Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We see how the first frame takes much longer than the rest of them to draw.}
+    \label{frametimes-outlier-graph}
+\end{figure}
+
+We decided to remove the first frame time from this average since, as you can see, it tends to be a statistical outlier, messing with "real world" appreciable results. The same graph from \ref{frametimes-outlier} results thus in \ref{frametimes-no-outlier}.
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figuras/frametime-no-outlier.png}
+    \caption{Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We have removed the first frame time since it took too long to draw in comparison with the rest.}
+    \label{frametimes-no-outlier-graph}
+\end{figure}
+
+With this preprocessing in place, we will first look at an overview for all models and resolutions in figure \ref{frametimes-overview-graph}. For the most part the graphs show what one might expect: render times get larger as screen resolution increases, with OptiX taking the longest across all cases. There is however a slightly odd yet expected behaviour. As we see, the model taking the longer to draw in both libraries is Sponza. The much bigger Hairball shows times more similar to the BMW model, with about 10 times more geometry. This suggests that complexity in shapes and textures may be more costly to render than a higher triangle count. 
+
+This discrepancy between triangle count and processing time reminds to the Acceleration Structure Build Times, where OptiX also struggled the most to optimize the Sponza geometry compared to the others. The main difference is here both libraries have the most trouble to draw this particular scene.
+
+\begin{figure}
+    \subfloat[BMW]{\includegraphics[width = 3in]{figuras/bmw-frametimes-comparison.png}}
+    \subfloat[Sponza]{\includegraphics[width = 3in]{figuras/sponza-frametimes-comparison.png}}\\
+    \centering
+    \subfloat[Hairball]{\includegraphics[width = 3in]{figuras/hairball-frametimes-comparison.png}}
+    \caption{Frame rendering times for each 3D model (BMW, Hairball and Sponza) across both libraries and 4 reasonable resolutions, from 720p to 4k.}
+    \label{frametimes-overview-graph}
+\end{figure}
+
+\section{Hardware comparison}
+As mentioned in the Development chapter, we will now run our software in all the machines we could gather from friends, family and fellow students. This will help us gauge how the same workload is handled by different GPUs, how CPUs affect performance while maintaining the same GPU and even how both libraries behave inside a virtual machine.

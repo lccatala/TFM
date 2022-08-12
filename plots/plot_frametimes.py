@@ -7,13 +7,14 @@ import os
 resolutions = [(1280, 720), (1920, 1080), (2560, 1440), (3840, 2160)]
 models = ['bmw', 'sponza', 'hairball']
 
-def plot_frametimes(filename):
+def plot_frametimes(filename, include_first=False):
     filename = f'{filename}-frametimes.txt'
     with open(filename) as f:
         lines = [int(line.rstrip()) for line in f]
-        x_values = [x for x in range(1, 1000)]
+        start = 0 if include_first else 1
+        x_values = [x for x in range(start, 1000)]
         plt.figure()
-        plt.plot(x_values, lines[1:-1])
+        plt.plot(x_values, lines[start:-1])
         plt.savefig(f'{filename[:-4]}.png')
         plt.close()
 
@@ -48,12 +49,12 @@ def plot_rasterized():
         store_rasterized_memory_usage(filename_prefix)
     plot_memory_usage(rasterized_memory_usage_values, 'rasterized')
 
-def plot_raytraced():
+def plot_raytraced(include_first=False):
     path = 'VulkanRaytraced2070super'
     for model in models:
         for w, h in resolutions:
             filename_prefix = os.path.join(path, f'vulkan-{w}x{h}{model}-textures')
-            plot_frametimes(filename_prefix)
+            plot_frametimes(filename_prefix, include_first=include_first)
             store_raytraced_memory_usage(filename_prefix)
         plot_memory_usage(raytraced_memory_usage_values, f'{model}-raytraced')
         raytraced_memory_usage_values.clear()
@@ -123,6 +124,35 @@ def plot_compared_raytraced_memory_usages():
         fig.tight_layout()
         plt.savefig(f'{model}-memory-usage-comparison.png')
 
+def plot_compared_raytraced_frametimes():
+    optix_path = 'optix'
+    vulkan_path = 'VulkanRaytraced2070super'
+    for model in models:
+        optix_frametimes = []
+        vulkan_frametimes = []
+        for w, h in resolutions: # TODO
+            filename = os.path.join(optix_path, f'optix-{w}x{h}{model}-shadows-frametimes.txt')
+            optix_frametimes.append(read_value(filename))
+
+            filename = os.path.join(vulkan_path, f'vulkan-{w}x{h}{model}-textures-frametimes.txt')
+            vulkan_frametimes.append(read_value(filename))
+
+        labels = [f'{x[0]}x{x[1]}' for x in resolutions]
+        x = np.arange(len(labels))
+        bar_width = 0.35
+        fig, ax = plt.subplots()
+        rects2 = ax.bar(x + bar_width/2, vulkan_frametimes, bar_width, label='Vulkan')
+        rects1 = ax.bar(x - bar_width/2, optix_frametimes, bar_width, label='OptiX')
+
+        ax.set_ylabel('Frame times (microseconds)')
+        ax.set_title(f'Frame time for raytraced rendering of {model} model')
+        ax.set_xticks(x, labels)
+        ax.legend()
+        ax.bar_label(rects1, padding=3)
+        ax.bar_label(rects2, padding=3)
+
+        fig.tight_layout()
+        plt.savefig(f'{model}-frametimes-comparison.png')
 def plot_compared_frame_times():
     rasterized_path = 'VulkanRasterized2070super'
     raytraced_path = 'VulkanRaytraced2070super'
@@ -218,8 +248,10 @@ def plot_compared_raytraced_as_build_times_geometry():
         plt.savefig(f'{w}x{h}-acceleration-structure-geometry-build-time-comparison.png')
 if __name__ == '__main__':
     # plot_rasterized()
-    # plot_raytraced()
+    # plot_raytraced(include_first=False)
+    # plot_raytraced(include_first=True)
     # plot_compared_memory_usages()
     # plot_compared_frame_times()
     # plot_compared_raytraced_memory_usages()
-    plot_compared_raytraced_as_build_times_geometry()
+    plot_compared_raytraced_frametimes()
+    # plot_compared_raytraced_as_build_times_geometry()
