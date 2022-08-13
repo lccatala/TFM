@@ -228,7 +228,6 @@ def plot_compared_raytraced_as_build_times_geometry():
                 values = [int(x) for x in f.readlines()]
                 avg = sum(values) / len(values)
                 vulkan_build_times.append(avg)
-                print(avg)
 
         labels = models
         x = np.arange(len(labels))
@@ -246,12 +245,44 @@ def plot_compared_raytraced_as_build_times_geometry():
 
         fig.tight_layout()
         plt.savefig(f'{w}x{h}-acceleration-structure-geometry-build-time-comparison.png')
+
+def read_values(filename):
+    with open(filename) as f:
+        values = [int(x) for x in f.readlines()]
+    return values
+
+def plot_decomposed_build_times():
+    blas_times = []
+    tlas_times = []
+    filename_prefix = 'Optix-accelbuildtimes-decomposed'
+    for model in models:
+        filename = os.path.join(filename_prefix, f'optix-2560x1440{model}-shadows-blasbuildtime.txt')
+        blas_time = np.average(read_values(filename))
+        blas_times.append(blas_time)
+
+        filename = os.path.join(filename_prefix, f'optix-2560x1440{model}-shadows-tlasbuildtime.txt')
+        tlas_time = np.average(read_values(filename))
+        tlas_times.append(tlas_time)
+
+    indices = np.arange(len(models))
+
+    p1 = plt.bar(indices, blas_times)
+    p2 = plt.bar(indices, tlas_times, bottom=blas_times)
+
+    plt.ylabel('AS Build Time (microseconds)')
+    plt.title('AS Build Times separated by stage')
+    plt.xticks(indices, models)
+    plt.legend((p1[0], p2[0]), ('BLAS', 'TLAS'))
+    plt.savefig('optix-accelbuildtimes-decomposed.png')
+
+
 if __name__ == '__main__':
     # plot_rasterized()
     # plot_raytraced(include_first=False)
     # plot_raytraced(include_first=True)
     # plot_compared_memory_usages()
+    plot_decomposed_build_times()
     # plot_compared_frame_times()
     # plot_compared_raytraced_memory_usages()
-    plot_compared_raytraced_frametimes()
+    # plot_compared_raytraced_frametimes()
     # plot_compared_raytraced_as_build_times_geometry()

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.31)  12 AUG 2022 20:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.31)  13 AUG 2022 20:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -959,76 +959,84 @@ g>
 Package pdftex.def Info: figuras/3840x2160-acceleration-structure-geometry-buil
 d-time-comparison.png  used on input line 67.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-LaTeX Info: Redefining \. on input line 72.
-LaTeX Info: Redefining \% on input line 72.
+<figuras/optix-accelbuildtimes-decomposed.png, id=291, 462.528pt x 346.896pt>
+File: figuras/optix-accelbuildtimes-decomposed.png Graphic file (type png)
+<use figuras/optix-accelbuildtimes-decomposed.png>
+Package pdftex.def Info: figuras/optix-accelbuildtimes-decomposed.png  used on 
+input line 76.
+(pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
  [18 <./figuras/1280x720-acceleration-structure-geometry-build-time-comparison.
 png> <./figuras/1920x1080-acceleration-structure-geometry-build-time-comparison
 .png> <./figuras/2560x1440-acceleration-structure-geometry-build-time-compariso
 n.png> <./figuras/3840x2160-acceleration-structure-geometry-build-time-comparis
-on.png>]
-<figuras/frametime-outlier.png, id=304, 462.528pt x 346.896pt>
+on.png>] [19 <./figuras/optix-accelbuildtimes-decomposed.png>]
+<figuras/frametime-outlier.png, id=312, 462.528pt x 346.896pt>
 File: figuras/frametime-outlier.png Graphic file (type png)
 <use figuras/frametime-outlier.png>
-Package pdftex.def Info: figuras/frametime-outlier.png  used on input line 82.
+Package pdftex.def Info: figuras/frametime-outlier.png  used on input line 90.
 (pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
 
 
-LaTeX Warning: Reference `frametimes-outlier' on page 19 undefined on input lin
-e 87.
+LaTeX Warning: Reference `frametimes-outlier' on page 20 undefined on input lin
+e 95.
 
 
-LaTeX Warning: Reference `frametimes-no-outlier' on page 19 undefined on input 
-line 87.
+LaTeX Warning: Reference `frametimes-no-outlier' on page 20 undefined on input 
+line 95.
 
-<figuras/frametime-no-outlier.png, id=305, 462.528pt x 346.896pt>
+<figuras/frametime-no-outlier.png, id=313, 462.528pt x 346.896pt>
 File: figuras/frametime-no-outlier.png Graphic file (type png)
 <use figuras/frametime-no-outlier.png>
 Package pdftex.def Info: figuras/frametime-no-outlier.png  used on input line 9
-1.
+9.
 (pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
-[19
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
+[20
 
  <./figuras/frametime-outlier.png>]
-<figuras/bmw-frametimes-comparison.png, id=313, 462.528pt x 346.896pt>
+<figuras/bmw-frametimes-comparison.png, id=321, 462.528pt x 346.896pt>
 File: figuras/bmw-frametimes-comparison.png Graphic file (type png)
 <use figuras/bmw-frametimes-comparison.png>
 Package pdftex.def Info: figuras/bmw-frametimes-comparison.png  used on input l
-ine 101.
+ine 109.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-<figuras/sponza-frametimes-comparison.png, id=314, 462.528pt x 346.896pt>
+<figuras/sponza-frametimes-comparison.png, id=322, 462.528pt x 346.896pt>
 File: figuras/sponza-frametimes-comparison.png Graphic file (type png)
 <use figuras/sponza-frametimes-comparison.png>
 Package pdftex.def Info: figuras/sponza-frametimes-comparison.png  used on inpu
-t line 102.
+t line 110.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-<figuras/hairball-frametimes-comparison.png, id=315, 462.528pt x 346.896pt>
+<figuras/hairball-frametimes-comparison.png, id=323, 462.528pt x 346.896pt>
 File: figuras/hairball-frametimes-comparison.png Graphic file (type png)
 <use figuras/hairball-frametimes-comparison.png>
 Package pdftex.def Info: figuras/hairball-frametimes-comparison.png  used on in
-put line 104.
+put line 112.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
 ) (./secciones/05_Conclusiones.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
-[20 <./figuras/frametime-no-outlier.png>]
+[21 <./figuras/frametime-no-outlier.png>]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [21 <./figuras/bmw-frametimes-comparison.png> <./figuras/sponza-frametimes-com
+ [22 <./figuras/bmw-frametimes-comparison.png> <./figuras/sponza-frametimes-com
 parison.png> <./figuras/hairball-frametimes-comparison.png>]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [22]
-Chapter 4.
-) [23
+ [23] [24
 
-] (./plantilla_TFM.bbl
+]
+Chapter 4.
+) [25] (./plantilla_TFM.bbl
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 52
 .
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)) [24
+)) [26
 
 ]
 (./plantilla_TFM.aux
@@ -1038,17 +1046,14 @@ LaTeX Info: Redefining \% on input line 27.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `plantilla_TFM.out' has not changed.
 (rerunfilecheck)             Checksum: 278D67EC8DB1B1B29068B3355DB16226;2235.
  ) 
 Here is how much of TeX's memory you used:
- 16658 strings out of 478268
- 268107 string characters out of 5846347
- 576239 words of memory out of 5000000
- 34473 multiletter control sequences out of 15000+600000
+ 16669 strings out of 478268
+ 268488 string characters out of 5846347
+ 576426 words of memory out of 5000000
+ 34480 multiletter control sequences out of 15000+600000
  497842 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,11n,66p,1120b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1057,10 +1062,10 @@ exlive/2022/texmf-dist/fonts/type1/urw/bookman/ubkd8a.pfb></usr/local/texlive/2
 022/texmf-dist/fonts/type1/urw/bookman/ubkl8a.pfb></usr/local/texlive/2022/texm
 f-dist/fonts/type1/urw/bookman/ubkli8a.pfb></usr/local/texlive/2022/texmf-dist/
 fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on plantilla_TFM.pdf (34 pages, 634512 bytes).
+Output written on plantilla_TFM.pdf (36 pages, 654241 bytes).
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 310 compressed objects within 4 object streams
- 89 named destinations out of 1000 (max. 500000)
- 242 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 413 PDF objects out of 1000 (max. 8388607)
+ 319 compressed objects within 4 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 247 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -69,6 +69,14 @@ When comparing both libraries, even in the most discrepant case (Hairball), we s
     \label{as-build-time-geometry-comparison-graph}
 \end{figure}
 
+To further investigate why Sponza takes that much longer to build than other models, we first timed each part of the building process separately. We see this in figure \ref{as-build-time-decomposed}. We observe how the distribution of times for each model is completely different. The Hairball model takes the longest by far to build it's TLAS, while Sponza takes it's much longer time mostly building the Bottom Level part, taking as little as the BMW one in the Top Level stage.
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figuras/optix-accelbuildtimes-decomposed.png}
+    \caption{Acceleration Structure Build Times for each model, divided between the TLAS and BLAS phases. We see great discrepancies in the distribution of time in each case.}
+    \label{as-build-time-decomposed}
+\end{figure}
 \clearpage
 \section{Frame Time}
 Finally we will look at how long each technology takes to render a full frame. This could be considered the most important metric to monitor, since rendering a frame is something that will happen as often as possible, and therefore the ammount of time it takes to do so will be more prevalent than updating or initializing geometry structures.
