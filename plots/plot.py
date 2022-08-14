@@ -299,8 +299,16 @@ def plot_extra_decomposed_build_times():
     plt.xticks(indices, models)
     plt.legend((p1[0], p2[0]), ('BLAS', 'TLAS'))
     plt.savefig('optix-extra-accelbuildtimes-decomposed.png')
-def plot_scenes_geometry():
-    triangles = [998941, 383000]
+
+def plot_extra_scenes_geometry():
+    models = ['human', 'iscv2', 'gallery']
+    triangles = [25422, 383511, 998831]
+    indices = np.arange(len(models))
+    plt.xticks(indices, models)
+    plt.ylabel('Triangles')
+    plt.title('Triangle counts for additional models')
+    plt.bar(indices, triangles)
+    plt.savefig('extra-scenes-geometry.png')
 
 if __name__ == '__main__':
     # plot_rasterized()
@@ -308,7 +316,8 @@ if __name__ == '__main__':
     # plot_raytraced(include_first=True)
     # plot_compared_memory_usages()
     # plot_decomposed_build_times()
-    plot_extra_decomposed_build_times()
+    # plot_extra_decomposed_build_times()
+    plot_extra_scenes_geometry()
     # plot_compared_frame_times()
     # plot_compared_raytraced_memory_usages()
     # plot_compared_raytraced_frametimes()

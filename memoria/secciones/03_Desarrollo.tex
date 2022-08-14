@@ -47,6 +47,30 @@ In order to better gauge how these scene sizes compare, we have plotted them in 
   \label{scenes-geometry-graph}
 \end{figure}
 
+After testing these models we countered some discrepancies with the Acceleration Structure Build Times we expected for each of them. This can be seen in more detail in the Results chapter. We added some extra models for further testing. Their features can be seen in table \ref{extra-scenes-geometry-table} and their triangle counts is graphically compared in plot \ref{extra-scenes-geometry-graph}
+
+\begin{center}
+  \begin{tabular}{ | m{3cm} | m{3cm}| m{3cm}|m{3cm} |}
+  \hline
+  Model name& Triangles& Vertices& Texture size\\
+  \hline
+    Human& 25422& 29708& 0\\
+  \hline
+    ISCV2& 383511& 193212& 0\\
+  \hline
+    Gallery& 998831& 499314& 0\\
+  \label{extra-scenes-geometry-table}
+\end{tabular}
+  % \caption{Scenes that will be used to test the ray tracing libraries compared in this work. We have selected a single 3D model from each order of magnitude in terms of size.}
+\end{center}
+
+\begin{figure}[hbt!]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figuras/extra-scenes-geometry.png}
+  \caption{Triangle count of the extra scenes used to further test acceleration structure build times.}
+  \label{extra-scenes-geometry-graph}
+\end{figure}
+
 Finally, we considered it will be of use compare how each library performed in different hardware configurations. We gathered all the available hardware compatible with GPU accelerated ray tracing, and used it to run the same experiments. This hardware is summarized in table \ref{pc-specs-table}. This will not only allow us to check how different GPUs handle the same workload, but also how they do it inside a virtualized environment: the Intel Core i9 machine is not running the software in bare metal, but rather virtualizing Windows under \textit{QEMU}.
 
 \begin{center}
