@@ -77,6 +77,16 @@ To further investigate why Sponza takes that much longer to build than other mod
     \caption{Acceleration Structure Build Times for each model, divided between the TLAS and BLAS phases. We see great discrepancies in the distribution of time in each case.}
     \label{as-build-time-decomposed}
 \end{figure}
+
+Seeing this, we decided to expand this metric's models testing pool to Human, ISCV2 and Gallery. In figure \ref{as-extra-build-time-decomposed} we see how their build times stack up to one another. In sight of these new data points we appreciate that a longer build time seems to come not only from the triangle count, but rather from the presence of textures, that seem to extend the Top Level Acceleration Structure build time.
+
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figuras/optix-extra-accelbuildtimes-decomposed.png}
+    \caption{Acceleration Structure Build Times divided between the TLAS and BLAS phases for the extra set of models (Human, ISCV2 and Gallery). We see how the presence of textures makes for a longer TLAS build time.}
+    \label{as-extra-build-time-decomposed}
+\end{figure}
 \clearpage
 \section{Frame Time}
 Finally we will look at how long each technology takes to render a full frame. This could be considered the most important metric to monitor, since rendering a frame is something that will happen as often as possible, and therefore the ammount of time it takes to do so will be more prevalent than updating or initializing geometry structures.

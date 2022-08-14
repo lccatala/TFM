@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {3.1}Rasterization Baseline}{13}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Memory Usage}{14}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Acceleration Structure Build Time}{17}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Frame Time}{20}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Hardware comparison}{21}{section.3.5}%
+\contentsline {section}{\numberline {3.4}Frame Time}{21}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Hardware comparison}{22}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Conclusiones}{25}{chapter.4}%
 \contentsline {section}{Referencias}{26}{section*.5}%
