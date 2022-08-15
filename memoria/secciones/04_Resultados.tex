@@ -125,4 +125,15 @@ This discrepancy between triangle count and processing time reminds to the Accel
 \end{figure}
 
 \section{Hardware comparison}
-As mentioned in the Development chapter, we will now run our software in all the machines we could gather from friends, family and fellow students. This will help us gauge how the same workload is handled by different GPUs, how CPUs affect performance while maintaining the same GPU and even how both libraries behave inside a virtual machine.
+As mentioned in the Development chapter, we ran our software in all the machines we could gather from friends, family and fellow students. This will help us gauge how the same workload is handled by different GPUs, how CPUs affect performance while maintaining the same GPU and even how both libraries behave inside a virtual machine.
+
+We'll start by comparing how a difference in CPU power affects all the metrics we're monitoring, except for memory usage of course. We have a couple of pairs of systems with the same GPUs and different processors, On the one hand we have two \textit{2070 Super}'s with an AMD Ryzen 5 3700 BOX and 7 3800x respectively, and on the other we have two \textit{2600}'s, one with an Intel Core i9-12900F and the other with a % TODO 
+
+In graph \ref{2070-super-comparison} we see how acceleration structure build time and frame times compare to one another when using two machines with a \textit{2070 Super} and AMD Ryzen 5 and 7 processors respectively. Some of the results data went missing when trying to get the software to run on other people's systems, so we will not be comparing all the models' metrics every time.
+
+\begin{figure}
+    \subfloat[Acceleration Structure Build Time]{\includegraphics[width = 3in]{figuras/accelbuildtime-2070super-comparison.png}}
+    \subfloat[Frame Times]{\includegraphics[width = 3in]{figuras/frametimes-2070super-comparison.png}}\\
+    \caption{}
+    \label{2070-super-comparison}
+\end{figure}

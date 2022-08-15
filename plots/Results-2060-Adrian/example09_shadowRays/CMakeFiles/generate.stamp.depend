@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindCUDA/run_nvcc.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindOpenGL.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.23/Modules/FindPackageMessage.cmake
+C:/Users/alpas/Desktop/optix7course/build/example09_shadowRays/CMakeFiles/cuda_compile_ptx_1.dir/cuda_compile_ptx_1_generated_devicePrograms.cu.ptx.cmake.pre-gen
+C:/Users/alpas/Desktop/optix7course/build/example09_shadowRays/CMakeFiles/cuda_compile_ptx_1.dir/cuda_compile_ptx_1_generated_devicePrograms.cu.ptx.depend
+C:/Users/alpas/Desktop/optix7course/example09_shadowRays/CMakeLists.txt

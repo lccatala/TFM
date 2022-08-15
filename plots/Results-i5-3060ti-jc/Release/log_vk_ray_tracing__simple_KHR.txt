@@ -1,0 +1,23 @@
+_______________
+Vulkan Version:
+ - available:  1.3.201
+ - requesting: 1.2.0
+______________________
+Used Instance Layers :
+
+Used Instance Extensions :
+VK_KHR_surface
+VK_KHR_win32_surface
+VK_EXT_debug_utils
+____________________
+Compatible Devices :
+0: NVIDIA GeForce RTX 3060 Ti
+Physical devices found : 1
+________________________
+Used Device Extensions :
+VK_KHR_swapchain
+VK_KHR_acceleration_structure
+VK_KHR_ray_tracing_pipeline
+VK_KHR_deferred_host_operations
+
+Loading File:  E:/Games/raytracing_benchmark/vulkan/bin_x64/Release/../../vk_raytracing_tutorial_KHR/ray_tracing__simple/../media/models/hairball/hairball.obj 

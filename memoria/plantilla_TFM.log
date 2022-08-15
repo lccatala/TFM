@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.31)  14 AUG 2022 18:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.31)  15 AUG 2022 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -813,37 +813,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--89
  []
 
 
-Overfull \hbox (9.59665pt too wide) in paragraph at lines 77--93
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+[]|\T1/pbk/l/n/10.95 AMD Ry-zen 7 3800x,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+[]|\T1/pbk/l/n/10.95 Nvidia Ge-For-ce
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+[]|\T1/pbk/l/n/10.95 Nvidia Ge-For-ce
+ []
+
+
+Overfull \hbox (9.59665pt too wide) in paragraph at lines 77--97
  [] 
  []
 
-LaTeX Info: Redefining \. on input line 93.
-LaTeX Info: Redefining \% on input line 93.
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
 [5 <./figuras/scenes-geometry.png>]
-LaTeX Info: Redefining \. on input line 95.
-LaTeX Info: Redefining \% on input line 95.
+LaTeX Info: Redefining \. on input line 99.
+LaTeX Info: Redefining \% on input line 99.
  [6 <./figuras/extra-scenes-geometry.png>]
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <12> not available
-(Font)              Font shape `T1/pbk/db/n' tried instead on input line 109.
+(Font)              Font shape `T1/pbk/db/n' tried instead on input line 113.
 LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <8> not available
-(Font)              Font shape `T1/pbk/l/n' tried instead on input line 117.
+(Font)              Font shape `T1/pbk/l/n' tried instead on input line 121.
 
 [7
 
 ]
-Overfull \hbox (3.29254pt too wide) in paragraph at lines 128--129
+Overfull \hbox (3.29254pt too wide) in paragraph at lines 132--133
 []\T1/pbk/l/n/10.95 First an-noun-ced by the Kh-ro-nos Group at GDC 2015 as the
  "next ge-ne-ra-tion OpenGL",
  []
 
-LaTeX Info: Redefining \. on input line 136.
-LaTeX Info: Redefining \% on input line 136.
+LaTeX Info: Redefining \. on input line 140.
+LaTeX Info: Redefining \% on input line 140.
 [8]
-LaTeX Info: Redefining \. on input line 149.
-LaTeX Info: Redefining \% on input line 149.
+LaTeX Info: Redefining \. on input line 153.
+LaTeX Info: Redefining \% on input line 153.
  [9]
-LaTeX Info: Redefining \. on input line 164.
-LaTeX Info: Redefining \% on input line 164.
+LaTeX Info: Redefining \. on input line 168.
+LaTeX Info: Redefining \% on input line 168.
  [10]) (./secciones/04_Resultados.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1032,18 +1047,36 @@ File: figuras/hairball-frametimes-comparison.png Graphic file (type png)
 Package pdftex.def Info: figuras/hairball-frametimes-comparison.png  used on in
 put line 122.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+ [22 <./figuras/frametime-no-outlier.png>]
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+ [23 <./figuras/bmw-frametimes-comparison.png> <./figuras/sponza-frametimes-com
+parison.png> <./figuras/hairball-frametimes-comparison.png>]
+<figuras/accelbuildtime-2070super-comparison.png, id=356, 462.528pt x 346.896pt
+>
+File: figuras/accelbuildtime-2070super-comparison.png Graphic file (type png)
+<use figuras/accelbuildtime-2070super-comparison.png>
+Package pdftex.def Info: figuras/accelbuildtime-2070super-comparison.png  used 
+on input line 135.
+(pdftex.def)             Requested size: 216.81pt x 162.60709pt.
+<figuras/frametimes-2070super-comparison.png, id=357, 462.528pt x 346.896pt>
+File: figuras/frametimes-2070super-comparison.png Graphic file (type png)
+<use figuras/frametimes-2070super-comparison.png>
+Package pdftex.def Info: figuras/frametimes-2070super-comparison.png  used on i
+nput line 136.
+(pdftex.def)             Requested size: 216.81pt x 162.60709pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
+
+ []
+
 ) (./secciones/05_Conclusiones.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-
-[22 <./figuras/frametime-no-outlier.png>]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [23 <./figuras/bmw-frametimes-comparison.png> <./figuras/sponza-frametimes-com
-parison.png> <./figuras/hairball-frametimes-comparison.png>]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [24]
+ [24 <./figuras/accelbuildtime-2070super-comparison.png> <./figuras/frametimes-
+2070super-comparison.png>]
 Chapter 4.
 ) [25
 
@@ -1067,22 +1100,22 @@ Package rerunfilecheck Info: File `plantilla_TFM.out' has not changed.
 (rerunfilecheck)             Checksum: 278D67EC8DB1B1B29068B3355DB16226;2235.
  ) 
 Here is how much of TeX's memory you used:
- 16688 strings out of 478268
- 269229 string characters out of 5846347
- 582816 words of memory out of 5000000
- 34495 multiletter control sequences out of 15000+600000
+ 16706 strings out of 478268
+ 269971 string characters out of 5846347
+ 583845 words of memory out of 5000000
+ 34508 multiletter control sequences out of 15000+600000
  497842 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,11n,66p,1120b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 65i,12n,66p,1120b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2022/texmf-dist/fonts/type1/urw/bookman/ubkd8a.pfb></usr/local/texlive/2
 022/texmf-dist/fonts/type1/urw/bookman/ubkl8a.pfb></usr/local/texlive/2022/texm
 f-dist/fonts/type1/urw/bookman/ubkli8a.pfb></usr/local/texlive/2022/texmf-dist/
 fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on plantilla_TFM.pdf (36 pages, 686946 bytes).
+Output written on plantilla_TFM.pdf (36 pages, 725178 bytes).
 PDF statistics:
- 422 PDF objects out of 1000 (max. 8388607)
- 324 compressed objects within 4 object streams
- 94 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 431 PDF objects out of 1000 (max. 8388607)
+ 329 compressed objects within 4 object streams
+ 97 named destinations out of 1000 (max. 500000)
+ 267 words of extra memory for PDF output out of 10000 (max. 10000000)
 

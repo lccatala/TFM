@@ -1,0 +1,10 @@
+﻿  Building NVCC ptx file example09_shadowRays/cuda_compile_ptx_1_generated_devicePrograms.cu.ptx
+  devicePrograms.cu
+C:\Users\alpas\Desktop\optix7course\example09_shadowRays\devicePrograms.cu(29): warning #20044-D: extern declaration of the entity optixLaunchParams is treated as a static definition
+  
+  devicePrograms.cu
+  compiling (and embedding ptx from) devicePrograms.cu
+  cuda_compile_ptx_1_generated_devicePrograms.cu.ptx_embedded.c
+     Creating library C:/Users/alpas/Desktop/optix7course/build/Release/ex09_shadowRays.lib and object C:/Users/alpas/Desktop/optix7course/build/Release/ex09_shadowRays.exp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  ex09_shadowRays.vcxproj -> C:\Users\alpas\Desktop\optix7course\build\Release\ex09_shadowRays.exe

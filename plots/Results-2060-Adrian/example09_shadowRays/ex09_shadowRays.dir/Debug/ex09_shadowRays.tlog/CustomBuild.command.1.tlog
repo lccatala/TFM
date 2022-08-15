@@ -1,0 +1,36 @@
+^C:\USERS\ALPAS\DESKTOP\OPTIX7COURSE\EXAMPLE09_SHADOWRAYS\DEVICEPROGRAMS.CU
+setlocal
+cd C:\Users\alpas\Desktop\optix7course\build\example09_shadowRays\CMakeFiles\cuda_compile_ptx_1.dir
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/alpas/Desktop/optix7course/build/example09_shadowRays
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools/MSVC/14.31.31103/bin/Hostx64/x64" -D build_configuration:STRING=Debug -D generated_file:STRING=C:/Users/alpas/Desktop/optix7course/build/example09_shadowRays/cuda_compile_ptx_1_generated_devicePrograms.cu.ptx -D generated_cubin_file:STRING=C:/Users/alpas/Desktop/optix7course/build/example09_shadowRays/cuda_compile_ptx_1_generated_devicePrograms.cu.ptx.cubin.txt -P C:/Users/alpas/Desktop/optix7course/build/example09_shadowRays/CMakeFiles/cuda_compile_ptx_1.dir//cuda_compile_ptx_1_generated_devicePrograms.cu.ptx.Debug.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ALPAS\DESKTOP\OPTIX7COURSE\BUILD\CMAKEFILES\1C20206D8D53F4062DBBAF2C0E31F442\CUDA_COMPILE_PTX_1_GENERATED_DEVICEPROGRAMS.CU.PTX_EMBEDDED.C.RULE
+setlocal
+"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\bin\bin2c.exe" -c --padd 0 --type char --name embedded_ptx_code C:/Users/alpas/Desktop/optix7course/build/example09_shadowRays/cuda_compile_ptx_1_generated_devicePrograms.cu.ptx > C:/Users/alpas/Desktop/optix7course/build/example09_shadowRays/cuda_compile_ptx_1_generated_devicePrograms.cu.ptx_embedded.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\ALPAS\DESKTOP\OPTIX7COURSE\EXAMPLE09_SHADOWRAYS\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/alpas/Desktop/optix7course -BC:/Users/alpas/Desktop/optix7course/build --check-stamp-file C:/Users/alpas/Desktop/optix7course/build/example09_shadowRays/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

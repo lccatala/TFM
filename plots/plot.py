@@ -49,8 +49,7 @@ def plot_rasterized():
         store_rasterized_memory_usage(filename_prefix)
     plot_memory_usage(rasterized_memory_usage_values, 'rasterized')
 
-def plot_raytraced(include_first=False):
-    path = 'VulkanRaytraced2070super'
+def plot_raytraced(path='VulkanRaytraced2070super', include_first=False):
     for model in models:
         for w, h in resolutions:
             filename_prefix = os.path.join(path, f'vulkan-{w}x{h}{model}-textures')
@@ -310,6 +309,61 @@ def plot_extra_scenes_geometry():
     plt.bar(indices, triangles)
     plt.savefig('extra-scenes-geometry.png')
 
+def plot_2070_super_comparison():
+    models = ['bmw', 'sponza']
+    indices = np.arange(len([]))
+
+    accelbuildtimes7 = []
+    accelbuildtimes5 = []
+
+    for model in models:
+        path = 'Results-ryzen7-2070super-jesus/optix'
+        filename = os.path.join(path, f'optix-1920x1080{model}-shadows-accelbuildtime.txt')
+        accelbuildtimes7.append(read_value(filename))
+
+        path = 'optix'
+        filename = os.path.join(path, f'optix-1920x1080{model}-shadows-accelbuildtime.txt')
+        accelbuildtimes5.append(read_value(filename))
+
+    x = np.arange(len(models))
+    bar_width = 0.35
+    fig, ax = plt.subplots()
+    rects1 = ax.bar(x - bar_width/2, accelbuildtimes7, bar_width, label='Ryzen 7')
+    rects2 = ax.bar(x + bar_width/2, accelbuildtimes5, bar_width, label='Ryzen 5')
+
+    ax.set_ylabel('Build time (microseconds)')
+    ax.set_title('Acceleration Structure build time')
+    ax.set_xticks(x, models)
+    ax.legend()
+    ax.bar_label(rects1, padding=3)
+    ax.bar_label(rects2, padding=3)
+
+    fig.tight_layout()
+    plt.savefig('accelbuildtime-2070super-comparison.png')
+
+    # Frame times
+    frame_time_7 = [np.average(read_values('Results-ryzen7-2070super-jesus/optix/optix-1920x1080sponza-shadows-frametimes.txt'))]
+    frame_time_5 = [np.average(read_values('optix/optix-1920x1080sponza-shadows-frametimes.txt'))]
+    models = ['sponza']
+    x = np.arange(len(models))
+    bar_width = 0.35
+    fig, ax = plt.subplots()
+    rects1 = ax.bar(x - bar_width/2, frame_time_7, bar_width, label='Ryzen 7')
+    rects2 = ax.bar(x + bar_width/2, frame_time_5, bar_width, label='Ryzen 5')
+
+    ax.set_ylabel('Frame time (microseconds)')
+    ax.set_title('Frame render time')
+    ax.set_xticks(x, models)
+    ax.legend()
+    ax.bar_label(rects1, padding=3)
+    ax.bar_label(rects2, padding=3)
+
+    fig.tight_layout()
+    plt.savefig('frametimes-2070super-comparison.png')
+
+
+
+
 if __name__ == '__main__':
     # plot_rasterized()
     # plot_raytraced(include_first=False)
@@ -317,9 +371,10 @@ if __name__ == '__main__':
     # plot_compared_memory_usages()
     # plot_decomposed_build_times()
     # plot_extra_decomposed_build_times()
-    plot_extra_scenes_geometry()
+    # plot_extra_scenes_geometry()
     # plot_compared_frame_times()
     # plot_compared_raytraced_memory_usages()
     # plot_compared_raytraced_frametimes()
     # plot_compared_raytraced_as_build_times_geometry()
     # plot_scenes_geometry()
+    plot_2070_super_comparison()

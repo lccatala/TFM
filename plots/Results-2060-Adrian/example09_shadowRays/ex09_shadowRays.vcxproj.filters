@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\alpas\Desktop\optix7course\build\example09_shadowRays\cuda_compile_ptx_1_generated_devicePrograms.cu.ptx_embedded.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alpas\Desktop\optix7course\example09_shadowRays\SampleRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alpas\Desktop\optix7course\example09_shadowRays\Model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\alpas\Desktop\optix7course\example09_shadowRays\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\alpas\Desktop\optix7course\example09_shadowRays\optix7.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alpas\Desktop\optix7course\example09_shadowRays\CUDABuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alpas\Desktop\optix7course\example09_shadowRays\LaunchParams.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alpas\Desktop\optix7course\example09_shadowRays\SampleRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\alpas\Desktop\optix7course\example09_shadowRays\Model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\alpas\Desktop\optix7course\example09_shadowRays\devicePrograms.cu">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\alpas\Desktop\optix7course\build\CMakeFiles\1c20206d8d53f4062dbbaf2c0e31f442\cuda_compile_ptx_1_generated_devicePrograms.cu.ptx_embedded.c.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\alpas\Desktop\optix7course\example09_shadowRays\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{583EA40C-2FA1-3839-B54F-F26CAADA1EDE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{E3E5949C-C561-3509-81B6-5E3A21B19174}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E05E0AB1-F127-3B9A-B81C-0BF57C0E456D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
