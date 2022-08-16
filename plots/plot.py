@@ -311,7 +311,6 @@ def plot_extra_scenes_geometry():
 
 def plot_2070_super_comparison():
     models = ['bmw', 'sponza']
-    indices = np.arange(len([]))
 
     accelbuildtimes7 = []
     accelbuildtimes5 = []
@@ -362,8 +361,165 @@ def plot_2070_super_comparison():
     plt.savefig('frametimes-2070super-comparison.png')
 
 
+    models = ['bmw', 'sponza', 'hairball']
+
+    accelbuildtimes7 = []
+    accelbuildtimes5 = []
+
+    for model in models:
+        path = 'Results-ryzen7-2070super-jesus/vulkan'
+        filename = os.path.join(path, f'vulkan-1920x1080{model}-textures-accelbuildtime.txt')
+        accelbuildtimes7.append(read_value(filename))
+
+        path = 'VulkanRaytraced2070super'
+        filename = os.path.join(path, f'vulkan-1920x1080{model}-textures-accelbuildtime.txt')
+        accelbuildtimes5.append(read_value(filename))
+
+    x = np.arange(len(models))
+    bar_width = 0.35
+    fig, ax = plt.subplots()
+    rects1 = ax.bar(x - bar_width/2, accelbuildtimes7, bar_width, label='Ryzen 7')
+    rects2 = ax.bar(x + bar_width/2, accelbuildtimes5, bar_width, label='Ryzen 5')
+
+    ax.set_ylabel('Build time (microseconds)')
+    ax.set_title('Acceleration Structure build time')
+    ax.set_xticks(x, models)
+    ax.legend()
+    ax.bar_label(rects1, padding=3)
+    ax.bar_label(rects2, padding=3)
+
+    fig.tight_layout()
+    plt.savefig('vulkan-accelbuildtime-2070super-comparison.png')
+
+    # Frame times
+    models = ['bmw', 'sponza', 'hairball']
+    frame_time_5.clear()
+    frame_time_7.clear()
+    for model in models:
+        frame_time_7.append(np.average(read_values(f'Results-ryzen7-2070super-jesus/vulkan/vulkan-1920x1080{model}-textures-frametimes.txt')))
+        frame_time_5.append(np.average(read_values(f'VulkanRaytraced2070super/vulkan-1920x1080{model}-textures-frametimes.txt')))
+    print(frame_time_5)
+    x = np.arange(len(models))
+    bar_width = 0.35
+    fig, ax = plt.subplots()
+    rects1 = ax.bar(x - bar_width/2, frame_time_7, bar_width, label='Ryzen 7')
+    rects2 = ax.bar(x + bar_width/2, frame_time_5, bar_width, label='Ryzen 5')
+
+    ax.set_ylabel('Frame time (microseconds)')
+    ax.set_title('Frame render time')
+    ax.set_xticks(x, models)
+    ax.legend()
+    ax.bar_label(rects1, padding=3)
+    ax.bar_label(rects2, padding=3)
+
+    fig.tight_layout()
+    plt.savefig('vulkan-frametimes-2070super-comparison.png')
 
 
+
+
+def plot_baremetal_virtualized_comparison():
+    models = ['bmw', 'sponza']
+
+    accelbuildtimes7 = []
+    accelbuildtimes5 = []
+
+    for model in models:
+        path = 'Results-i9-3080-virtual-roobre'
+        filename = os.path.join(path, f'optix-1920x1080{model}-shadows-accelbuildtime.txt')
+        accelbuildtimes7.append(read_value(filename))
+
+        path = 'Results-3080-naru'
+        filename = os.path.join(path, f'optix-1920x1080{model}-shadows-accelbuildtime.txt')
+        accelbuildtimes5.append(read_value(filename))
+
+    x = np.arange(len(models))
+    bar_width = 0.35
+    fig, ax = plt.subplots()
+    rects1 = ax.bar(x - bar_width/2, accelbuildtimes7, bar_width, label='Ryzen 7')
+    rects2 = ax.bar(x + bar_width/2, accelbuildtimes5, bar_width, label='Ryzen 5')
+
+    ax.set_ylabel('Build time (microseconds)')
+    ax.set_title('Acceleration Structure build time')
+    ax.set_xticks(x, models)
+    ax.legend()
+    ax.bar_label(rects1, padding=3)
+    ax.bar_label(rects2, padding=3)
+
+    fig.tight_layout()
+    plt.savefig('accelbuildtime-baremetal-virtualized-comparison.png')
+
+    # Frame times
+    frame_time_7 = [np.average(read_values('Results-i9-3080-virtual-roobre/optix-1920x1080sponza-shadows-frametimes.txt'))]
+    frame_time_5 = [np.average(read_values('Results-3080-naru/optix-1920x1080sponza-shadows-frametimes.txt'))]
+    models = ['sponza']
+    x = np.arange(len(models))
+    bar_width = 0.35
+    fig, ax = plt.subplots()
+    rects1 = ax.bar(x - bar_width/2, frame_time_7, bar_width, label='VM')
+    rects2 = ax.bar(x + bar_width/2, frame_time_5, bar_width, label='Bare metal')
+
+    ax.set_ylabel('Frame time (microseconds)')
+    ax.set_title('Frame render time')
+    ax.set_xticks(x, models)
+    ax.legend()
+    ax.bar_label(rects1, padding=3)
+    ax.bar_label(rects2, padding=3)
+
+    fig.tight_layout()
+    plt.savefig('frametimes-baremetal-virtualized-comparison.png')
+
+    accelbuildtimes7 = []
+    accelbuildtimes5 = []
+
+    for model in models:
+        path = 'Results-i9-3080-virtual-roobre'
+        filename = os.path.join(path, f'vulkan-1920x1080{model}-textures-accelbuildtime.txt')
+        accelbuildtimes7.append(read_value(filename))
+
+        path = 'Results-3080-naru'
+        filename = os.path.join(path, f'vulkan-1920x1080{model}-textures-accelbuildtime.txt')
+        accelbuildtimes5.append(read_value(filename))
+
+    x = np.arange(len(models))
+    bar_width = 0.35
+    fig, ax = plt.subplots()
+    rects1 = ax.bar(x - bar_width/2, accelbuildtimes7, bar_width, label='Virtual Machine')
+    rects2 = ax.bar(x + bar_width/2, accelbuildtimes5, bar_width, label='Bare Metal')
+
+    ax.set_ylabel('Build time (microseconds)')
+    ax.set_title('Acceleration Structure build time')
+    ax.set_xticks(x, models)
+    ax.legend()
+    ax.bar_label(rects1, padding=3)
+    ax.bar_label(rects2, padding=3)
+
+    fig.tight_layout()
+    plt.savefig('vulkan-accelbuildtime-baremetal-virtualized-comparison.png')
+
+    # Frame times
+    models = ['bmw', 'sponza', 'hairball']
+    frame_time_5.clear()
+    frame_time_7.clear()
+    for model in models:
+        frame_time_7.append(np.average(read_values(f'Results-ryzen7-2070super-jesus/vulkan/vulkan-1920x1080{model}-textures-frametimes.txt')))
+        frame_time_5.append(np.average(read_values(f'VulkanRaytraced2070super/vulkan-1920x1080{model}-textures-frametimes.txt')))
+    print(frame_time_5)
+    x = np.arange(len(models))
+    bar_width = 0.35
+    fig, ax = plt.subplots()
+    rects1 = ax.bar(x - bar_width/2, frame_time_7, bar_width, label='Virtual Machine')
+    rects2 = ax.bar(x + bar_width/2, frame_time_5, bar_width, label='Bare Metal')
+
+    ax.set_ylabel('Frame time (microseconds)')
+    ax.set_title('Frame render time')
+    ax.set_xticks(x, models)
+    ax.legend()
+    ax.bar_label(rects1, padding=3)
+    ax.bar_label(rects2, padding=3)
+
+    fig.tight_layout()
+    plt.savefig('vulkan-frametimes-baremetal-virtualized-comparison.png')
 if __name__ == '__main__':
     # plot_rasterized()
     # plot_raytraced(include_first=False)
@@ -377,4 +533,5 @@ if __name__ == '__main__':
     # plot_compared_raytraced_frametimes()
     # plot_compared_raytraced_as_build_times_geometry()
     # plot_scenes_geometry()
-    plot_2070_super_comparison()
+    # plot_2070_super_comparison()
+    plot_baremetal_virtualized_comparison()

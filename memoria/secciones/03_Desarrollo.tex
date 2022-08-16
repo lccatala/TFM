@@ -96,9 +96,8 @@ Finally, we considered it will be of use compare how each library performed in d
   % \caption{Hardware information of the different PCs we managed to run our tests on.}
 \end{center}
 
+
 \clearpage
-
-
 \section{Implementation}
 In this section we will discuss the process of implementing everything that went into this work. The code written for this comparison can be divided in three categories:
 
@@ -169,5 +168,7 @@ With these BLASes we build a single Top Level Acceleration Structure (TLAS). Thi
 
 We employed the \textit{nvvk} utilities at the \textit{Nvpro} library \cite{Nvpro} to facilitate building this renderer. The same instrumentation and parametrization as in the rasterized renderer was used here.
 
+
+\clearpage
 \subsection{Automation and Plotting}
 To get reproducible results in a reduced ammount of time, we implemented a series of Python scripts in order to run every renderer with every combination of scenes, renderer settings (like use of shadows or textures) and framebuffer resolutions. Each renderer run will handle savingtheir performance information to disk. We later plotted these results in a single script using \textit{matplotlib} to more easily gauge how each library behaved under the same configuration. The whole suite of experiments ran just under 10 minutes in every machine we tested it on.

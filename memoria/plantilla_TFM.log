@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.31)  15 AUG 2022 18:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.31)  16 AUG 2022 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -518,6 +518,11 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 (./plantilla_TFM.aux
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
+
+
+LaTeX Warning: Label `vulkan-accelbuildtime-bm-vm-comparison' multiply defined.
+
+
 )
 \openout1 = `plantilla_TFM.aux'.
 
@@ -544,8 +549,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Info: Redefining \. on input line 19.
 LaTeX Info: Redefining \% on input line 19.
-
-(/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count320
 \scratchdimen=\dimen188
@@ -640,7 +644,7 @@ LaTeX Info: Redefining \BHBI on input line 139.
 \c@lstlisting=\count328
 
 (./include/Portada.tex
-<include/logo-upv.png, id=72, 136.8312pt x 158.2713pt>
+<include/logo-upv.png, id=80, 136.8312pt x 158.2713pt>
 File: include/logo-upv.png Graphic file (type png)
 <use include/logo-upv.png>
 Package pdftex.def Info: include/logo-upv.png  used on input line 12.
@@ -672,7 +676,7 @@ LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <14.4> not available
 (Font)              Font shape `T1/pbk/l/n' tried instead on input line 18.
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <14.4> not available
 (Font)              Font shape `T1/pbk/db/n' tried instead on input line 18.
-<include/DSIC.png, id=74, 92.7465pt x 64.3203pt>
+<include/DSIC.png, id=82, 92.7465pt x 64.3203pt>
 File: include/DSIC.png Graphic file (type png)
 <use include/DSIC.png>
 Package pdftex.def Info: include/DSIC.png  used on input line 22.
@@ -745,7 +749,7 @@ l.1 \chapter
 
 ]
 Chapter 2.
-<figuras/vulkan-7680x4320viking_room-textures-frametimes.png, id=151, 462.528pt
+<figuras/vulkan-7680x4320viking_room-textures-frametimes.png, id=161, 462.528pt
  x 346.896pt>
 File: figuras/vulkan-7680x4320viking_room-textures-frametimes.png Graphic file 
 (type png)
@@ -759,12 +763,12 @@ Underfull \vbox (badness 3108) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 39.
 LaTeX Info: Redefining \% on input line 39.
  [4 <./figuras/vulkan-7680x4320viking_room-textures-frametimes.png>]
-<figuras/scenes-geometry.png, id=174, 462.528pt x 346.896pt>
+<figuras/scenes-geometry.png, id=184, 462.528pt x 346.896pt>
 File: figuras/scenes-geometry.png Graphic file (type png)
 <use figuras/scenes-geometry.png>
 Package pdftex.def Info: figuras/scenes-geometry.png  used on input line 45.
 (pdftex.def)             Requested size: 339.7262pt x 254.80934pt.
-<figuras/extra-scenes-geometry.png, id=177, 462.528pt x 346.896pt>
+<figuras/extra-scenes-geometry.png, id=187, 462.528pt x 346.896pt>
 File: figuras/extra-scenes-geometry.png Graphic file (type png)
 <use figuras/extra-scenes-geometry.png>
 Package pdftex.def Info: figuras/extra-scenes-geometry.png  used on input line 
@@ -835,250 +839,299 @@ Overfull \hbox (9.59665pt too wide) in paragraph at lines 77--97
 LaTeX Info: Redefining \. on input line 97.
 LaTeX Info: Redefining \% on input line 97.
 [5 <./figuras/scenes-geometry.png>]
-LaTeX Info: Redefining \. on input line 99.
-LaTeX Info: Redefining \% on input line 99.
+LaTeX Info: Redefining \. on input line 100.
+LaTeX Info: Redefining \% on input line 100.
  [6 <./figuras/extra-scenes-geometry.png>]
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <12> not available
-(Font)              Font shape `T1/pbk/db/n' tried instead on input line 113.
+(Font)              Font shape `T1/pbk/db/n' tried instead on input line 112.
 LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <8> not available
-(Font)              Font shape `T1/pbk/l/n' tried instead on input line 121.
+(Font)              Font shape `T1/pbk/l/n' tried instead on input line 120.
 
 [7
 
 ]
-Overfull \hbox (3.29254pt too wide) in paragraph at lines 132--133
+Overfull \hbox (3.29254pt too wide) in paragraph at lines 131--132
 []\T1/pbk/l/n/10.95 First an-noun-ced by the Kh-ro-nos Group at GDC 2015 as the
  "next ge-ne-ra-tion OpenGL",
  []
 
-LaTeX Info: Redefining \. on input line 140.
-LaTeX Info: Redefining \% on input line 140.
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
 [8]
-LaTeX Info: Redefining \. on input line 153.
-LaTeX Info: Redefining \% on input line 153.
+LaTeX Info: Redefining \. on input line 152.
+LaTeX Info: Redefining \% on input line 152.
  [9]
-LaTeX Info: Redefining \. on input line 168.
-LaTeX Info: Redefining \% on input line 168.
- [10]) (./secciones/04_Resultados.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [11] [12
+LaTeX Info: Redefining \. on input line 167.
+LaTeX Info: Redefining \% on input line 167.
+ [10]
+LaTeX Info: Redefining \. on input line 172.
+LaTeX Info: Redefining \% on input line 172.
+ [11]) (./secciones/04_Resultados.tex [12
 
 ]
 Chapter 3.
-<figuras/vulkan-memory-usage-comparison.png, id=239, 462.528pt x 346.896pt>
+<figuras/vulkan-memory-usage-comparison.png, id=249, 462.528pt x 346.896pt>
 File: figuras/vulkan-memory-usage-comparison.png Graphic file (type png)
 <use figuras/vulkan-memory-usage-comparison.png>
 Package pdftex.def Info: figuras/vulkan-memory-usage-comparison.png  used on in
 put line 12.
 (pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
-<figuras/vulkan-frametimes-comparison.png, id=241, 462.528pt x 346.896pt>
+<figuras/vulkan-frametimes-comparison.png, id=251, 462.528pt x 346.896pt>
 File: figuras/vulkan-frametimes-comparison.png Graphic file (type png)
 <use figuras/vulkan-frametimes-comparison.png>
 Package pdftex.def Info: figuras/vulkan-frametimes-comparison.png  used on inpu
 t line 23.
 (pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
+[13
 
-Underfull \vbox (badness 2707) has occurred while \output is active []
-
- [13]
-<figuras/bmw-memory-usage-comparison.png, id=249, 462.528pt x 346.896pt>
+] [14 <./figuras/vulkan-memory-usage-comparison.png>]
+LaTeX Info: Redefining \. on input line 29.
+LaTeX Info: Redefining \% on input line 29.
+ [15 <./figuras/vulkan-frametimes-comparison.png>]
+<figuras/bmw-memory-usage-comparison.png, id=270, 462.528pt x 346.896pt>
 File: figuras/bmw-memory-usage-comparison.png Graphic file (type png)
 <use figuras/bmw-memory-usage-comparison.png>
 Package pdftex.def Info: figuras/bmw-memory-usage-comparison.png  used on input
- line 34.
+ line 36.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
 LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <9> not available
-(Font)              Font shape `T1/pbk/l/n' tried instead on input line 34.
-<figuras/sponza-memory-usage-comparison.png, id=250, 462.528pt x 346.896pt>
+(Font)              Font shape `T1/pbk/l/n' tried instead on input line 36.
+<figuras/sponza-memory-usage-comparison.png, id=271, 462.528pt x 346.896pt>
 File: figuras/sponza-memory-usage-comparison.png Graphic file (type png)
 <use figuras/sponza-memory-usage-comparison.png>
 Package pdftex.def Info: figuras/sponza-memory-usage-comparison.png  used on in
-put line 35.
+put line 37.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-<figuras/hairball-memory-usage-comparison.png, id=251, 462.528pt x 346.896pt>
+<figuras/hairball-memory-usage-comparison.png, id=272, 462.528pt x 346.896pt>
 File: figuras/hairball-memory-usage-comparison.png Graphic file (type png)
 <use figuras/hairball-memory-usage-comparison.png>
 Package pdftex.def Info: figuras/hairball-memory-usage-comparison.png  used on 
-input line 37.
+input line 39.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-LaTeX Info: Redefining \. on input line 42.
-LaTeX Info: Redefining \% on input line 42.
+LaTeX Info: Redefining \. on input line 44.
+LaTeX Info: Redefining \% on input line 44.
+ [16
 
-[14 <./figuras/vulkan-memory-usage-comparison.png>] [15 <./figuras/vulkan-frame
-times-comparison.png>]
-LaTeX Info: Redefining \. on input line 42.
-LaTeX Info: Redefining \% on input line 42.
- [16 <./figuras/bmw-memory-usage-comparison.png> <./figuras/sponza-memory-usage
--comparison.png> <./figuras/hairball-memory-usage-comparison.png>]
-<figuras/bmw-acceleration-structure-build-time-comparison.png, id=275, 462.528p
+ <./figuras/bmw-memory-usage-comparison.png> <./figuras/sponza-memory-usage-com
+parison.png> <./figuras/hairball-memory-usage-comparison.png>]
+<figuras/bmw-acceleration-structure-build-time-comparison.png, id=285, 462.528p
 t x 346.896pt>
 File: figuras/bmw-acceleration-structure-build-time-comparison.png Graphic file
  (type png)
 <use figuras/bmw-acceleration-structure-build-time-comparison.png>
 Package pdftex.def Info: figuras/bmw-acceleration-structure-build-time-comparis
-on.png  used on input line 49.
+on.png  used on input line 51.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-<figuras/sponza-acceleration-structure-build-time-comparison.png, id=276, 462.5
+<figuras/sponza-acceleration-structure-build-time-comparison.png, id=286, 462.5
 28pt x 346.896pt>
 File: figuras/sponza-acceleration-structure-build-time-comparison.png Graphic f
 ile (type png)
 <use figuras/sponza-acceleration-structure-build-time-comparison.png>
 Package pdftex.def Info: figuras/sponza-acceleration-structure-build-time-compa
-rison.png  used on input line 50.
+rison.png  used on input line 52.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-<figuras/hairball-acceleration-structure-build-time-comparison.png, id=277, 462
+<figuras/hairball-acceleration-structure-build-time-comparison.png, id=287, 462
 .528pt x 346.896pt>
 File: figuras/hairball-acceleration-structure-build-time-comparison.png Graphic
  file (type png)
 <use figuras/hairball-acceleration-structure-build-time-comparison.png>
 Package pdftex.def Info: figuras/hairball-acceleration-structure-build-time-com
-parison.png  used on input line 52.
+parison.png  used on input line 54.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-LaTeX Info: Redefining \. on input line 60.
-LaTeX Info: Redefining \% on input line 60.
  [17
 
  <./figuras/bmw-acceleration-structure-build-time-comparison.png> <./figuras/sp
 onza-acceleration-structure-build-time-comparison.png> <./figuras/hairball-acce
 leration-structure-build-time-comparison.png>]
 <figuras/1280x720-acceleration-structure-geometry-build-time-comparison.png, id
-=291, 462.528pt x 346.896pt>
+=302, 462.528pt x 346.896pt>
 File: figuras/1280x720-acceleration-structure-geometry-build-time-comparison.pn
 g Graphic file (type png)
 <use figuras/1280x720-acceleration-structure-geometry-build-time-comparison.png
 >
 Package pdftex.def Info: figuras/1280x720-acceleration-structure-geometry-build
--time-comparison.png  used on input line 64.
+-time-comparison.png  used on input line 66.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
 <figuras/1920x1080-acceleration-structure-geometry-build-time-comparison.png, i
-d=292, 462.528pt x 346.896pt>
+d=303, 462.528pt x 346.896pt>
 File: figuras/1920x1080-acceleration-structure-geometry-build-time-comparison.p
 ng Graphic file (type png)
 <use figuras/1920x1080-acceleration-structure-geometry-build-time-comparison.pn
 g>
 Package pdftex.def Info: figuras/1920x1080-acceleration-structure-geometry-buil
-d-time-comparison.png  used on input line 65.
+d-time-comparison.png  used on input line 67.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
 <figuras/2560x1440-acceleration-structure-geometry-build-time-comparison.png, i
-d=293, 462.528pt x 346.896pt>
+d=304, 462.528pt x 346.896pt>
 File: figuras/2560x1440-acceleration-structure-geometry-build-time-comparison.p
 ng Graphic file (type png)
 <use figuras/2560x1440-acceleration-structure-geometry-build-time-comparison.pn
 g>
 Package pdftex.def Info: figuras/2560x1440-acceleration-structure-geometry-buil
-d-time-comparison.png  used on input line 66.
+d-time-comparison.png  used on input line 68.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
 <figuras/3840x2160-acceleration-structure-geometry-build-time-comparison.png, i
-d=294, 462.528pt x 346.896pt>
+d=305, 462.528pt x 346.896pt>
 File: figuras/3840x2160-acceleration-structure-geometry-build-time-comparison.p
 ng Graphic file (type png)
 <use figuras/3840x2160-acceleration-structure-geometry-build-time-comparison.pn
 g>
 Package pdftex.def Info: figuras/3840x2160-acceleration-structure-geometry-buil
-d-time-comparison.png  used on input line 67.
+d-time-comparison.png  used on input line 69.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-<figuras/optix-accelbuildtimes-decomposed.png, id=296, 462.528pt x 346.896pt>
+<figuras/optix-accelbuildtimes-decomposed.png, id=307, 462.528pt x 346.896pt>
 File: figuras/optix-accelbuildtimes-decomposed.png Graphic file (type png)
 <use figuras/optix-accelbuildtimes-decomposed.png>
 Package pdftex.def Info: figuras/optix-accelbuildtimes-decomposed.png  used on 
-input line 76.
+input line 78.
 (pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
-LaTeX Info: Redefining \. on input line 82.
-LaTeX Info: Redefining \% on input line 82.
+LaTeX Info: Redefining \. on input line 84.
+LaTeX Info: Redefining \% on input line 84.
  [18 <./figuras/1280x720-acceleration-structure-geometry-build-time-comparison.
 png> <./figuras/1920x1080-acceleration-structure-geometry-build-time-comparison
 .png> <./figuras/2560x1440-acceleration-structure-geometry-build-time-compariso
 n.png> <./figuras/3840x2160-acceleration-structure-geometry-build-time-comparis
 on.png>]
-<figuras/optix-extra-accelbuildtimes-decomposed.png, id=313, 462.528pt x 346.89
+<figuras/optix-extra-accelbuildtimes-decomposed.png, id=323, 462.528pt x 346.89
 6pt>
 File: figuras/optix-extra-accelbuildtimes-decomposed.png Graphic file (type png
 )
 <use figuras/optix-extra-accelbuildtimes-decomposed.png>
 Package pdftex.def Info: figuras/optix-extra-accelbuildtimes-decomposed.png  us
-ed on input line 86.
+ed on input line 88.
 (pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
-LaTeX Info: Redefining \. on input line 90.
-LaTeX Info: Redefining \% on input line 90.
- [19 <./figuras/optix-accelbuildtimes-decomposed.png>] [20 <./figuras/optix-ext
-ra-accelbuildtimes-decomposed.png>]
-<figuras/frametime-outlier.png, id=325, 462.528pt x 346.896pt>
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
+
+[19 <./figuras/optix-accelbuildtimes-decomposed.png>] [20 <./figuras/optix-extr
+a-accelbuildtimes-decomposed.png>]
+<figuras/frametime-outlier.png, id=335, 462.528pt x 346.896pt>
 File: figuras/frametime-outlier.png Graphic file (type png)
 <use figuras/frametime-outlier.png>
-Package pdftex.def Info: figuras/frametime-outlier.png  used on input line 100.
+Package pdftex.def Info: figuras/frametime-outlier.png  used on input line 104.
 
 (pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
 
 
 LaTeX Warning: Reference `frametimes-outlier' on page 21 undefined on input lin
-e 105.
+e 109.
 
 
 LaTeX Warning: Reference `frametimes-no-outlier' on page 21 undefined on input 
-line 105.
+line 109.
 
-<figuras/frametime-no-outlier.png, id=326, 462.528pt x 346.896pt>
+<figuras/frametime-no-outlier.png, id=336, 462.528pt x 346.896pt>
 File: figuras/frametime-no-outlier.png Graphic file (type png)
 <use figuras/frametime-no-outlier.png>
 Package pdftex.def Info: figuras/frametime-no-outlier.png  used on input line 1
-09.
+13.
 (pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
-LaTeX Info: Redefining \. on input line 115.
-LaTeX Info: Redefining \% on input line 115.
+LaTeX Info: Redefining \. on input line 119.
+LaTeX Info: Redefining \% on input line 119.
 [21
 
  <./figuras/frametime-outlier.png>]
-<figuras/bmw-frametimes-comparison.png, id=335, 462.528pt x 346.896pt>
+<figuras/bmw-frametimes-comparison.png, id=345, 462.528pt x 346.896pt>
 File: figuras/bmw-frametimes-comparison.png Graphic file (type png)
 <use figuras/bmw-frametimes-comparison.png>
 Package pdftex.def Info: figuras/bmw-frametimes-comparison.png  used on input l
-ine 119.
+ine 123.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-<figuras/sponza-frametimes-comparison.png, id=336, 462.528pt x 346.896pt>
+<figuras/sponza-frametimes-comparison.png, id=346, 462.528pt x 346.896pt>
 File: figuras/sponza-frametimes-comparison.png Graphic file (type png)
 <use figuras/sponza-frametimes-comparison.png>
 Package pdftex.def Info: figuras/sponza-frametimes-comparison.png  used on inpu
-t line 120.
+t line 124.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-<figuras/hairball-frametimes-comparison.png, id=337, 462.528pt x 346.896pt>
+<figuras/hairball-frametimes-comparison.png, id=347, 462.528pt x 346.896pt>
 File: figuras/hairball-frametimes-comparison.png Graphic file (type png)
 <use figuras/hairball-frametimes-comparison.png>
 Package pdftex.def Info: figuras/hairball-frametimes-comparison.png  used on in
-put line 122.
+put line 126.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-LaTeX Info: Redefining \. on input line 130.
-LaTeX Info: Redefining \% on input line 130.
+LaTeX Info: Redefining \. on input line 132.
+LaTeX Info: Redefining \% on input line 132.
  [22 <./figuras/frametime-no-outlier.png>]
-LaTeX Info: Redefining \. on input line 130.
-LaTeX Info: Redefining \% on input line 130.
+LaTeX Info: Redefining \. on input line 132.
+LaTeX Info: Redefining \% on input line 132.
  [23 <./figuras/bmw-frametimes-comparison.png> <./figuras/sponza-frametimes-com
 parison.png> <./figuras/hairball-frametimes-comparison.png>]
-<figuras/accelbuildtime-2070super-comparison.png, id=356, 462.528pt x 346.896pt
+<figuras/accelbuildtime-2070super-comparison.png, id=366, 462.528pt x 346.896pt
 >
 File: figuras/accelbuildtime-2070super-comparison.png Graphic file (type png)
 <use figuras/accelbuildtime-2070super-comparison.png>
 Package pdftex.def Info: figuras/accelbuildtime-2070super-comparison.png  used 
-on input line 135.
+on input line 144.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-<figuras/frametimes-2070super-comparison.png, id=357, 462.528pt x 346.896pt>
+<figuras/frametimes-2070super-comparison.png, id=367, 462.528pt x 346.896pt>
 File: figuras/frametimes-2070super-comparison.png Graphic file (type png)
 <use figuras/frametimes-2070super-comparison.png>
 Package pdftex.def Info: figuras/frametimes-2070super-comparison.png  used on i
-nput line 136.
+nput line 145.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
 
  []
 
-) (./secciones/05_Conclusiones.tex
+[24
+
+ <./figuras/accelbuildtime-2070super-comparison.png> <./figuras/frametimes-2070
+super-comparison.png>]
+<figuras/vulkan-accelbuildtime-2070super-comparison.png, id=379, 462.528pt x 34
+6.896pt>
+File: figuras/vulkan-accelbuildtime-2070super-comparison.png Graphic file (type
+ png)
+<use figuras/vulkan-accelbuildtime-2070super-comparison.png>
+Package pdftex.def Info: figuras/vulkan-accelbuildtime-2070super-comparison.png
+  used on input line 153.
+(pdftex.def)             Requested size: 216.81pt x 162.60709pt.
+<figuras/vulkan-frametimes-2070super-comparison.png, id=380, 462.528pt x 346.89
+6pt>
+File: figuras/vulkan-frametimes-2070super-comparison.png Graphic file (type png
+)
+<use figuras/vulkan-frametimes-2070super-comparison.png>
+Package pdftex.def Info: figuras/vulkan-frametimes-2070super-comparison.png  us
+ed on input line 154.
+(pdftex.def)             Requested size: 216.81pt x 162.60709pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--155
+
+ []
+
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
+[25 <./figuras/vulkan-accelbuildtime-2070super-comparison.png> <./figuras/vulka
+n-frametimes-2070super-comparison.png>]
+<figuras/vulkan-accelbuildtime-baremetal-virtualized-comparison.png, id=390, 46
+2.528pt x 346.896pt>
+File: figuras/vulkan-accelbuildtime-baremetal-virtualized-comparison.png Graphi
+c file (type png)
+<use figuras/vulkan-accelbuildtime-baremetal-virtualized-comparison.png>
+Package pdftex.def Info: figuras/vulkan-accelbuildtime-baremetal-virtualized-co
+mparison.png  used on input line 172.
+(pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
+
+
+LaTeX Warning: Reference `vulkan-frame-times-bm-vm-comparison' on page 26 undef
+ined on input line 177.
+
+<figuras/vulkan-frametimes-baremetal-virtualized-comparison.png, id=391, 462.52
+8pt x 346.896pt>
+File: figuras/vulkan-frametimes-baremetal-virtualized-comparison.png Graphic fi
+le (type png)
+<use figuras/vulkan-frametimes-baremetal-virtualized-comparison.png>
+Package pdftex.def Info: figuras/vulkan-frametimes-baremetal-virtualized-compar
+ison.png  used on input line 181.
+(pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
+) (./secciones/05_Conclusiones.tex [26
+
+] [27 <./figuras/vulkan-accelbuildtime-baremetal-virtualized-comparison.png>]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [24 <./figuras/accelbuildtime-2070super-comparison.png> <./figuras/frametimes-
-2070super-comparison.png>]
+ [28 <./figuras/vulkan-frametimes-baremetal-virtualized-comparison.png>]
 Chapter 4.
-) [25
+) [29
 
 ] (./plantilla_TFM.bbl
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 52
@@ -1086,7 +1139,7 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 52
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)) [26
+)) [30
 
 ]
 (./plantilla_TFM.aux
@@ -1096,26 +1149,29 @@ LaTeX Info: Redefining \% on input line 27.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `plantilla_TFM.out' has not changed.
-(rerunfilecheck)             Checksum: 278D67EC8DB1B1B29068B3355DB16226;2235.
+(rerunfilecheck)             Checksum: 204F1E3B1729F9A726FF2262CAB3896C;2591.
  ) 
 Here is how much of TeX's memory you used:
- 16706 strings out of 478268
- 269971 string characters out of 5846347
- 583845 words of memory out of 5000000
- 34508 multiletter control sequences out of 15000+600000
+ 16750 strings out of 478268
+ 271961 string characters out of 5846347
+ 584387 words of memory out of 5000000
+ 34537 multiletter control sequences out of 15000+600000
  497842 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,12n,66p,1120b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 65i,11n,66p,1120b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2022/texmf-dist/fonts/type1/urw/bookman/ubkd8a.pfb></usr/local/texlive/2
 022/texmf-dist/fonts/type1/urw/bookman/ubkl8a.pfb></usr/local/texlive/2022/texm
 f-dist/fonts/type1/urw/bookman/ubkli8a.pfb></usr/local/texlive/2022/texmf-dist/
 fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on plantilla_TFM.pdf (36 pages, 725178 bytes).
+Output written on plantilla_TFM.pdf (40 pages, 806584 bytes).
 PDF statistics:
- 431 PDF objects out of 1000 (max. 8388607)
- 329 compressed objects within 4 object streams
- 97 named destinations out of 1000 (max. 500000)
- 267 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 476 PDF objects out of 1000 (max. 8388607)
+ 362 compressed objects within 4 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 303 words of extra memory for PDF output out of 10000 (max. 10000000)
 
