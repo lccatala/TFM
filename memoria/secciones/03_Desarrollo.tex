@@ -17,7 +17,7 @@ The first step before starting to record any data or implementing any renderers 
     \item[*]\textbf{Memory Usage:} quite self-explanatory, the last factor we consider of great importance is the video memory consumption of the process. This can be a limiting factor on the hardware requirements of a particular application, since execeding the user's GPU's memory capabilities will force it to resort to the use of swap memory from the system RAM, significantly impacting the performance due to an abundance of copying between the two.
 \end{itemize}
 
-All these variables will be tested while rendering different ammounts of geometry and scene complexity. In order to simplify the development of all renderers, each scene will be comprised of a single 3D model. The Single Triangle model was built in-house, the Viking Room was obtained from \cite{VulkanTutorial}, and the rest were obtained from Morgan McGuire's Computer Graphics Archive \cite{McGuire2022Data}. They all can be seen at table \ref{scenes-geometry-table}
+All these variables will be tested while rendering different ammounts of geometry and scene complexity. In order to simplify the development of all renderers, each scene will be comprised of a single 3D model. The Single Triangle model was built in-house, the Viking Room was obtained from \cite{VulkanTutorial}, and the rest were obtained from Morgan McGuire's Computer Graphics Archive \cite{McGuire2022Data}. They all can be seen at table \ref{scenes-geometry-table} and in figures \ref{bmw-screenshot}, \ref{sponza-screenshot} and \ref{hairball-screenshot}.
 
 \begin{center}
   \begin{tabular}{ | m{3cm} | m{3cm}| m{3cm}|m{3cm} |}
@@ -38,6 +38,25 @@ All these variables will be tested while rendering different ammounts of geometr
   % \caption{Scenes that will be used to test the ray tracing libraries compared in this work. We have selected a single 3D model from each order of magnitude in terms of size.}
 \end{center}
 
+\begin{figure}[hbt!]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figuras/bmw.png}
+  \caption{BMW 3D model used during our experiments}
+  \label{bmw-screenshot}
+\end{figure}
+
+\begin{figure}[hbt!]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figuras/sponza.png}
+  \caption{Sponza 3D model used during our experiments}
+  \label{sponza-screenshot}
+\end{figure}
+\begin{figure}[hbt!]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figuras/hairball.png}
+  \caption{Hairball3D model used during our experiments}
+  \label{hairball-screenshot}
+\end{figure}
 In order to better gauge how these scene sizes compare, we have plotted them in graph \ref{scenes-geometry-graph}.
 
 \begin{figure}[hbt!]

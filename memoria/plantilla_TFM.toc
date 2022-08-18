@@ -2,19 +2,19 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Development}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Experiment Design}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Implementation}{7}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}OptiX Renderer}{7}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Vulkan Renderer}{8}{subsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.2.1}Rasterized}{8}{subsubsection.2.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2.2}Ray Traced}{9}{subsubsection.2.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Automation and Plotting}{12}{subsection.2.2.3}%
-\contentsline {chapter}{\numberline {3}Results}{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Rasterization Baseline}{13}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Memory Usage}{16}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Acceleration Structure Build Time}{17}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Frame Time}{21}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Hardware comparison}{24}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Same GPU, changing CPU}{24}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Virtualization effects}{26}{subsection.3.5.2}%
-\contentsline {chapter}{\numberline {4}Conclusiones}{29}{chapter.4}%
-\contentsline {section}{Referencias}{30}{section*.5}%
+\contentsline {section}{\numberline {2.2}Implementation}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}OptiX Renderer}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Vulkan Renderer}{9}{subsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}Rasterized}{9}{subsubsection.2.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2.2}Ray Traced}{10}{subsubsection.2.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Automation and Plotting}{13}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {3}Results}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Rasterization Baseline}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Memory Usage}{18}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Acceleration Structure Build Time}{19}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Frame Time}{23}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Hardware comparison}{26}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Same GPU, changing CPU}{26}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Virtualization effects}{28}{subsection.3.5.2}%
+\contentsline {chapter}{\numberline {4}Conclussions}{31}{chapter.4}%
+\contentsline {section}{Referencias}{33}{section*.5}%

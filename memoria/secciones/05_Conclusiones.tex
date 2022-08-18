@@ -1,4 +1,19 @@
-\chapter{Conclusiones}
+\chapter{Conclussions}
 
-En este capítulo se incluyen las conclusiones personales del estudiante sobre el trabajo realizado así como posibles trabajos futuros.
+In this chapter we will explain the our personal conclussions from doing this work, as well as possible future works.
+
+My main goal as a student in choosing this particular project was to further my understanding of ray tracing and modern rendering, beyond what casual tutorials in my spare time could give me. I believe this has been achieved, since we had to build not one but two, although basic, functioning ray tracers with technologies that are currently in use in the graphics industry. Not only this, but I was also able to learn other technologies to aid in their development, such as Nvidia Nsight, as well as know what to look for when evaluating rendering applications.
+
+This master's degree has a bigger focus on machine learning than computer graphics and during the school year you have to develop several projects in that area. Combining those and my bachelor's thesis in computer science, which also revolved around ML, I have gathered some experience that was useful in comparing that field to computer graphics. I believe there are two key differences:
+
+\begin{itemize}
+  \item[*]{The development time is much longer in this field than in ML. At least for a majority of projects of equivalent scope and level of difficulty in both areas, a project in computer graphics will usually require to build most of the stuff from scratch, and/or work at a much lower level than machine learning. ML, on the other hand, has a much richer ecosystem of libraries, frameworks and pre-trained models that is quite easy to take advantage of. This makes the process of experimentation on something brand new much faster, since you usually just need to cobble some stuff together to get most of what you want running.}
+  \item[*]{The experiment running time is hugely different in both areas. Machine Learning, specially Deep Learning, has reached a point where it requires increasingly larger ammounts of computation to improve it's results, making it's experiments take hours, days or even weeks to run for projects not more ambitious than this. I've seen my fellow students leave experiments running for unfathomable ammounts of time in quite powerful machines, without reaching state of the art results. This pales in comparison to the time it took me to run my benchmark in user-grade systems, taking less than 10 minutes; the only exception to this was the dedicated AS build time experiment, which took a few hours.}
+\end{itemize}
+
+This discrepancy between development and running time could very well compensate itself, making the total ammount of time dedicated to a project in one field or the other pretty much equivalent.
+
+An unrelated note on a completely personal tone: this work has made me realize how behind are the typical development tools in the graphics industry in comparison to others. The most typical development environment for computer graphics, aside from a few exceptions, is Visual Studio running on Windows. Coming from the Unix-based world, these tools seem sluggish, tight and slow in comparison, as well as hard to learn in some cases. And I use Vim.
+
+Finally, being forced to code in Vulkan is something equivalent to using PyTorch for Deep Learning. The low level and explicit approach of these libraries helps you understand in greater detail how some processes work. In the same way that PyTorch makes you understand how a neural network is trained in comparison to running \textit{model.fit} in Keras, configuring every step of the graphics pipeline in Vulkan makes you understand it in greater depth. The same goes for the modern ray tracing pipeline and both libraries I used here, with OptiX having a (relatively) higher level approach, serving as a gentle introduction. In this way it could be considered an equivalent to OpenGL.
 
