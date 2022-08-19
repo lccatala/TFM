@@ -17,3 +17,12 @@ An unrelated note on a completely personal tone: this work has made me realize h
 
 Finally, being forced to code in Vulkan is something equivalent to using PyTorch for Deep Learning. The low level and explicit approach of these libraries helps you understand in greater detail how some processes work. In the same way that PyTorch makes you understand how a neural network is trained in comparison to running \textit{model.fit} in Keras, configuring every step of the graphics pipeline in Vulkan makes you understand it in greater depth. The same goes for the modern ray tracing pipeline and both libraries I used here, with OptiX having a (relatively) higher level approach, serving as a gentle introduction. In this way it could be considered an equivalent to OpenGL.
 
+\section{Future work}
+
+There are a few areas in which this project could be expanded upon. These are:
+
+\begin{itemize}
+  \item[*]{Testing with dynamic geometry. This would allow for a higher number of tests in the Acceleration Structure Build Time part, since the AS needs to be rebuilt when geometry changes.}
+  \item[*]{Advanced Ray Tracing implementations. Due to the short time frame for this work and having to do everything almost from scratch, the ray tracers we used for testing were fairly basic. There are tones of features that could be added to them, like reflections, different types of materials, etc.}
+  \item[*]{Porting to Falcor. Halfway through the development of this project (when most of the code was written), Nvidia released Falcor \cite{Kallweit22}. I believe using this framework would have made it much easier to implement a software that traces rays, in comparison to our approach of doing everything from scratch. Additionally, it would have made it much easier to run and iterate on a larger number of experiments, as well as testing other rendering APIs such as DirectX 12.}
+\end{itemize}
