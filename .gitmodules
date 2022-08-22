@@ -1,0 +1,6 @@
+[submodule "optix"]
+	path = optix
+	url = https://github.com/lccatala/optix-tfm
+[submodule "vulkan-rasterized"]
+	path = vulkan-rasterized
+	url = https://github.com/lccatala/VulkanTesting
