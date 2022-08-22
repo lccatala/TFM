@@ -4,3 +4,6 @@
 [submodule "vulkan-rasterized"]
 	path = vulkan-rasterized
 	url = https://github.com/lccatala/VulkanTesting
+[submodule "vulkan"]
+	path = vulkan
+	url = https://github.com/lccatala/vulkan-tfm
