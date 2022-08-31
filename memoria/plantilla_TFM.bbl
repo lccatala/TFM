@@ -30,6 +30,55 @@ Clarberg, P.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+\APACcitebtitle {File:Ray trace diagram.svg}}{%
+\APACcitebtitle {File:Ray trace diagram.svg}}{%
+{\protect \APACyear {2022}}%
+}]{%
+WikimediaRT}
+\APACinsertmetastar {%
+WikimediaRT}%
+\APACrefbtitle {File:Ray trace diagram.svg.} {File:ray trace diagram.svg.}
+\newblock
+\APACrefYearMonthDay{2022}{August}{}.
+\newblock
+\begin{APACrefURL}
+  \url{https://commons.wikimedia.org/wiki/File:Ray_trace_diagram.svg}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kallweit%
+\ \protect \BOthers {.}}{%
+Kallweit%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2022}}%
+}]{%
+Kallweit22}
+\APACinsertmetastar {%
+Kallweit22}%
+\begin{APACrefauthors}%
+Kallweit, S.%
+, Clarberg, P.%
+, Kolb, C.%
+, Davidovi{\v c}, T.%
+, Yao, K\BHBI H.%
+, Foley, T.%
+\BDBL {}Benty, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{8}{}.
+\newblock
+\APACrefbtitle {The {Falcor} Rendering Framework.} {The {Falcor} rendering
+  framework.}
+\newblock
+\begin{APACrefURL} \url{https://github.com/NVIDIAGameWorks/Falcor}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{\url{https://github.com/NVIDIAGameWorks/Falcor}}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Lefrançois%
 }{%
 Lefrançois%
@@ -121,6 +170,22 @@ Overvoorde, A.%
 \APAChowpublished {\url{https://vulkan-tutorial.com}}.
 \newblock
 \APACrefnote{Accessed: 2022-08-01}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+\APACcitebtitle {Ray Tracing (graphics)}}{%
+\APACcitebtitle {Ray Tracing (graphics)}}{%
+{\protect \APACyear {2022}}%
+}]{%
+WikipediaRT}
+\APACinsertmetastar {%
+WikipediaRT}%
+\APACrefbtitle {Ray Tracing (graphics).} {Ray tracing (graphics).}
+\newblock
+\APACrefYearMonthDay{2022}{August}{}.
+\newblock
+\begin{APACrefURL} \url{https://en.wikipedia.org/wiki/Ray_tracing_(graphics)}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
