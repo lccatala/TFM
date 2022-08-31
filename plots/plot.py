@@ -131,24 +131,24 @@ def plot_compared_raytraced_frametimes():
         vulkan_frametimes = []
         for w, h in resolutions: # TODO
             filename = os.path.join(optix_path, f'optix-{w}x{h}{model}-shadows-frametimes.txt')
-            optix_frametimes.append(read_value(filename))
+            optix_frametimes.append(read_values(filename))
 
             filename = os.path.join(vulkan_path, f'vulkan-{w}x{h}{model}-textures-frametimes.txt')
-            vulkan_frametimes.append(read_value(filename))
+            vulkan_frametimes.append(read_values(filename))
 
         labels = [f'{x[0]}x{x[1]}' for x in resolutions]
         x = np.arange(len(labels))
-        bar_width = 0.35
+        bar_width = 2.0
         fig, ax = plt.subplots()
-        rects2 = ax.bar(x + bar_width/2, vulkan_frametimes, bar_width, label='Vulkan')
-        rects1 = ax.bar(x - bar_width/2, optix_frametimes, bar_width, label='OptiX')
+        rects1 = ax.boxplot(x + bar_width/2, vulkan_frametimes)
+        rects1 = ax.boxplot(x - bar_width/2, optix_frametimes)
 
         ax.set_ylabel('Frame times (microseconds)')
         ax.set_title(f'Frame time for raytraced rendering of {model} model')
         ax.set_xticks(x, labels)
         ax.legend()
-        ax.bar_label(rects1, padding=3)
-        ax.bar_label(rects2, padding=3)
+        # ax.bar_label(rects1, padding=3)
+        # ax.bar_label(rects2, padding=3)
 
         fig.tight_layout()
         plt.savefig(f'{model}-frametimes-comparison.png')
@@ -398,7 +398,7 @@ def plot_2070_super_comparison():
     for model in models:
         frame_time_7.append(np.average(read_values(f'Results-ryzen7-2070super-jesus/vulkan/vulkan-1920x1080{model}-textures-frametimes.txt')))
         frame_time_5.append(np.average(read_values(f'VulkanRaytraced2070super/vulkan-1920x1080{model}-textures-frametimes.txt')))
-    print(frame_time_5)
+    # print(frame_time_5)
     x = np.arange(len(models))
     bar_width = 0.35
     fig, ax = plt.subplots()
@@ -504,7 +504,7 @@ def plot_baremetal_virtualized_comparison():
     for model in models:
         frame_time_7.append(np.average(read_values(f'Results-ryzen7-2070super-jesus/vulkan/vulkan-1920x1080{model}-textures-frametimes.txt')))
         frame_time_5.append(np.average(read_values(f'VulkanRaytraced2070super/vulkan-1920x1080{model}-textures-frametimes.txt')))
-    print(frame_time_5)
+    # print(frame_time_5)
     x = np.arange(len(models))
     bar_width = 0.35
     fig, ax = plt.subplots()
@@ -521,17 +521,17 @@ def plot_baremetal_virtualized_comparison():
     fig.tight_layout()
     plt.savefig('vulkan-frametimes-baremetal-virtualized-comparison.png')
 if __name__ == '__main__':
-    # plot_rasterized()
-    # plot_raytraced(include_first=False)
-    # plot_raytraced(include_first=True)
-    # plot_compared_memory_usages()
-    # plot_decomposed_build_times()
-    # plot_extra_decomposed_build_times()
-    # plot_extra_scenes_geometry()
-    # plot_compared_frame_times()
-    # plot_compared_raytraced_memory_usages()
-    # plot_compared_raytraced_frametimes()
-    # plot_compared_raytraced_as_build_times_geometry()
-    # plot_scenes_geometry()
-    # plot_2070_super_comparison()
+    plot_rasterized()
+    plot_raytraced(include_first=False)
+    plot_raytraced(include_first=True)
+    plot_compared_memory_usages()
+    plot_decomposed_build_times()
+    plot_extra_decomposed_build_times()
+    plot_extra_scenes_geometry()
+    plot_compared_frame_times()
+    plot_compared_raytraced_memory_usages()
+    plot_compared_raytraced_frametimes()
+    plot_compared_raytraced_as_build_times_geometry()
+    #plot_scenes_geometry()
+    plot_2070_super_comparison()
     plot_baremetal_virtualized_comparison()
