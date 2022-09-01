@@ -121,6 +121,22 @@ Lefrançois, M\BHBI K.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+\APACcitebtitle {Mantle, Wikipedia}}{%
+\APACcitebtitle {Mantle, Wikipedia}}{%
+{\protect \APACyear {2022}}%
+}]{%
+Mantle}
+\APACinsertmetastar {%
+Mantle}%
+\APACrefbtitle {Mantle, Wikipedia.} {Mantle, wikipedia.}
+\newblock
+\APACrefYearMonthDay{2022}{September}{}.
+\newblock
+\begin{APACrefURL} \url{https://en.wikipedia.org/wiki/Mantle_(API)}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 McGuire%
 }{%
 McGuire%

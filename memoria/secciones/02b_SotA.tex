@@ -119,3 +119,47 @@ If we consider $P_{ij} = E + \overrightarrow{p}_{ij}$ and the ray $\overrightarr
 
 % Introduce Vulkan and OptiX: main features, current real world usage, API organization, etc.
 \section{Ray Tracing Technologies}
+As previously said, though the ray tracing technique has existed for several decades now, it is only in recent years that GPU acceleration has made it usable for real time applications. This acceleration comes from one of several libraries or rendering APIs that offer the programmer a quick and easy way to interact with the graphics card.
+
+It's also worth mentioning that we could technically develop a GPU-accelerated ray tracer with any rendering library from the last two decades, since anything that gives us control over the GPU could be used for parallelizing the required operations and give us a considerable speed increase. An example of this would be the Compute Shaders in OpenGL, which could process an image that we could then draw to a texture in screen made of two triangles. However, we will only be looking at libraries that include functionality exclusively dedicated to ray tracing.
+
+Some of these libraries have legacies that extend to the era of rasterized-only graphics, while others were made from the ground up just for ray tracing. At the same time, each of them was designed with a specific use case in mind, be it real time graphics or achieving a higher image fidelity. We will now be looking at what we considered the most prominent library for each use case,
+
+\subsection{Vulkan}
+First announced by the Khronos Group at GDC 2015 as the "next generation OpenGL", Vulkan is intended to be used in high-performance real-time 3D graphics for interactive applications such as videogames. It offers higher performance and lower level control than popular graphics APIs at the time such as OpenGL or DirectX 11.
+
+It is intended to provide a series of advantages over it's predecessor, OpenGL, as well as other APIs. Mainly, Vulkan offers lower overhead, more direct control over the GPU and lower CPU usage. It was originally developed from AMD's Mantle \cite{Mantle}, taking many features and concepts from it. These were later adopted by other APIs, such as DirectX12 and Metal.
+
+Some of it's advantages compared to other APIs at the time were:
+\begin{itemize}
+  \item[*]{Provides a unified API for desktop and mobile devices, in contrast with OpenGL, which had two different APIs for each (OpenGL and OpenGL ES).}
+  \item[*]{Vulkan is multiplatform and available in multiple modern operating systems, not being locked to any operating system or device form factor. In this sense it's more similar to OpenGL than to DirectX 12. It currently runs on Android, Linux, BSD Unix, QNX, Nintendo Switch, Raspberry Pi, Stadia, Fuchsia, Tizen, Windows 7, 8, 10 and 11, iOS, tvOS and macOS. It is worth noting that the Apple platforms require the usage of MoltenVK, a library that converts Vulkan code to Metal.}
+  \item[*]{Lower CPU usage through the use of low level optimizations such as batching operations together. This leaves the CPU free for longer periods of time, allowing it to do more work in the meantime.}
+  \item[*]{Multi-threading friendly design, in contrast with OpenGL 4 and DirectX 11. These were developed with single-core CPUs in mind and had to be expanded later on to be executable in multiple cores. Thanks to this, Vulkan offers better scalability on multi-core CPUs.}
+  \item[*]{Pre-compiled shaders. Shaders are programs executed in the GPU, and as such they need to be compiled. The prevalent method for doing this was that each rendering API supported a specific language (OpenGL with GLSL, DirectX with HLSL, etc.) and came with it's own compiler for it. This compiler was executed at application runtime to translate from a shading language into machine code readable by the GPU. In contrast, the Vulkan driver expects code already compiled into an intermediate language known as SPIR-V (Standard Portable Intermediate Representation). This pre-compilation reduces the application's initialization time and allows for a larger variety of shaders to be used per scene. Now the driver only needs to optimize the intermediate code, and developers have an easier way of obfuscating propietary shaders, since this is no longer stored as souce code.}
+  \item[*]{Vulkan employs an extension system in which the programmer must explicitly ask for the functionality they require, therefore reducing unnecesary overhead and code size. It is through this system that it provides ray tracing support, by means of the \textit{VK\_KHR\_ray\_tracing} extension.}
+\end{itemize}
+
+Due to it's low overhead and customization capabilities Vulkan is widely used in the videogame industry. We see almost every major game engine (Unity, Unreal Engine, CryEngine, Frostbite, Godot, etc.).
+
+\subsection{OptiX}
+Released in 2009 as part of Nvidia GameWorks, OptiX is a ray tracing API that offloads computations to the GPU through CUDA. This means it's only available for Nvidia's graphics products. While in previous versions it was considered a high level API, since version 7 it has become much lower level, giving an extensive control to the programmer on how memory and processes are managed. Despite of this, it's still at a higher level than most other rendering APIs, being designed to encapsulate the entire algorithm of which ray tracing is a part, not just the ray tracing itself. This allows for the engine to execute the broader algorithm with greater flexibility and without changes on the application side. Aside from rendering, OptiX is also used in areas where the tracing of rays or GPU acceleration is useful. This includes optical and accoustic design, radiation and electromagnetic research, artificial intelligence queries and collision analysis.
+
+OptiX works using CUDA kernels, instructions supplied by the user, that indicate how a ray should behave in a specific situation to simulate a complete tracing process. A ray might have different behaviours when hitting different surfaces. OptiX allows us to customize these behaviours with kernels, written in CUDA's own flavour of C or PTX code, that are linked together when used by the engine.
+
+The usage of an OptiX ray tracer usually involes the following steps:
+\begin{enumerate}
+  \item Define programs for:
+  \begin{itemize}
+    \item[*]{Ray Generation. Wether rays can be shot in paralell, in a perspective fashion, like a gradient field, etc.}
+    \item[*]{Ray Missing. What to do when a ray doesn't interact with any object.}
+    \item[*]{(Optional) Exception Program. What to do when a ray cannot be shot for some reason.}
+    \item[*]{Bounding Box. This provides a bounding box intersection test for a given object.}
+    \item[*]{Intersection Program. How a ray behaves when intersecting with geometry.}
+  \end{itemize}
+  \item Define material programs for \textit{anyhit} and \textit{closesthit}. These determine the ray behaviour upon it's first intersection (closest hit) or subsequent intersections (any hit).
+  \item Define buffers. These are memory regions that allow the host and device (CPU and GPU) codes to communicate.
+  \item Define scene geometry hierarchy. This generates a tree graph of the scene to be rendered, including objects, groups and selectors among others.
+\end{enumerate}
+
+OptiX is also capable of scaling transparently across multiple GPUs. This feature, along with it's higher overhead compared to Vulkan, make it so it's more used for higher image fidelity applications than the Khronos library. If we look at the list of companies that employ it, we find names like Autodesk, Pixar or Redshift.
