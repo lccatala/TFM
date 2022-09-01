@@ -9,6 +9,14 @@ The field of computer graphics seeks to generate images with the aid of computer
 \subsection{Rasterization}
 Rasterization is the process of taking an image described as vector graphics and converting it into a series of pixels which, when displayed together, recreate the image that was represented with vector shapes. This image can then be displayed in a monitor, stored as a bit map and so on.
 
+In figure \ref{rasterization-triangle-image}, from \cite{ScratchPixel} we see the principle of this process. After transforming the geometry (in this case a triangle) to screen space, we check if each pixel in the image overlaps said geometry.
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figuras/rasterization-triangle1.png}
+    \caption{}
+    \label{rasterization-triangle-image}
+\end{figure}
 When compared to other techniques for rendering 3D models, such as ray tracing, rasterization is extremely fast. This gives it a prevalent usage in real time 3D engines. We must take into account that the process of rasterization is only responsible for mapping the scene geometry to pixels, and does not compute the color of such pixels. This color is assigned by a Pixel (or Fragment) Shader, which is completely programmable in modern GPUs. This shader may take into account physical processes like light position, or a purely artistic approach. There is no motivation in modifying the rasterization techniques at render time. Therefore, the rest of the process of rasterizing a 3D model into screen space (a 2D plane for displaying said graphics) is often performed by non-programmable hardware with a fixed function within the graphics pipeline. This method allows for high efficiency.
 
 \subsection{Ray Tracing}

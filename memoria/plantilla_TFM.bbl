@@ -1,6 +1,23 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+\APACcitebtitle {3D Basic Rendering}}{%
+\APACcitebtitle {3D Basic Rendering}}{%
+{\protect \APACyear {2022}}%
+}]{%
+ScratchPixel}
+\APACinsertmetastar {%
+ScratchPixel}%
+\APACrefbtitle {3D Basic Rendering.} {3d basic rendering.}
+\newblock
+\APACrefYearMonthDay{2022}{September}{}.
+\newblock
+\begin{APACrefURL}
+  \url{https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation/rasterization-stage}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Clarberg%
 \ \protect \BOthers {.}}{%
 Clarberg%
