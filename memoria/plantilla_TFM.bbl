@@ -248,6 +248,29 @@ Sawichi, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Wald%
+}{%
+Wald%
+}{%
+{\protect \APACyear {2022}}%
+}]{%
+OptixCourse}
+\APACinsertmetastar {%
+OptixCourse}%
+\begin{APACrefauthors}%
+Wald, I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{September}{}.
+\newblock
+\APACrefbtitle {optix7course.} {optix7course.}
+\newblock
+\begin{APACrefURL} \url{https://github.com/ingowald/optix7course}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 White%
 \ \protect \BOthers {.}}{%
 White%

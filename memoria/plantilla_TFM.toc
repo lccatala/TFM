@@ -16,21 +16,21 @@
 \contentsline {subsection}{\numberline {4.1.1}Rasterized}{17}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Ray Traced}{17}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}OptiX Ray Tracer}{17}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Development}{19}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Implementation}{20}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}OptiX Renderer}{20}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Vulkan Renderer}{21}{subsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.2.1}Rasterized}{21}{subsubsection.5.1.2.1}%
-\contentsline {subsubsection}{\numberline {5.1.2.2}Ray Traced}{21}{subsubsection.5.1.2.2}%
-\contentsline {subsection}{\numberline {5.1.3}Automation and Plotting}{24}{subsection.5.1.3}%
-\contentsline {chapter}{\numberline {6}Results}{25}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Rasterization Baseline}{25}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Memory Usage}{28}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Acceleration Structure Build Time}{29}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Frame Time}{33}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Hardware comparison}{36}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Same GPU, changing CPU}{36}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Virtualization effects}{38}{subsection.6.5.2}%
-\contentsline {chapter}{\numberline {7}Conclussions}{41}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Future work}{42}{section.7.1}%
-\contentsline {section}{Referencias}{43}{section*.5}%
+\contentsline {chapter}{\numberline {5}Development}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Implementation}{22}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}OptiX Renderer}{22}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Vulkan Renderer}{23}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}Rasterized}{23}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}Ray Traced}{23}{subsubsection.5.1.2.2}%
+\contentsline {subsection}{\numberline {5.1.3}Automation and Plotting}{26}{subsection.5.1.3}%
+\contentsline {chapter}{\numberline {6}Results}{27}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Rasterization Baseline}{27}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Memory Usage}{30}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Acceleration Structure Build Time}{31}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Frame Time}{35}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Hardware comparison}{38}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Same GPU, changing CPU}{38}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Virtualization effects}{40}{subsection.6.5.2}%
+\contentsline {chapter}{\numberline {7}Conclussions}{43}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Future work}{44}{section.7.1}%
+\contentsline {section}{Referencias}{45}{section*.5}%
