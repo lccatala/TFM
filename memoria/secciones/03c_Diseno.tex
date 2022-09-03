@@ -22,6 +22,7 @@ For the ray traced version of the Vulkan renderer we refactored and simplified m
   \label{vulkan-rt-uml}
 \end{figure}
 
+\clearpage
 \section{OptiX Ray Tracer}
 For this ray tracer we further encapsulated different functionalities to improve code reusability. This meant increasing the complexity of the class hierarchy. The full diagram can be seen in figure \ref{optix-uml}. 
 
@@ -32,5 +33,21 @@ Here we see a central Renderer class thaat serves much as the Application class 
   \includegraphics[width=\textwidth]{figuras/optix-uml.png}
   \caption{UML class diagram for the OptiX ray tracer.}
   \label{optix-uml}
+\end{figure}
 
+\clearpage
+\section{Flow charts}
+All the renderers follow the same high level flow. They all start by an initialization process, which we see in detail in figure \ref{init-flowchart}. In this they: 
+\begin{enumerate}
+
+\item Read desired window width and height, and model path desired to render, from command line arguments. A couple of fail-safes were placed to have default values for these parameters, in case none were provided. These were added to ease the development process, allowing us to run our software from the development enviroment. 
+\item Initialize the windowing and input systems are initialized. Despite some low-level differences these all depend on GLFW, so the process is exactly the same for all renderers.
+\item Initialize the renderer itself. This process is highly dependent on each API, but it's mostly sequential, checking the hardware we are running it in is supported and filling data structures. This is specified in detail in the Development chapter.
+\item Finally, we get to the main loop, which we'll explain in detail next. After exiting this loop, the program ends.
+\end{enumerate}
+\begin{figure}[hbt!]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figuras/init-flowchart.png}
+  \caption{UML flow chart.}
+  \label{init-flowchart}
 \end{figure}
