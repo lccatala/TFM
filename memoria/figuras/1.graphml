@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <!--Created by yEd 3.22-->
+  <key attr.name="Description" attr.type="string" for="graph" id="d0"/>
+  <key for="port" id="d1" yfiles.type="portgraphics"/>
+  <key for="port" id="d2" yfiles.type="portgeometry"/>
+  <key for="port" id="d3" yfiles.type="portuserdata"/>
+  <key attr.name="url" attr.type="string" for="node" id="d4"/>
+  <key attr.name="description" attr.type="string" for="node" id="d5"/>
+  <key for="node" id="d6" yfiles.type="nodegraphics"/>
+  <key for="graphml" id="d7" yfiles.type="resources"/>
+  <key attr.name="url" attr.type="string" for="edge" id="d8"/>
+  <key attr.name="description" attr.type="string" for="edge" id="d9"/>
+  <key for="edge" id="d10" yfiles.type="edgegraphics"/>
+  <graph edgedefault="directed" id="G">
+    <data key="d0"/>
+    <node id="n0">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d5"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="1716.3333333333333" width="1659.3333333333335" x="659.49609375" y="0.0"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="80.15283203125" x="789.5902506510417" xml:space="preserve" y="3.0">Application<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel xml:space="preserve">- m_MaxFramesInFlight: const uint32_t
+-  m_CurrentFrame: uint32_t
+- m_Window: GLFWwindow*
+- m_WindowWidth: const uint32_t
+- m_WindowHeight: const uint32_t
+- m_VkInstance: VkInstance
+- validationLayers: const std::vector&lt;const char*&gt;
+- m_EnableValidationLayers: const bool
+- m_PhysicalDevice: VkPhysicalDevice
+- m_Device: VkDevice
+- m_GraphicsQueue: VkQueue
+- m_WindowSurface: VkSurfaceKHR
+- m_PresentQueue: VkQueue
+- m_DeviceExtensions: const std::vector&lt;const char*&gt;
+- m_Swapchain: VkSwapchainKHR
+- m_SwapchainImages: std::vector&lt;VkImage&gt;
+- m_SwapchainImageViews: std::vector&lt;VkImageView&gt;
+- m_SwapchainImageFormat: VkFormat
+- m_SwapchainExtent: VkExtent2D
+- m_SwapchainFramebuffers: std::vector&lt;VkFramebuffer&gt;
+- m_RenderPass: VkRenderPass
+- m_DescriptorSetLayout: VkDescriptorSetLayout
+- m_PipelineLayout: VkPipelineLayout
+- m_GraphicsPipeline: VkPipeline
+- m_CommandPool: VkCommandPool
+- m_CommandBuffers: std::vector&lt;VkCommandBuffer&gt;
+- m_ImageAvailableSemaphores, m_RenderFinishedSemaphores: std::vector&lt;VkSemaphore&gt;
+- m_InFlightFences: std::vector&lt;VkFence&gt;
+- m_FramebufferResized: bool
+- m_UniformBuffers: std::vector&lt;VkBuffer&gt;
+- m_UniformBufferMemories: std::vector&lt;VkDeviceMemory&gt;
+- m_DescriptorPool: VkDescriptorPool
+- m_DescriptorSets: std::vector&lt;VkDescriptorSet&gt;
+- m_MipLevels: uint32_t
+- m_TextureImage: VkImage
+- m_TextureImageMemory: VkDeviceMemory
+- m_TextureImageView: VkImageView
+- m_TextureSampler: VkSampler
+- m_DepthImage: VkImage
+- m_DepthImageMemory: VkDeviceMemory
+- m_DepthImageView: VkImageView
+- m_ModelPath: const std::string
+- m_TexturePath: const std::string
+- m_Indices: std::vector&lt;uint32_t&gt;
+- m_VertexBuffer: VkBuffer
+- m_VertexBufferMemory: VkDeviceMemory
+- m_IndexBuffer: VkBuffer
+- m_IndexBufferMemory: VkDeviceMemory
+- m_MsaaSamples: VkSampleCountFlagBits
+- m_ColorImage: VkImage
+- m_ColorImageMemory: VkDeviceMemory
+- m_ColorImageView: VkImageView
+- m_InstanceExtensions: const std::vector&lt;const char*&gt;
+- m_ObjModel: std::vector&lt;ObjModel&gt; </y:AttributeLabel>
+            <y:MethodLabel xml:space="preserve">+ Run(): void
+
+- InitWindow(): void
+- InitVulkan(): void
+- GetBufferDeviceAddress(buffer: VkBuffer): VkDeviceAddress
+- CreateInstance(): void
+- CheckValidationLayerSupport(): bool
+- PickPhysicalDevice(): void 
+- IsDeviceSuitable(device: VkPhysicalDevice): bool
+- FindQueueFamilies(device: VkPhysicalDevice): QueueFamilyIndices  
+- CheckDeviceExtensionSupport(device: VkPhysicalDevice): bool
+- CreateLogicalDevice(): void
+- CreateSurface(): void
+- CreateSwapchain(): void
+- CreateImageViews() void
+- QuerySwapchainSupport(device: VkPhysicalDevice): SwapchainSupportDetails
+- ChooseSwapSurfaceFormat(availableFormats: const std::vector&lt;VkSurfaceFormatKHR&gt;&amp;): VkSurfaceFormatKHR
+	VkPresentModeKHR ChooseSwapPresentMode(const std::vector&lt;VkPresentModeKHR&gt;&amp; availablePresentModes);
+- ChooseSwapExtent(capabilities: const VkSurfaceCapabilitiesKHR&amp;): VkExtent2D
+- CreateRenderPass(): void
+- CreateDescriptorSetLayout(): void
+- CreateGraphicsPipeline(): void
+- ReadFile(filename: const std::string&amp;): std::vector&lt;char&gt;
+- CreateShaderModule(code: const std::vector&lt;char&gt;&amp;): VkShaderModule
+- CreateFramebuffers(): void
+- CreateCommandPool(): void
+- CreateCommandBuffers(): void
+- RecordCommandBuffer(commandBuffer: VkCommandBuffer, index: uint32_t): void
+- CreateSyncObjects(): void
+- CreateVertexBuffer(): void
+- CreateBuffer(size: VkDeviceSize, usage: VkBufferUsageFlags, properties: VkMemoryPropertyFlags, buffer: VkBuffer&amp;, deviceMemory: VkDeviceMemory&amp;): void
+- CreateIndexBuffer(): void
+- CopyBuffer(srcBuffer: VkBuffer, dstBuffer: VkBuffer, size: VkDeviceSize): void
+- FindMemoryType(typeFilter: uint32_t, properties: VkMemoryPropertyFlags): uint32_t
+- CreateUniformBuffers(): void
+- CreateDescriptorPool() void
+- CreateDescriptorSets() void
+- UpdateUniformBuffer(currentImage: uint32_t): void
+- CreateTextureImage(): void
+- CreateTextureImageView(): void
+- CreateImageView(image: VkImage, format: VkFormat, aspectFlags: VkImageAspectFlags, mipLevels: uint32_t): VkImageView
+- CreateImage(width: uint32_t,  height: uint32_t,  mipLevels: uint32_t, numSamples: VkSampleCountFlagBits, format: VkFormat, tiling: VkImageTiling, usage: VkImageUsageFlags, properties: VkMemoryPropertyFlags, image: VkImage&amp;,  imageMemory: VkDeviceMemory&amp;): void
+- BeginSingleTimeCommands(): VkCommandBuffer
+- EndSingleTimeCommands(commandBuffer: VkCommandBuffer): void
+- TransitionImageLayout(image: VkImage, format: VkFormat, oldLayout: VkImageLayout, newLayout: VkImageLayout, mipLevels: uint32_t): void
+- CopyBufferToImage(buffer: VkBuffer, image: VkImage, width: uint32_t, height: uint32_t): void
+- CreateTextureSampler(): void
+- CreateDepthResources(): void
+- CreateColorResources() void
+- FindDepthFormat(): VkFormat
+-  FindSupportedFormat(candidates: const std::vector&lt;VkFormat&gt;&amp;, tiling: VkImageTiling, features: VkFormatFeatureFlags): VkFormat
+- HasStencilComponent(format: VkFormat): bool
+- LoadModel(): void
+- GenerateMipmaps(image: VkImage, imageFormat: VkFormat, texWidth: int32_t, texHeight: int32_t, mipLevels: uint32_t): void
+- GetMaxUsableSampleCount(): VkSampleCountFlagBits
+- MainLoop(): void
+- DrawFrame(): void
+- RecreateSwapchain(): void
+- FramebufferResizeCallback(window: GLFWwindow*, width: int, height: int): void
+- CleanupSwapchain(): void
+- Cleanup(): void
+
+</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n1">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d5"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="88.9375" width="257.81249999999994" x="390.0" y="1762.0"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="143.0263671875" x="57.39306640624997" xml:space="preserve" y="3.0">UniformBufferObject<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel xml:space="preserve">+ Model: glm::mat4
++ View: glm::mat4
++ Projection: glm::mat4</y:AttributeLabel>
+            <y:MethodLabel xml:space="preserve"/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d5"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="131.125" width="495.31250000000006" x="0.0" y="363.5208333333333"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="47.1767578125" x="224.06787109375003" xml:space="preserve" y="3.0">Vertex<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel xml:space="preserve">+ Position: glm::vec3
++ Color: glm::vec3
++ TextureCoordinates: glm::vec2</y:AttributeLabel>
+            <y:MethodLabel xml:space="preserve">+ GetBindingDescription(): VkVertexInputBindingDescription
++ GetAttributeDescriptions(): std::array&lt;VkVertexInputAttributeDescription, 3&gt;
++ operator==(other: const Vertex&amp;): bool</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d5"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="88.9375" width="289.06249999999994" x="103.125" y="1242.78125"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="138.341796875" x="75.36035156249997" xml:space="preserve" y="3.0">QueueFamilyIndices<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel xml:space="preserve">+ GraphicsFamily: std::optional&lt;uint32_t&gt;
++ PresentFamily: std::optional&lt;uint32_t&gt;
+</y:AttributeLabel>
+            <y:MethodLabel xml:space="preserve">+ IsComplete(): bool</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n4">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d5"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="88.9375" width="343.75" x="0.0" y="1762.0"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="174.0791015625" x="84.83544921875" xml:space="preserve" y="3.0">SwapchainSupportDetails<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel xml:space="preserve">+ Capabilities: VkSurfaceCapabilitiesKHR
++ Formats: std::vector&lt;VkSurfaceFormatKHR&gt;
++ PresentModes: std::vector&lt;VkPresentModeKHR&gt; </y:AttributeLabel>
+            <y:MethodLabel xml:space="preserve"/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <edge id="e0" source="n0" target="n2">
+      <data key="d8" xml:space="preserve"/>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-829.6666666666667" sy="-429.08333333333337" tx="247.65625" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="diamond" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="67.55078125" x="-120.82708740234375" xml:space="preserve" y="-9.06641642252606">m_Vertices<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="10.0" distanceToCenter="false" position="center" ratio="0.5577148525565876" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e1" source="n0" target="n3">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-829.6666666666667" sy="429.08333333333337" tx="144.53125" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="diamond" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="134.18359375" x="-154.15093994140625" xml:space="preserve" y="-9.06640625">m_QueryFamilyIndices<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="10.0" distanceToCenter="false" position="center" ratio="0.1218274111675127" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+  </graph>
+  <data key="d7">
+    <y:Resources/>
+  </data>
+</graphml>

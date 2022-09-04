@@ -93,83 +93,87 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces UML class diagram for the OptiX ray tracer.}}{21}{figure.4.3}\protected@file@percent }
 \newlabel{optix-uml}{{4.3}{21}{UML class diagram for the OptiX ray tracer}{figure.4.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}Flow charts}{22}{section.4.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces UML flow chart.}}{23}{figure.4.4}\protected@file@percent }
-\newlabel{init-flowchart}{{4.4}{23}{UML flow chart}{figure.4.4}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Development}{25}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Initialization}{22}{subsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Main loop}{22}{subsection.4.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Renderer initialization process flow chart.}}{24}{figure.4.4}\protected@file@percent }
+\newlabel{init-flowchart}{{4.4}{24}{Renderer initialization process flow chart}{figure.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Renderer main loop flow chart.}}{25}{figure.4.5}\protected@file@percent }
+\newlabel{main-loop-flowchart}{{4.5}{25}{Renderer main loop flow chart}{figure.4.5}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Development}{27}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Implementation}{26}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}OptiX Renderer}{26}{subsection.5.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Implementation}{28}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}OptiX Renderer}{28}{subsection.5.1.1}\protected@file@percent }
 \citation{VulkanTutorial}
 \citation{DXGI}
 \citation{GpuMemUsageVulkan}
 \citation{VulkanRaytracingTutorial}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Vulkan Renderer}{27}{subsection.5.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2.1}Rasterized}{27}{subsubsection.5.1.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2.2}Ray Traced}{27}{subsubsection.5.1.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Vulkan Renderer}{29}{subsection.5.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2.1}Rasterized}{29}{subsubsection.5.1.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2.2}Ray Traced}{29}{subsubsection.5.1.2.2}\protected@file@percent }
 \citation{Nvpro}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Automation and Plotting}{30}{subsection.5.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Automation and Plotting}{32}{subsection.5.1.3}\protected@file@percent }
 \citation{VulkanTutorial}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Results}{31}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Results}{33}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Rasterization Baseline}{31}{section.6.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces GPU memory consumption when rendering the Viking Room 3D model at a range of reasonable resolutions, using ray traced and traditionally rasterized graphics. We can see a significant difference between the two, as well as an expected increase as resolutions get higher.}}{32}{figure.6.1}\protected@file@percent }
-\newlabel{memory-usage-comparison-graph}{{6.1}{32}{GPU memory consumption when rendering the Viking Room 3D model at a range of reasonable resolutions, using ray traced and traditionally rasterized graphics. We can see a significant difference between the two, as well as an expected increase as resolutions get higher}{figure.6.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Single frame rendering time when drawing the Viking Room 3D model at a range of reasonable resolution, using ray traced and traditionally rasterized graphics. As with the memory consumption graph, we see how the two of them take longer to finish in higher resolutions, while the rasterized renderer greatly outperforms the ray traced one.}}{33}{figure.6.2}\protected@file@percent }
-\newlabel{frametimes-comparison-graph}{{6.2}{33}{Single frame rendering time when drawing the Viking Room 3D model at a range of reasonable resolution, using ray traced and traditionally rasterized graphics. As with the memory consumption graph, we see how the two of them take longer to finish in higher resolutions, while the rasterized renderer greatly outperforms the ray traced one}{figure.6.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Memory consumption of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball.}}{34}{figure.6.3}\protected@file@percent }
-\newlabel{memory-usage-raytraced-comparison-graph}{{6.3}{34}{Memory consumption of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball}{figure.6.3}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {BMW}}}{34}{subfigure.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Sponza}}}{34}{subfigure.3.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Hairball}}}{34}{subfigure.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Memory Usage}{34}{section.6.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Acceleration Structure Build Time of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball. Sorted by rendering resolution.}}{35}{figure.6.4}\protected@file@percent }
-\newlabel{as-build-time-comparison-graph}{{6.4}{35}{Acceleration Structure Build Time of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball. Sorted by rendering resolution}{figure.6.4}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {BMW}}}{35}{subfigure.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Sponza}}}{35}{subfigure.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Hairball}}}{35}{subfigure.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Acceleration Structure Build Time}{35}{section.6.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Acceleration Structure Build Time of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball. Sorted by model.}}{36}{figure.6.5}\protected@file@percent }
-\newlabel{as-build-time-geometry-comparison-graph}{{6.5}{36}{Acceleration Structure Build Time of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball. Sorted by model}{figure.6.5}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {1280x720}}}{36}{subfigure.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {1920x1080}}}{36}{subfigure.5.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {2560x1440}}}{36}{subfigure.5.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {3840x2160}}}{36}{subfigure.5.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Acceleration Structure Build Times for each model, divided between the TLAS and BLAS phases. We see great discrepancies in the distribution of time in each case.}}{37}{figure.6.6}\protected@file@percent }
-\newlabel{as-build-time-decomposed}{{6.6}{37}{Acceleration Structure Build Times for each model, divided between the TLAS and BLAS phases. We see great discrepancies in the distribution of time in each case}{figure.6.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Acceleration Structure Build Times divided between the TLAS and BLAS phases for the extra set of models (Human, ISCV2 and Gallery). We see how the presence of textures makes for a longer TLAS build time.}}{38}{figure.6.7}\protected@file@percent }
-\newlabel{as-extra-build-time-decomposed}{{6.7}{38}{Acceleration Structure Build Times divided between the TLAS and BLAS phases for the extra set of models (Human, ISCV2 and Gallery). We see how the presence of textures makes for a longer TLAS build time}{figure.6.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Frame Time}{39}{section.6.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We see how the first frame takes much longer than the rest of them to draw.}}{39}{figure.6.8}\protected@file@percent }
-\newlabel{frametimes-outlier-graph}{{6.8}{39}{Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We see how the first frame takes much longer than the rest of them to draw}{figure.6.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We have removed the first frame time since it took too long to draw in comparison with the rest.}}{40}{figure.6.9}\protected@file@percent }
-\newlabel{frametimes-no-outlier-graph}{{6.9}{40}{Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We have removed the first frame time since it took too long to draw in comparison with the rest}{figure.6.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Frame rendering times for each 3D model (BMW, Hairball and Sponza) across both libraries and 4 reasonable resolutions, from 720p to 4k.}}{41}{figure.6.10}\protected@file@percent }
-\newlabel{frametimes-overview-graph}{{6.10}{41}{Frame rendering times for each 3D model (BMW, Hairball and Sponza) across both libraries and 4 reasonable resolutions, from 720p to 4k}{figure.6.10}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {BMW}}}{41}{subfigure.10.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Sponza}}}{41}{subfigure.10.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Hairball}}}{41}{subfigure.10.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Acceleration Structure Build Time and Frame Render Time comparison in OptiX when using an Nvidia 2070 Super in two systems with different CPUs. We see how a faster CPU means better performance in both cases.}}{42}{figure.6.11}\protected@file@percent }
-\newlabel{optix-2070-super-comparison}{{6.11}{42}{Acceleration Structure Build Time and Frame Render Time comparison in OptiX when using an Nvidia 2070 Super in two systems with different CPUs. We see how a faster CPU means better performance in both cases}{figure.6.11}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Acceleration Structure Build Time}}}{42}{subfigure.11.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Frame Times}}}{42}{subfigure.11.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Hardware comparison}{42}{section.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}Same GPU, changing CPU}{42}{subsection.6.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Acceleration Structure Build Time and Frame Render Time comparison in Vulkan when using an Nvidia 2070 Super in two systems with different CPUs. We see more variation in which system does better, in contrast with the previous OptiX test.}}{43}{figure.6.12}\protected@file@percent }
-\newlabel{vulkan-2070-super-comparison}{{6.12}{43}{Acceleration Structure Build Time and Frame Render Time comparison in Vulkan when using an Nvidia 2070 Super in two systems with different CPUs. We see more variation in which system does better, in contrast with the previous OptiX test}{figure.6.12}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Acceleration Structure Build Time}}}{43}{subfigure.12.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Frame Times}}}{43}{subfigure.12.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}Virtualization effects}{44}{subsection.6.5.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Acceleration Structure Build Times for Vulkan in a Virtual Machine and running bare metal. We see how the bare metal solution manages to get a significantly lower time than the virtualized one.}}{45}{figure.6.13}\protected@file@percent }
-\newlabel{vulkan-accelbuildtime-bm-vm-comparison}{{6.13}{45}{Acceleration Structure Build Times for Vulkan in a Virtual Machine and running bare metal. We see how the bare metal solution manages to get a significantly lower time than the virtualized one}{figure.6.13}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Frame render times in Vulkan across two machines with the same GPU (Nvidia 3080). One of them is running the renderer under a virtual machine and the other is doing so bare metal. We see a slight advantage towards the virtualized approach in this side, which could be due to a mere coincidence. This would make the GPU the only important element when drawing a given scene.}}{46}{figure.6.14}\protected@file@percent }
-\newlabel{vulkan-frame-times-bm-vm-comparison}{{6.14}{46}{Frame render times in Vulkan across two machines with the same GPU (Nvidia 3080). One of them is running the renderer under a virtual machine and the other is doing so bare metal. We see a slight advantage towards the virtualized approach in this side, which could be due to a mere coincidence. This would make the GPU the only important element when drawing a given scene}{figure.6.14}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclussions}{47}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Rasterization Baseline}{33}{section.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces GPU memory consumption when rendering the Viking Room 3D model at a range of reasonable resolutions, using ray traced and traditionally rasterized graphics. We can see a significant difference between the two, as well as an expected increase as resolutions get higher.}}{34}{figure.6.1}\protected@file@percent }
+\newlabel{memory-usage-comparison-graph}{{6.1}{34}{GPU memory consumption when rendering the Viking Room 3D model at a range of reasonable resolutions, using ray traced and traditionally rasterized graphics. We can see a significant difference between the two, as well as an expected increase as resolutions get higher}{figure.6.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Single frame rendering time when drawing the Viking Room 3D model at a range of reasonable resolution, using ray traced and traditionally rasterized graphics. As with the memory consumption graph, we see how the two of them take longer to finish in higher resolutions, while the rasterized renderer greatly outperforms the ray traced one.}}{35}{figure.6.2}\protected@file@percent }
+\newlabel{frametimes-comparison-graph}{{6.2}{35}{Single frame rendering time when drawing the Viking Room 3D model at a range of reasonable resolution, using ray traced and traditionally rasterized graphics. As with the memory consumption graph, we see how the two of them take longer to finish in higher resolutions, while the rasterized renderer greatly outperforms the ray traced one}{figure.6.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Memory consumption of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball.}}{36}{figure.6.3}\protected@file@percent }
+\newlabel{memory-usage-raytraced-comparison-graph}{{6.3}{36}{Memory consumption of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball}{figure.6.3}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {BMW}}}{36}{subfigure.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Sponza}}}{36}{subfigure.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Hairball}}}{36}{subfigure.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Memory Usage}{36}{section.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Acceleration Structure Build Time of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball. Sorted by rendering resolution.}}{37}{figure.6.4}\protected@file@percent }
+\newlabel{as-build-time-comparison-graph}{{6.4}{37}{Acceleration Structure Build Time of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball. Sorted by rendering resolution}{figure.6.4}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {BMW}}}{37}{subfigure.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Sponza}}}{37}{subfigure.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Hairball}}}{37}{subfigure.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Acceleration Structure Build Time}{37}{section.6.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Acceleration Structure Build Time of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball. Sorted by model.}}{38}{figure.6.5}\protected@file@percent }
+\newlabel{as-build-time-geometry-comparison-graph}{{6.5}{38}{Acceleration Structure Build Time of OptiX and Vulkan (raytraced) when rendering the 3D models BMW, Sponza and Hairball. Sorted by model}{figure.6.5}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {1280x720}}}{38}{subfigure.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {1920x1080}}}{38}{subfigure.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {2560x1440}}}{38}{subfigure.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {3840x2160}}}{38}{subfigure.5.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Acceleration Structure Build Times for each model, divided between the TLAS and BLAS phases. We see great discrepancies in the distribution of time in each case.}}{39}{figure.6.6}\protected@file@percent }
+\newlabel{as-build-time-decomposed}{{6.6}{39}{Acceleration Structure Build Times for each model, divided between the TLAS and BLAS phases. We see great discrepancies in the distribution of time in each case}{figure.6.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Acceleration Structure Build Times divided between the TLAS and BLAS phases for the extra set of models (Human, ISCV2 and Gallery). We see how the presence of textures makes for a longer TLAS build time.}}{40}{figure.6.7}\protected@file@percent }
+\newlabel{as-extra-build-time-decomposed}{{6.7}{40}{Acceleration Structure Build Times divided between the TLAS and BLAS phases for the extra set of models (Human, ISCV2 and Gallery). We see how the presence of textures makes for a longer TLAS build time}{figure.6.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Frame Time}{41}{section.6.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We see how the first frame takes much longer than the rest of them to draw.}}{41}{figure.6.8}\protected@file@percent }
+\newlabel{frametimes-outlier-graph}{{6.8}{41}{Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We see how the first frame takes much longer than the rest of them to draw}{figure.6.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We have removed the first frame time since it took too long to draw in comparison with the rest.}}{42}{figure.6.9}\protected@file@percent }
+\newlabel{frametimes-no-outlier-graph}{{6.9}{42}{Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We have removed the first frame time since it took too long to draw in comparison with the rest}{figure.6.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Frame rendering times for each 3D model (BMW, Hairball and Sponza) across both libraries and 4 reasonable resolutions, from 720p to 4k.}}{43}{figure.6.10}\protected@file@percent }
+\newlabel{frametimes-overview-graph}{{6.10}{43}{Frame rendering times for each 3D model (BMW, Hairball and Sponza) across both libraries and 4 reasonable resolutions, from 720p to 4k}{figure.6.10}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {BMW}}}{43}{subfigure.10.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Sponza}}}{43}{subfigure.10.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Hairball}}}{43}{subfigure.10.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Acceleration Structure Build Time and Frame Render Time comparison in OptiX when using an Nvidia 2070 Super in two systems with different CPUs. We see how a faster CPU means better performance in both cases.}}{44}{figure.6.11}\protected@file@percent }
+\newlabel{optix-2070-super-comparison}{{6.11}{44}{Acceleration Structure Build Time and Frame Render Time comparison in OptiX when using an Nvidia 2070 Super in two systems with different CPUs. We see how a faster CPU means better performance in both cases}{figure.6.11}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Acceleration Structure Build Time}}}{44}{subfigure.11.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Frame Times}}}{44}{subfigure.11.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Hardware comparison}{44}{section.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}Same GPU, changing CPU}{44}{subsection.6.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Acceleration Structure Build Time and Frame Render Time comparison in Vulkan when using an Nvidia 2070 Super in two systems with different CPUs. We see more variation in which system does better, in contrast with the previous OptiX test.}}{45}{figure.6.12}\protected@file@percent }
+\newlabel{vulkan-2070-super-comparison}{{6.12}{45}{Acceleration Structure Build Time and Frame Render Time comparison in Vulkan when using an Nvidia 2070 Super in two systems with different CPUs. We see more variation in which system does better, in contrast with the previous OptiX test}{figure.6.12}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Acceleration Structure Build Time}}}{45}{subfigure.12.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Frame Times}}}{45}{subfigure.12.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}Virtualization effects}{46}{subsection.6.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Acceleration Structure Build Times for Vulkan in a Virtual Machine and running bare metal. We see how the bare metal solution manages to get a significantly lower time than the virtualized one.}}{47}{figure.6.13}\protected@file@percent }
+\newlabel{vulkan-accelbuildtime-bm-vm-comparison}{{6.13}{47}{Acceleration Structure Build Times for Vulkan in a Virtual Machine and running bare metal. We see how the bare metal solution manages to get a significantly lower time than the virtualized one}{figure.6.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Frame render times in Vulkan across two machines with the same GPU (Nvidia 3080). One of them is running the renderer under a virtual machine and the other is doing so bare metal. We see a slight advantage towards the virtualized approach in this side, which could be due to a mere coincidence. This would make the GPU the only important element when drawing a given scene.}}{48}{figure.6.14}\protected@file@percent }
+\newlabel{vulkan-frame-times-bm-vm-comparison}{{6.14}{48}{Frame render times in Vulkan across two machines with the same GPU (Nvidia 3080). One of them is running the renderer under a virtual machine and the other is doing so bare metal. We see a slight advantage towards the virtualized approach in this side, which could be due to a mere coincidence. This would make the GPU the only important element when drawing a given scene}{figure.6.14}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclussions}{49}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \citation{Kallweit22}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Future work}{48}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Future work}{50}{section.7.1}\protected@file@percent }
 \bibdata{bibliografia}
 \bibcite{ScratchPixel}{\citeauthoryear {{\em  3D Basic Rendering\/}}{{\em  3D Basic Rendering\/}}{{\APACyear {2022}}}}
 \APACbibcite{ScratchPixel}{\citeauthoryear {{\em  3D Basic Rendering\/}}{{\em  3D Basic Rendering\/}}{{\APACyear {2022}}}}
@@ -197,5 +201,5 @@
 \APACbibcite{OptixCourse}{\citeauthoryear {Wald}{Wald}{{\APACyear {2022}}}}
 \bibcite{DXGI}{\citeauthoryear {White\ \BOthers {.}}{White\ \BOthers {.}}{{\APACyear {{\bibnodate {}}}}}}
 \APACbibcite{DXGI}{\citeauthoryear {White\ \BOthers {.}}{White\ \BOthers {.}}{{\APACyear {{\bibnodate {}}}}}}
-\@writefile{toc}{\contentsline {section}{Referencias}{49}{section*.5}\protected@file@percent }
-\gdef \@abspage@last{59}
+\@writefile{toc}{\contentsline {section}{Referencias}{51}{section*.5}\protected@file@percent }
+\gdef \@abspage@last{61}

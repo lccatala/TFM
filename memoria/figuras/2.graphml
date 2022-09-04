@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <!--Created by yEd 3.22-->
+  <key attr.name="Description" attr.type="string" for="graph" id="d0"/>
+  <key for="port" id="d1" yfiles.type="portgraphics"/>
+  <key for="port" id="d2" yfiles.type="portgeometry"/>
+  <key for="port" id="d3" yfiles.type="portuserdata"/>
+  <key attr.name="url" attr.type="string" for="node" id="d4"/>
+  <key attr.name="description" attr.type="string" for="node" id="d5"/>
+  <key for="node" id="d6" yfiles.type="nodegraphics"/>
+  <key for="graphml" id="d7" yfiles.type="resources"/>
+  <key attr.name="url" attr.type="string" for="edge" id="d8"/>
+  <key attr.name="description" attr.type="string" for="edge" id="d9"/>
+  <key for="edge" id="d10" yfiles.type="edgegraphics"/>
+  <graph edgedefault="directed" id="G">
+    <data key="d0"/>
+    <node id="n0">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d5"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="173.0" width="338.0" x="6.6510926902788015" y="327.2779204564523"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="183.09912109375" x="77.450439453125" xml:space="preserve" y="3.0">FramePerformanceCounter<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel xml:space="preserve">+ frameCount: int
++ maxFrames: int
++ frameTimes: std::vector&lt;std::chrono::microseconds&gt;
++ begin: std::chrono::steady_clock::time_point
++ end: std::chrono::steady_clock::time_point
++ filename: std::string</y:AttributeLabel>
+            <y:MethodLabel xml:space="preserve">+ init(maxFrames: int, filename: std::string): void
++ startFrameTiming(): void
++ endFrameTiming(): void</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n1">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d5"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="999.6666666666667" width="801.0" x="471.1511772572421" y="232.42590419449743"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="80.15283203125" x="360.423583984375" xml:space="preserve" y="3.0">Application<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel xml:space="preserve">- m_objModel: std::vector&lt;ObjModel&gt;
+- m_objDesc: std::vector&lt;ObjDesc&gt;
+- m_instances: std::vector&lt;ObjInstance&gt;
+- m_pipelineLayout: VkPipelineLayout
+- m_rtDescSetLayoutBind: nvvk::DescriptorSetBindings
+- m_graphicsPipeline: VkPipeline
+- m_descSetLayoutBind: nvvk::DescriptorSetBindings
+- m_descPool: VkDescriptorPool
+- m_descSetLayout: VkDescriptorSetLayout
+- m_descSet: VkDescriptorSet
+- m_bGlobals: nvvk::Buffer
+- m_bObjDesc: nvvk::Buffer
+- m_textures: std::vector&lt;nvvk::Texture&gt;
+- m_alloc: nvvk::ResourceAllocatorDma
+- m_debug: nvvk::DebugUtil
+- m_postDescSetLayoutBind: nvvk::DescriptorSetBindings
+- m_postDescPool: VkDescriptorPool
+- m_postDescSetLayout: VkDescriptorSetLayout
+- m_postDescSet: VkDescriptorSet
+- m_postPipeline: VkPipeline
+- m_postPipelineLayout: VkPipelineLayout
+- m_offscreenRenderPass: VkRenderPass
+- m_offscreenFramebuffer: VkFramebuffer
+- m_offscreenColor: nvvk::Texture
+- m_offscreenDepth: nvvk::Texture
+- m_offscreenColorFormat: VkFormat
+- m_offscreenDepthFormat: VkFormat
+- m_rtProperties: VkPhysicalDeviceRayTracingPipelinePropertiesKHR
+- m_rtBuilder: nvvk::RaytracingBuilderKHR
+- m_rtDescPool: VkDescriptorPool
+- m_rtDescSetLayout: VkDescriptorSetLayout
+- m_rtDescSet: VkDescriptorSet
+- m_rtShaderGroups: std::vector&lt;VkRayTracingShaderGroupCreateInfoKHR&gt;
+- m_rtPipelineLayout: VkPipelineLayout
+- m_rtPipeline: VkPipeline 
+- m_rtSBTBuffer: nvvk::Buffer
+- m_rgenRegion: VkStridedDeviceAddressRegionKHR
+- m_missRegion: VkStridedDeviceAddressRegionKHR
+- m_hitRegion: VkStridedDeviceAddressRegionKHR
+- m_callRegion: VkStridedDeviceAddressRegionKHR
+- m_pcRay: PushConstantRay
+- m_filenamePrefix: std::string</y:AttributeLabel>
+            <y:MethodLabel xml:space="preserve">+ setup(instance: const VkInstance&amp;, device: const VkDevice&amp;, physicalDevice: const VkPhysicalDevice&amp;, queueFamily: uint32_t) void
++ createDescriptorSetLayout(): void
++ createGraphicsPipeline(): void
++ loadModel(filename: const std::string&amp;, transform: nvmath::mat4f): void
++ updateDescriptorSet(): void
++ createUniformBuffer(): void
++ createObjDescriptionBuffer(): void
++ createTextureImages(cmdBuf: const VkCommandBuffer&amp;, textures: const std::vector&lt;std::string&gt;&amp;): void
++ updateUniformBuffer(cmdBuf: const VkCommandBuffer&amp;): void
++ onResize(int w, int h): void
++ destroyResources(): void
++ createOffscreenRender(): void
++ createPostPipeline(): void
++ createPostDescriptor(): void
++ updatePostDescriptorSet(): void
++ drawPost(cmdBuf: VkCommandBuffer): void
++ initRayTracing(): void
++ objectToVkGeometryKHR(model: const ObjModel&amp;): auto
++ createBottomLevelAS(): void
++ createTopLevelAS(): void
++ createRtDescriptorSet(): void
++ updateRtDescriptorSet(): void
++ createRtPipeline(): void
++ createRtShaderBindingTable(): void
++ raytrace(cmdBuf: const VkCommandBuffer&amp;, clearColor: const nvmath::vec4f&amp;): void</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d5"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="125.0" width="196.0" x="96.96145079991288" y="515.129404825972"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="68.20654296875" x="63.896728515625" xml:space="preserve" y="3.0">ObjModel<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel xml:space="preserve">+ nbIndices: uint32_t
++ nbVertices: uint32_t
++ vertexBuffer: nvvk::Buffer
++ indexBuffer: nvvk::Buffer
++ matColorBuffer: nvvk::Buffer
++ matIndexBuffer: nvvk::Buffer</y:AttributeLabel>
+            <y:MethodLabel xml:space="preserve"/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d5"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="67.0" width="179.0" x="98.92152561451348" y="245.42643608693265"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="83.828125" x="47.5859375" xml:space="preserve" y="3.0">ObjInstance<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel xml:space="preserve">+ transform: nvmath::mat4f
++ objIndex: uint32_t</y:AttributeLabel>
+            <y:MethodLabel xml:space="preserve"/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n4">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d5"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="28.0" width="140.0" x="805.8178439239089" y="174.42590419449743"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="117.521484375" x="11.2392578125" xml:space="preserve" y="3.0">nvvk::AppBaseVk<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel xml:space="preserve"/>
+            <y:MethodLabel xml:space="preserve"/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <edge id="e0" source="n1" target="n0">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-386.1511772572421" sy="-318.4813170713785" tx="0.0" ty="0.0">
+            <y:Point x="381.5" y="413.7779204564523"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="diamond" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="65.69921875" x="-96.60312230887894" xml:space="preserve" y="-19.066409377532068">m_counter<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="10.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e1" source="n1" target="n2">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-392.1511772572421" sy="-154.62983270185885" tx="0.0" ty="0.0">
+            <y:Point x="313.5" y="577.629404825972"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="diamond" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="75.19140625" x="-137.67880590262894" xml:space="preserve" y="-19.06639595527804">m_objModel<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="10.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="n1" target="n3">
+      <data key="d8" xml:space="preserve"/>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-373.90362639062573" sy="-453.33280144089815" tx="0.0" ty="0.0">
+            <y:Point x="378.0278824415975" y="278.92643608693265"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="diamond" target="none"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="75.748046875" x="-159.64120173366325" xml:space="preserve" y="-19.06639228220797">m_instances<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="10.0" distanceToCenter="true" position="right" ratio="0.5" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e3" source="n1" target="n4">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+  </graph>
+  <data key="d7">
+    <y:Resources/>
+  </data>
+</graphml>
