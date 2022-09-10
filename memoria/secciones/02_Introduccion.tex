@@ -10,6 +10,8 @@ Ray Tracing is one of the most advanced, elegant and precise ways to produce com
 
 Each library better suits a different purpose for the final piece of software, be it real time graphics for videogames or other real-time applications, or pursuing a higher image quality for visual effects in movies, animations, complex scientific visualizations, etc.
 
+Although academic work in this field is still actively published to this day using modern technologies \cite{rileymulti} \cite{wei2022model}, benchmarks and other publications that evaluate its performance have not been actively done since around two decades ago \cite{lext2001benchmark} \cite{foley2005kd} \cite{wald2007ray}. For this reason we considered a revision of modern technologies and their performance was in order, so it will orient fellow graphics programmers and researchers when choosing the technology that better suits their projects.
+
 This work aims to compare the most prevalent technologies used to build Ray Tracing applications for each purpose, Vulkan and OptiX, in order to benchmark their behaviour under different circumstances. We will implement a series of test cases which will vary the ammount of rendered and loaded geometry as well as image quality settings, and record the following data from each one:
 
 \begin{itemize}
