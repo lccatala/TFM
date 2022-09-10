@@ -30,7 +30,7 @@ To finish this part, we will compare frame times from both renderers in the same
 \section{Memory Usage}
 To start the real comparison between Vulkan and OptiX we will look at the memory usage in GPU across both libraries, all models and all resolutions. We can see how much each model consumes in graph \ref{memory-usage-raytraced-comparison-graph}.
 
-This is the first example of a trend we will start seeing throughout this chapter. Vulkan, either despite or thanks to it's explicitness when developing applications, is able to load and render the same ammount of geometry and detail as OptiX while requiring only a fraction of the resources, in this case video memory. This remains true while increasing the frame buffer size, with both libraries increasing the required memory at a similar rate. One last remarkable thing is the Hairball test case. Here we see the memory consumption for both libraries is very similar, which suggests the two technologies tend to use a similar ammount of resources when triangle counts tend to infinity.
+This is the first example of a trend we will start seeing throughout this chapter. Vulkan, either despite or thanks to it's explicitness when developing applications, is able to load and render the same amount of geometry and detail as OptiX while requiring only a fraction of the resources, in this case video memory. This remains true while increasing the frame buffer size, with both libraries increasing the required memory at a similar rate. One last remarkable thing is the Hairball test case. Here we see the memory consumption for both libraries is very similar, which suggests the two technologies tend to use a similar amount of resources when triangle counts tend to infinity.
 
 \begin{figure}
     \subfloat[BMW]{\includegraphics[width = 3in]{figuras/bmw-memory-usage-comparison.png}}
@@ -56,7 +56,7 @@ If we plot the Acceleration Structure Building Times in the same way as we did w
     \label{as-build-time-comparison-graph}
 \end{figure}
 
-We can plainly see how the rendering resolution does not affect the accel build time. This is to be expected, since a higher pixel count works with the same Acceleration Structure as a lower pixel count. We will now rearrange the plots in figure \ref{as-build-time-geometry-comparison-graph} to see how geometry ammount affects acceleration structure build times.
+We can plainly see how the rendering resolution does not affect the accel build time. This is to be expected, since a higher pixel count works with the same Acceleration Structure as a lower pixel count. We will now rearrange the plots in figure \ref{as-build-time-geometry-comparison-graph} to see how geometry amount affects acceleration structure build times.
 
 A curious phenomenon is shown here. We initially expected the Hairball model to have the greatest acceleration structure build time. This is true for Vulkan where the triangle count is directly proportional to the build time. In OptiX however, the first spot is granted to Sponza, with about 10 times less triangles than the Hairball. This could be due to this model having a wider variety of shapes formed by it's triangles, which could be harder to optimize, as opposed to the hairball, where everything is more similar and packed together.
 
@@ -75,7 +75,7 @@ To further investigate why Sponza takes that much longer to build than other mod
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=1.0\textwidth]{figuras/optix-accelbuildtimes-decomposed.png}
+    \includegraphics[width=0.7\textwidth]{figuras/optix-accelbuildtimes-decomposed.png}
     \caption{Acceleration Structure Build Times for each model, divided between the TLAS and BLAS phases. We see great discrepancies in the distribution of time in each case.}
     \label{as-build-time-decomposed}
 \end{figure}
@@ -85,7 +85,7 @@ Seeing this, we decided to expand this metric's models testing pool to Human, IS
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=1.0\textwidth]{figuras/optix-extra-accelbuildtimes-decomposed.png}
+    \includegraphics[width=0.7\textwidth]{figuras/optix-extra-accelbuildtimes-decomposed.png}
     \caption{Acceleration Structure Build Times divided between the TLAS and BLAS phases for the extra set of models (Human, ISCV2 and Gallery). We see how the presence of textures makes for a longer TLAS build time.}
     \label{as-extra-build-time-decomposed}
 \end{figure}
@@ -93,11 +93,11 @@ Seeing this, we decided to expand this metric's models testing pool to Human, IS
 
 \clearpage
 \section{Frame Time}
-Finally we will look at how long each technology takes to render a full frame. This could be considered the most important metric to monitor, since rendering a frame is something that will happen as often as possible, and therefore the ammount of time it takes to do so will be more prevalent than updating or initializing geometry structures.
+Finally we will look at how long each technology takes to render a full frame. This could be considered the most important metric to monitor, since rendering a frame is something that will happen as often as possible, and therefore the amount of time it takes to do so will be more prevalent than updating or initializing geometry structures.
 
 As mentioned before, each frame will be rendered to a frame buffer and we will only count the time it takes to do exactly that, although we will then display them in a window so we can see what the renderer is doing.
 
-In a modern operating system, the time it takes to perform a certain task can vary a lot depending on what other processes are running at the time. To counteract this, we timed the render of 1000 frames for each parameter combination and averaged them. An example of that can be seen in figure \ref{frametimes-outlier-graph}.
+In a modern operating system, the time it takes to perform a certain task can vary a lot depending on what other processes are running at the time. To counteract this, we timed the render of 1000 frames for each parameter combination and statistically described them. An example of that can be seen in figure \ref{frametimes-outlier-graph}.
 
 \begin{figure}[hbt!]
     \centering
@@ -106,7 +106,7 @@ In a modern operating system, the time it takes to perform a certain task can va
     \label{frametimes-outlier-graph}
 \end{figure}
 
-We decided to remove the first frame time from this average since, as you can see, it tends to be a statistical outlier, messing with "real world" appreciable results. The same graph from \ref{frametimes-outlier} results thus in \ref{frametimes-no-outlier}.
+We decided to remove the first frame time from this average since, as you can see, it tends to be a statistical outlier, messing with \textit{real world} appreciable results. The same graph from \ref{frametimes-outlier-graph} results thus in \ref{frametimes-no-outlier-graph}.
 
 \begin{figure}[hbt!]
     \centering
@@ -138,7 +138,7 @@ We'll start by comparing how a difference in CPU power affects all the metrics w
 
 We will start with OptiX. In graph \ref{optix-2070-super-comparison} we see how acceleration structure build time and frame times compare to one another when using two machines with a \textit{2070 Super} and AMD Ryzen 5 and 7 processors respectively. Some of the results data went missing when trying to get the software to run on other people's systems, so we will not be comparing all the models' metrics every time. Additionally, we have only compared the render time averages at a 1920x1080 resolution to simplify the graphs.
 
-In both cases we see a marginal increase in performance (less time consumption) in the system with the more powerful CPU. In all cases it's small enough that it could be considered a fluke, being a difference smaller than a 10\% every time. However, since it happens accross all tested models and all the averages in render time, we can determine it does have an impact on render and acceleration structure build times.
+In both cases we see a marginal increase in performance (less time consumption) in the system with the more powerful CPU. In all cases it's small enough that it could be considered noise, being a difference smaller than a 10\% every time. However, since it happens accross all tested models and all the averages in render time, we can determine it does have an impact on render and acceleration structure build times.
 
 \begin{figure}
     \subfloat[Acceleration Structure Build Time]{\includegraphics[width = 3in]{figuras/accelbuildtime-2070super-comparison.png}}
@@ -147,7 +147,7 @@ In both cases we see a marginal increase in performance (less time consumption) 
     \label{optix-2070-super-comparison}
 \end{figure}
 
-In figure \ref{vulkan-2070-super-comparison} we see the same comparison for Vulkan, only this time using a larger pool of models. Note how in this case the model of CPU doesn't seem as important, with both of them registering shorter times depending on the metric and scene. We assume from this that Vulkan is not as dependent on the CPU as OptiX when it comes to building an acceleration structure or rendering.
+In Figure \ref{vulkan-2070-super-comparison} we see the same comparison for Vulkan, only this time using a larger pool of models. Note how in this case the model of CPU doesn't seem as important, with both of them registering shorter times depending on the metric and scene. We assume from this that Vulkan is not as dependent on the CPU as OptiX when it comes to building an acceleration structure or rendering.
 
 \begin{figure}
     \subfloat[Acceleration Structure Build Time]{\includegraphics[width = 3in]{figuras/vulkan-accelbuildtime-2070super-comparison.png}}
@@ -161,20 +161,33 @@ In figure \ref{vulkan-2070-super-comparison} we see the same comparison for Vulk
 \subsection{Virtualization effects}
 Virtual machines are a staple of computing, indispensable when dispatching a job to a server or running experiments in isolation. During the development of this work we came across a curious use of these systems, in which people who primarily use Linux run a small virtual machine for specific purposes, such as gaming or having access to some software. 
 
-VM's dedicated to gaming or any other intensively graphically intensive work use GPU passthrough to have access to near bare metal performance. We will now analyze to what extent this is true, by running our benchmark in a VM dedicated almost exclusively to gaming by it's user. According to them, it's performance is almost identical to running the games bare metal, with some minimal additional stuttering. As shown in the Development chapter, this machine uses 12 out of the 16 cores available in it's processor.
+VM's dedicated to gaming or any other graphically intensive work use GPU passthrough to have access to near bare metal performance. We will now analyze to what extent this is true, by running our benchmark in a VM dedicated almost exclusively to gaming by it's user. According to them, it's performance is almost identical to running the games bare metal, with some minimal additional stuttering. It's worth noting this virtual machine makes use of 12 out of the 16 cores available in it's processor.
 
 The comparison will not be exact, since the most similar system we had access to had an Intel Core i7, compared to the i9 running the virtual machine. However, the GPU is the same across both systems, which should be close enough for our purposes. Unfortunately, due to driver issues, we will only be looking at the Vulkan data for this case, since we couldn't get the OptiX ray tracer to run on the Virtual Machine.
 
 We'll start by looking at the Acceleration Structure build time in \ref{vulkan-accelbuildtime-bm-vm-comparison}. We see how the virtualized system is three times slower than the bare metal one for this task, despite having a more powerful processor. This makes sense to an extent, since this task is relatively CPU-intensive, even though we just saw Vulkan depends less on this component than on the graphics card.
 
-\begin{figure}[hbt!]
-    \centering
-    \includegraphics[width=1.0\textwidth]{figuras/vulkan-accelbuildtime-baremetal-virtualized-comparison.png}
-    \caption{Acceleration Structure Build Times for Vulkan in a Virtual Machine and running bare metal. We see how the bare metal solution manages to get a significantly lower time than the virtualized one.}
-    \label{vulkan-accelbuildtime-bm-vm-comparison}
-\end{figure}
+\begin{center}
+  \begin{table}
+    \begin{tabular}{ | m{5cm}| m{3cm} | m{3cm} |}
+  \hline
+  \textbf{Hardware}& Virtual Machine& Bare Metal\\
+  \hline
+  \textbf{Time (microseconds)}& 400& 100 \\
+  \hline
+  \label{vulkan-accelbuildtime-bm-vm-comparison}
+\end{tabular}
+\end{table}
+  % \caption{Hardware information of the different PCs we managed to run our tests on.}
+\end{center}
+% \begin{figure}[hbt!]
+%     \centering
+%     \includegraphics[width=1.0\textwidth]{figuras/vulkan-accelbuildtime-baremetal-virtualized-comparison.png}
+%     \caption{Acceleration Structure Build Times for Vulkan in a Virtual Machine and running bare metal. We see how the bare metal solution manages to get a significantly lower time than the virtualized one.}
+%     \label{vulkan-accelbuildtime-bm-vm-comparison}
+% \end{figure}
 
-Next up we will look at frame render times across multiple models in figure \ref{vulkan-frame-times-bm-vm-comparison}. We see how, opposite to the acceleration structure build time, the virtual machine manages to draw frames marginally faster than the bare metal environment. The difference between the two is so small that we could attribute it to a fluke, concluding that the CPU isn't really relevant when rendering a static scene and that the render time will in essence only depend on the GPU's capabilities.
+Next up we will look at frame render times across multiple models in figure \ref{vulkan-frame-times-bm-vm-comparison}. We see how, opposite to the acceleration structure build time, the virtual machine manages to draw frames marginally faster than the bare metal environment. The difference between the two is so small that we could attribute it to noise, concluding that the CPU isn't really relevant when rendering a static scene. This is due to the CPU being mostly idle once all data is uploaded to the GPU. Therefore the render time will in essence only depend on the GPU's capabilities.
 
 \begin{figure}[hbt!]
     \centering

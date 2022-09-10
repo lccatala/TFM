@@ -13,8 +13,8 @@ In figure \ref{rasterization-triangle-image}, from \cite{ScratchPixel} we see th
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=1.0\textwidth]{figuras/rasterization-triangle1.png}
-    \caption{}
+    \includegraphics[width=0.6\textwidth]{figuras/rasterization-triangle1.png}
+    \caption{Image being rasterized into pixels, extracted from \href{https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation/rasterization-stage}{ScratchPixel}}
     \label{rasterization-triangle-image}
 \end{figure}
 When compared to other techniques for rendering 3D models, such as ray tracing, rasterization is extremely fast. This gives it a prevalent usage in real time 3D engines. We must take into account that the process of rasterization is only responsible for mapping the scene geometry to pixels, and does not compute the color of such pixels. This color is assigned by a Pixel (or Fragment) Shader, which is completely programmable in modern GPUs. This shader may take into account physical processes like light position, or a purely artistic approach. There is no motivation in modifying the rasterization techniques at render time. Therefore, the rest of the process of rasterizing a 3D model into screen space (a 2D plane for displaying said graphics) is often performed by non-programmable hardware with a fixed function within the graphics pipeline. This method allows for high efficiency.
@@ -126,7 +126,7 @@ It's also worth mentioning that we could technically develop a GPU-accelerated r
 Some of these libraries have legacies that extend to the era of rasterized-only graphics, while others were made from the ground up just for ray tracing. At the same time, each of them was designed with a specific use case in mind, be it real time graphics or achieving a higher image fidelity. We will now be looking at what we considered the most prominent library for each use case,
 
 \subsection{Vulkan}
-First announced by the Khronos Group at GDC 2015 as the "next generation OpenGL", Vulkan is intended to be used in high-performance real-time 3D graphics for interactive applications such as videogames. It offers higher performance and lower level control than popular graphics APIs at the time such as OpenGL or DirectX 11.
+First announced by the Khronos Group at GDC 2015 as the "next generation OpenGL", Vulkan is intended to be used in high-performance real-time 3D graphics for interactive applications such as videogames \cite{van2022novel} \cite{nikolaev20223d}. It offers higher performance and lower level control than popular graphics APIs at the time such as OpenGL or DirectX 11.
 
 It is intended to provide a series of advantages over it's predecessor, OpenGL, as well as other APIs. Mainly, Vulkan offers lower overhead, more direct control over the GPU and lower CPU usage. It was originally developed from AMD's Mantle \cite{Mantle}, taking many features and concepts from it. These were later adopted by other APIs, such as DirectX12 and Metal.
 
@@ -143,8 +143,7 @@ Some of it's advantages compared to other APIs at the time were:
 Due to it's low overhead and customization capabilities Vulkan is widely used in the videogame industry. We see almost every major game engine (Unity, Unreal Engine, CryEngine, Frostbite, Godot, etc.).
 
 \subsection{OptiX}
-Released in 2009 as part of Nvidia GameWorks, OptiX is a ray tracing API that offloads computations to the GPU through CUDA. This means it's only available for Nvidia's graphics products. While in previous versions it was considered a high level API, since version 7 it has become much lower level, giving an extensive control to the programmer on how memory and processes are managed. Despite of this, it's still at a higher level than most other rendering APIs, being designed to encapsulate the entire algorithm of which ray tracing is a part, not just the ray tracing itself. This allows for the engine to execute the broader algorithm with greater flexibility and without changes on the application side. Aside from rendering, OptiX is also used in areas where the tracing of rays or GPU acceleration is useful. This includes optical and accoustic design, radiation and electromagnetic research, artificial intelligence queries and collision analysis.
-
+Released in 2009 as part of Nvidia GameWorks, OptiX \cite{parker2010optix} is a ray tracing API that offloads computations to the GPU through CUDA. This means it's only available for Nvidia's graphics products. While in previous versions it was considered a high level API, since version 7 it has become much lower level, giving an extensive control to the programmer on how memory and processes are managed. Despite of this, it's still at a higher level than most other rendering APIs, being designed to encapsulate the entire algorithm of which ray tracing is a part, not just the ray tracing itself. This allows for the engine to execute the broader algorithm with greater flexibility and without changes on the application side. Aside from rendering, OptiX is also used in areas where line-of-sight is important, namely optical and accoustical design \cite{blyth2021integration} \cite{hursky2013reverberation}, radiation and electromagnetic research \cite{felbecker2012electromagnetic} \cite{niu2021application}, artificial intelligence queries \cite{callicott2021benefits} and collision analysis \cite{vassilev2012collision}.
 OptiX works using CUDA kernels, instructions supplied by the user, that indicate how a ray should behave in a specific situation to simulate a complete tracing process. A ray might have different behaviours when hitting different surfaces. OptiX allows us to customize these behaviours with kernels, written in CUDA's own flavour of C or PTX code, that are linked together when used by the engine.
 
 The usage of an OptiX ray tracer usually involes the following steps:

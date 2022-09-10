@@ -18,6 +18,58 @@ ScratchPixel}%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Blyth%
+}{%
+Blyth%
+}{%
+{\protect \APACyear {2021}}%
+}]{%
+blyth2021integration}
+\APACinsertmetastar {%
+blyth2021integration}%
+\begin{APACrefauthors}%
+Blyth, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Integration of JUNO simulation framework with Opticks:
+  GPU accelerated optical propagation via NVIDIA{\textregistered} OptiX™}
+  {Integration of juno simulation framework with opticks: Gpu accelerated
+  optical propagation via nvidia{\textregistered} optix™}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {EPJ Web of Conferences} {Epj web of conferences}\
+  (\BVOL~251, \BPG~03009).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Callicott%
+\ \BBA {} Zarko%
+}{%
+Callicott%
+\ \BBA {} Zarko%
+}{%
+{\protect \APACyear {2021}}%
+}]{%
+callicott2021benefits}
+\APACinsertmetastar {%
+callicott2021benefits}%
+\begin{APACrefauthors}%
+Callicott, M.%
+\BCBT {}\ \BBA {} Zarko, B\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Benefits of AI-driven autonomous chemistry control}
+  {Benefits of ai-driven autonomous chemistry control}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Appita Magazine}{}{4}{62--65}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Clarberg%
 \ \protect \BOthers {.}}{%
 Clarberg%
@@ -47,6 +99,39 @@ Clarberg, P.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Felbecker%
+, Raschkowski%
+, Keusgen%
+\BCBL {}\ \BBA {} Peter%
+}{%
+Felbecker%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+felbecker2012electromagnetic}
+\APACinsertmetastar {%
+felbecker2012electromagnetic}%
+\begin{APACrefauthors}%
+Felbecker, R.%
+, Raschkowski, L.%
+, Keusgen, W.%
+\BCBL {}\ \BBA {} Peter, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Electromagnetic wave propagation in the millimeter wave
+  band using the NVIDIA OptiX GPU ray tracing engine} {Electromagnetic wave
+  propagation in the millimeter wave band using the nvidia optix gpu ray
+  tracing engine}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2012 6th European Conference on Antennas and Propagation
+  (EUCAP)} {2012 6th european conference on antennas and propagation (eucap)}\
+  (\BPGS\ 488--492).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 \APACcitebtitle {File:Ray trace diagram.svg}}{%
 \APACcitebtitle {File:Ray trace diagram.svg}}{%
 {\protect \APACyear {2022}}%
@@ -61,6 +146,33 @@ WikimediaRT}%
 \begin{APACrefURL}
   \url{https://commons.wikimedia.org/wiki/File:Ray_trace_diagram.svg}
   \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hursky%
+\ \BBA {} Abawi%
+}{%
+Hursky%
+\ \BBA {} Abawi%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+hursky2013reverberation}
+\APACinsertmetastar {%
+hursky2013reverberation}%
+\begin{APACrefauthors}%
+Hursky, P.%
+\BCBT {}\ \BBA {} Abawi, A\BPBI T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Reverberation modeling on graphics processing units}
+  {Reverberation modeling on graphics processing units}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The Journal of the Acoustical Society of
+  America}{133}{5}{3615--3615}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -159,6 +271,65 @@ McGuire, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Nikolaev%
+, Frolov%
+\BCBL {}\ \BBA {} Ryzhova%
+}{%
+Nikolaev%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2022}}%
+}]{%
+nikolaev20223d}
+\APACinsertmetastar {%
+nikolaev20223d}%
+\begin{APACrefauthors}%
+Nikolaev, A.%
+, Frolov, V.%
+\BCBL {}\ \BBA {} Ryzhova, I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {3D Model Compression with Support of Parallel Processing
+  on the GPU} {3d model compression with support of parallel processing on the
+  gpu}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Programming and Computer Software}{48}{3}{181--189}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Niu%
+, He%
+\BCBL {}\ \BBA {} Jin%
+}{%
+Niu%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2021}}%
+}]{%
+niu2021application}
+\APACinsertmetastar {%
+niu2021application}%
+\begin{APACrefauthors}%
+Niu, X.%
+, He, H.%
+\BCBL {}\ \BBA {} Jin, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Application of Ray-Tracing Method in Electromagnetic
+  Numerical Simulation Algorithm} {Application of ray-tracing method in
+  electromagnetic numerical simulation algorithm}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2021 International Applied Computational
+  Electromagnetics Society (ACES-China) Symposium} {2021 international applied
+  computational electromagnetics society (aces-china) symposium}\ (\BPGS\
+  1--2).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Nviidia%
 }{%
 Nviidia%
@@ -206,6 +377,35 @@ Overvoorde, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Parker%
+\ \protect \BOthers {.}}{%
+Parker%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+parker2010optix}
+\APACinsertmetastar {%
+parker2010optix}%
+\begin{APACrefauthors}%
+Parker, S\BPBI G.%
+, Bigler, J.%
+, Dietrich, A.%
+, Friedrich, H.%
+, Hoberock, J.%
+, Luebke, D.%
+\BDBL {}others%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Optix: a general purpose ray tracing engine} {Optix: a
+  general purpose ray tracing engine}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Acm transactions on graphics (tog)}{29}{4}{1--13}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 \APACcitebtitle {Ray Tracing (graphics)}}{%
 \APACcitebtitle {Ray Tracing (graphics)}}{%
 {\protect \APACyear {2022}}%
@@ -219,6 +419,35 @@ WikipediaRT}%
 \newblock
 \begin{APACrefURL} \url{https://en.wikipedia.org/wiki/Ray_tracing_(graphics)}
   \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Riley%
+, Diefes%
+, Bechtold%
+\BCBL {}\ \BBA {} Barry%
+}{%
+Riley%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+rileymulti}
+\APACinsertmetastar {%
+rileymulti}%
+\begin{APACrefauthors}%
+Riley, S.%
+, Diefes, L.%
+, Bechtold, L.%
+\BCBL {}\ \BBA {} Barry, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Multi-GPU Accelerated Ray Tracing Using CUDA} {Multi-gpu
+  accelerated ray tracing using cuda}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{https://scholar. sun. ac. za/}{}{}{676--686}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -245,6 +474,60 @@ Sawichi, A.%
   {\url{https://www.asawicki.info/news_1695_there_is_a_way_to_query_gpu_memory_usage_in_vulkan_-_use_dxgi}}.
 \newblock
 \APACrefnote{Accessed: 2022-08-03}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Van~Bogaert%
+, Bonatto%
+, Fachada%
+\BCBL {}\ \BBA {} Lafruit%
+}{%
+Van~Bogaert%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2022}}%
+}]{%
+van2022novel}
+\APACinsertmetastar {%
+van2022novel}%
+\begin{APACrefauthors}%
+Van~Bogaert, L.%
+, Bonatto, D.%
+, Fachada, S\BPBI F\BPBI P.%
+\BCBL {}\ \BBA {} Lafruit, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Novel view synthesis in embedded virtual reality
+  devices} {Novel view synthesis in embedded virtual reality devices}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Electronic Imaging}{34}{}{1--6}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Vassilev%
+}{%
+Vassilev%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+vassilev2012collision}
+\APACinsertmetastar {%
+vassilev2012collision}%
+\begin{APACrefauthors}%
+Vassilev, T\BPBI I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Collision Detection for Cloth Simulation using
+  Ray-tracing on the GPU} {Collision detection for cloth simulation using
+  ray-tracing on the gpu}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{International Journal on Information Technologies \&
+  Security}{4}{4}{10}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

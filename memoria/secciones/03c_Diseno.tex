@@ -3,14 +3,7 @@ In this chapter we will explain the applications we developed for this work at a
 
 \section{Vulkan Ray Tracer}
 \subsection{Rasterized}
-The rasterized version of the renderer is quite simple in its design, with a single monolithic Application class handling almost everything and a few helper data structures (Vertex, QueueFamilyIndex, SwapchainSupportDetails and UniformBufferObject) for storing and grouping together information. We see an UML class diagram of this application in figure \ref{rasterized-uml}. This instance of the renderer is much bigger than the following ones due to us not relying on almost any external library and having to handle all the low level operations ourselves, thus resulting in a high ammount of initialization functionality. To all this we added one more class that encapsulates all the performance measuring functionality, which we called FramePerformanceCounter.
-
-\begin{figure}[hbt!]
-  \centering
-  \includegraphics[width=\textwidth]{figuras/rasterized-uml.png}
-  \caption{UML class diagram for the rasterized Vulkan renderer.}
-  \label{rasterized-uml}
-\end{figure}
+The rasterized version of the renderer is quite simple in its design, with a single monolithic Application class handling almost everything and a few helper data structures (Vertex, QueueFamilyIndex, SwapchainSupportDetails and UniformBufferObject) for storing and grouping together information. This instance of the renderer is much bigger than the following ones due to us not relying on almost any external library and having to handle all the low level operations ourselves, thus resulting in a high ammount of initialization functionality. To all this we added one more class that encapsulates all the performance measuring functionality, which we called FramePerformanceCounter.
 
 \subsection{Ray Traced}
 For the ray traced version of the Vulkan renderer we refactored and simplified most of the Application class To achieve this, we left an important part of both the initialization and memory cleanup to the Nvvk library. The UML class diagram in figure \ref{vulkan-rt-uml} shows the resulting hierarchy. Finally, we included our own FramePerformanceCounter class for measuring performance.
