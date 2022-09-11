@@ -149,6 +149,34 @@ WikimediaRT}%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Foley%
+\ \BBA {} Sugerman%
+}{%
+Foley%
+\ \BBA {} Sugerman%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+foley2005kd}
+\APACinsertmetastar {%
+foley2005kd}%
+\begin{APACrefauthors}%
+Foley, T.%
+\BCBT {}\ \BBA {} Sugerman, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {KD-tree acceleration structures for a GPU raytracer}
+  {Kd-tree acceleration structures for a gpu raytracer}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the ACM SIGGRAPH/EUROGRAPHICS conference
+  on Graphics hardware} {Proceedings of the acm siggraph/eurographics
+  conference on graphics hardware}\ (\BPGS\ 15--22).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Hursky%
 \ \BBA {} Abawi%
 }{%
@@ -230,6 +258,34 @@ Lefrançois, M\BHBI K.%
 \APAChowpublished {\url{https://vulkan-tutorial.com}}.
 \newblock
 \APACrefnote{Accessed: 2022-08-03}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lext%
+, Assarsson%
+\BCBL {}\ \BBA {} Moller%
+}{%
+Lext%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2001}}%
+}]{%
+lext2001benchmark}
+\APACinsertmetastar {%
+lext2001benchmark}%
+\begin{APACrefauthors}%
+Lext, J.%
+, Assarsson, U.%
+\BCBL {}\ \BBA {} Moller, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2001}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A benchmark for animated ray tracing} {A benchmark for
+  animated ray tracing}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Computer Graphics and
+  Applications}{21}{2}{22--31}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -551,6 +607,64 @@ Wald, I.%
 \newblock
 \begin{APACrefURL} \url{https://github.com/ingowald/optix7course}
   \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wald%
+, Boulos%
+\BCBL {}\ \BBA {} Shirley%
+}{%
+Wald%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2007}}%
+}]{%
+wald2007ray}
+\APACinsertmetastar {%
+wald2007ray}%
+\begin{APACrefauthors}%
+Wald, I.%
+, Boulos, S.%
+\BCBL {}\ \BBA {} Shirley, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Ray tracing deformable scenes using dynamic bounding
+  volume hierarchies} {Ray tracing deformable scenes using dynamic bounding
+  volume hierarchies}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{ACM Transactions on Graphics (TOG)}{26}{1}{6--es}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wei%
+\ \protect \BOthers {.}}{%
+Wei%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2022}}%
+}]{%
+wei2022model}
+\APACinsertmetastar {%
+wei2022model}%
+\begin{APACrefauthors}%
+Wei, Y.%
+, Gao, M.%
+, Tian, D.%
+, Guo, L.%
+, Li, J.%
+, Yang, L.%
+\BCBL {}\ \BBA {} Guo, X.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A Model for Calculating Electromagnetic Scattering from
+  Target in Evaporation Duct} {A model for calculating electromagnetic
+  scattering from target in evaporation duct}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Antennas and Wireless Propagation Letters}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

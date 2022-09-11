@@ -80,17 +80,30 @@ To further investigate why Sponza takes that much longer to build than other mod
     \label{as-build-time-decomposed}
 \end{figure}
 
-Seeing this, we decided to expand this metric's models testing pool to Human, ISCV2 and Gallery. In figure \ref{as-extra-build-time-decomposed} we see how their build times stack up to one another. In sight of these new data points we appreciate that a longer build time seems to come not only from the triangle count, but rather from the presence of textures, that seem to extend the Top Level Acceleration Structure build time.
-
+Seeing this, we decided to expand this metric's models testing pool to Human, ISCV2 and Gallery. In figure \ref{as-extra-build-time-decomposed} we see how their build times stack up to one another.
 
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=0.7\textwidth]{figuras/optix-extra-accelbuildtimes-decomposed.png}
-    \caption{Acceleration Structure Build Times divided between the TLAS and BLAS phases for the extra set of models (Human, ISCV2 and Gallery). We see how the presence of textures makes for a longer TLAS build time.}
+    \caption{Acceleration Structure Build Times divided between the TLAS and BLAS phases for the extra set of models (Human, ISCV2 and Gallery).}
     \label{as-extra-build-time-decomposed}
 \end{figure}
 
+Finally, we decided to look at the number of BLASes generated for every model, to see if that could explain why some took longer than others. In table \ref{blas-count-table} we see this. It's clear that a higher number of BLASes, and therefore meshes of a given scene, is more relevant to the Acceleration Structure Build Time than the overall triangle count.
 
+\begin{center}
+  \begin{table}
+    \begin{tabular}{ | m{3cm}| m{1.5cm} | m{1.5cm} | m{1.5cm} | m{1.5cm} | m{1.5cm} | m{1.5cm} |}
+  \hline
+  \textbf{Model}& BMW& Sponza& Hairball& Human& ISCV2& Gallery\\
+  \hline
+      \textbf{BLAS count}& 73& 393& 2& 20& 7& 1\\
+  \hline
+\end{tabular}
+  \label{blas-count-table}
+  \caption{Number of Bottom Level Acceleration Structures in each scene tested. We see how Sponza, despite having the highest triangle count, has the biggest ammount of BLASes. This explains why it's the scene taking the longest to build an Acceleration Structure.}
+\end{table}
+\end{center}
 \clearpage
 \section{Frame Time}
 Finally we will look at how long each technology takes to render a full frame. This could be considered the most important metric to monitor, since rendering a frame is something that will happen as often as possible, and therefore the amount of time it takes to do so will be more prevalent than updating or initializing geometry structures.
@@ -101,7 +114,7 @@ In a modern operating system, the time it takes to perform a certain task can va
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=1.0\textwidth]{figuras/frametime-outlier.png}
+    \includegraphics[width=1.0\textwidth]{figuras/frametimes-outlier.png}
     \caption{Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We see how the first frame takes much longer than the rest of them to draw.}
     \label{frametimes-outlier-graph}
 \end{figure}
@@ -110,7 +123,7 @@ We decided to remove the first frame time from this average since, as you can se
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics[width=1.0\textwidth]{figuras/frametime-no-outlier.png}
+    \includegraphics[width=1.0\textwidth]{figuras/frametimes-no-outlier.png}
     \caption{Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We have removed the first frame time since it took too long to draw in comparison with the rest.}
     \label{frametimes-no-outlier-graph}
 \end{figure}
@@ -128,7 +141,14 @@ This discrepancy between triangle count and processing time reminds to the Accel
     \label{frametimes-overview-graph}
 \end{figure}
 
+To finish the Frame Time tests, we decided to analyze how the presence of textures affects this metric. With that in mind, we rendered again the Sponza scene, at a resolution of 1920x1080 with both libraries, while removing the textures. The results from this test are shown in Figure \ref{texture-impact-graph}. Here we see the same gap between both APIs, with Vulkan being faster overall, but additionally we appreciate how it seems unaffected by the presence of textures, while OptiX takes significantly longer to draw the textured scene.
 
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figuras/texture-impact.png}
+    \caption{Sponza scene rendered in Vulkan and OptiX, both with and without textures, to compare how these affect render times.}
+    \label{texture-impact-graph}
+\end{figure}
 \clearpage
 \section{Hardware comparison}
 As mentioned in the Development chapter, we ran our software in all the machines we could gather from friends, family and fellow students. This will help us gauge how the same workload is handled by different GPUs, how CPUs affect performance while maintaining the same GPU and even how both libraries behave inside a virtual machine.
@@ -175,8 +195,8 @@ We'll start by looking at the Acceleration Structure build time in \ref{vulkan-a
   \hline
   \textbf{Time (microseconds)}& 400& 100 \\
   \hline
-  \label{vulkan-accelbuildtime-bm-vm-comparison}
 \end{tabular}
+  \label{vulkan-accelbuildtime-bm-vm-comparison}
 \end{table}
   % \caption{Hardware information of the different PCs we managed to run our tests on.}
 \end{center}

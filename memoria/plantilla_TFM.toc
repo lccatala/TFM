@@ -30,10 +30,10 @@
 \contentsline {section}{\numberline {6.1}Rasterization Baseline}{31}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Memory Usage}{34}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Acceleration Structure Build Time}{35}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Frame Time}{38}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Hardware comparison}{41}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Same GPU, changing CPU}{41}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Virtualization effects}{43}{subsection.6.5.2}%
-\contentsline {chapter}{\numberline {7}Conclusions}{45}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Future work}{46}{section.7.1}%
-\contentsline {section}{Referencias}{47}{section*.5}%
+\contentsline {section}{\numberline {6.4}Frame Time}{39}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Hardware comparison}{43}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Same GPU, changing CPU}{43}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Virtualization effects}{45}{subsection.6.5.2}%
+\contentsline {chapter}{\numberline {7}Conclusions}{47}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Future work}{49}{section.7.1}%
+\contentsline {section}{Referencias}{50}{section*.5}%

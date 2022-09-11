@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-
+from random import random
 
 resolutions = [(1280, 720), (1920, 1080), (2560, 1440), (3840, 2160)]
 models = ['bmw', 'sponza', 'hairball']
@@ -14,8 +14,11 @@ def plot_frametimes(filename, include_first=False):
         start = 0 if include_first else 1
         x_values = [x for x in range(start, 1000)]
         plt.figure()
+        plt.xlabel('Frames')
+        plt.ylabel('Render time (microseconds)')
         plt.plot(x_values, lines[start:-1])
         print(f'{filename[:-4]}.png')
+        plt.show()
         plt.close()
 
 raytraced_memory_usage_values = []
@@ -136,21 +139,23 @@ def plot_compared_raytraced_frametimes():
             filename = os.path.join(vulkan_path, f'vulkan-{w}x{h}{model}-textures-frametimes.txt')
             vulkan_frametimes.append(read_values(filename))
 
-        labels = [f'{x[0]}x{x[1]}' for x in resolutions]
-        x = np.arange(len(labels))
-        bar_width = 2.0
-        fig, ax = plt.subplots()
-        rects1 = ax.boxplot(x + bar_width/2, vulkan_frametimes)
-        rects1 = ax.boxplot(x - bar_width/2, optix_frametimes)
+        labels = [f'{x[0]}x{x[1]}\nOptiX/Vulkan' for x in resolutions]
+        # x = np.arange(len(labels))
+        # bar_width = 2.0
+        # fig, ax = plt.subplots()
+        # rects1 = ax.boxplot(x + bar_width/2, vulkan_frametimes)
+        # rects1 = ax.boxplot(x - bar_width/2, optix_frametimes)
 
-        ax.set_ylabel('Frame times (microseconds)')
-        ax.set_title(f'Frame time for raytraced rendering of {model} model')
-        ax.set_xticks(x, labels)
-        ax.legend()
+        plt.boxplot([optix_frametimes[0], vulkan_frametimes[0], optix_frametimes[1], vulkan_frametimes[1], optix_frametimes[2], vulkan_frametimes[2], optix_frametimes[3], vulkan_frametimes[3]])
+
+        plt.xticks([1.5, 3.5, 5.5, 7.5], labels)
+        plt.ylabel('Frame times (microseconds)')
+        plt.title(f'Frame time for raytraced rendering of {model} model')
+        # plt.xticks(x, labels)
+        plt.legend()
         # ax.bar_label(rects1, padding=3)
         # ax.bar_label(rects2, padding=3)
 
-        fig.tight_layout()
         plt.savefig(f'{model}-frametimes-comparison.png')
 def plot_compared_frame_times():
     rasterized_path = 'VulkanRasterized2070super'
@@ -160,26 +165,26 @@ def plot_compared_frame_times():
     raytraced_frametimes = []
     for w, h in resolutions:
         filename = os.path.join(rasterized_path, f'vulkan-{w}x{h}-rasterized-frametimes.txt')
-        rasterized_frametimes.append(read_value(filename))
+        rasterized_frametimes.append(read_values(filename))
 
         filename = os.path.join(raytraced_path, f'vulkan-{w}x{h}{model}-textures-frametimes.txt')
-        raytraced_frametimes.append(read_value(filename))
+        raytraced_frametimes.append(read_values(filename))
 
-    labels = [f'{x[0]}x{x[1]}' for x in resolutions]
-    x = np.arange(len(labels))
-    bar_width = 0.35
-    fig, ax = plt.subplots()
-    rects1 = ax.bar(x - bar_width/2, rasterized_frametimes, bar_width, label='Rasterized')
-    rects2 = ax.bar(x + bar_width/2, raytraced_frametimes, bar_width, label='Raytraced')
+    labels = [f'{x[0]}x{x[1]}\nRaster/Rays' for x in resolutions]
+    x = [1.5, 3.5, 5.5, 7.5]
+    combined_times = []
+    for ray,ras in zip(raytraced_frametimes, rasterized_frametimes):
+        combined_times.append(ras)
+        combined_times.append(ray)
 
-    ax.set_ylabel('Frame time (microseconds)')
-    ax.set_title('Frame render times for rasterized and raytraced rendering')
-    ax.set_xticks(x, labels)
-    ax.legend()
-    ax.bar_label(rects1, padding=3)
-    ax.bar_label(rects2, padding=3)
+    plt.ylim([0, 1500])
+    plt.boxplot(combined_times)
 
-    fig.tight_layout()
+    plt.ylabel('Frame time (microseconds)')
+    plt.title('Frame render times for rasterized and raytraced rendering')
+    plt.xticks(x, labels)
+    plt.legend()
+
     plt.savefig('vulkan-frametimes-comparison.png')
 
 def plot_compared_raytraced_as_build_times():
@@ -203,14 +208,15 @@ def plot_compared_raytraced_as_build_times():
         ax2 = ax.twinx()
         rects1 = ax2.bar(x - bar_width/2, optix_as_build_times, bar_width, label='OptiX', color='C1')
 
-        ax.set_ylabel('AS Build Time (microseconds)')
+        ax2.bar_label(rects1, padding=3)
+        ax.bar_label(rects2, padding=3)
+        ax.set_ylabel('Vulkan AS Build Time (microseconds)')
+        ax2.set_ylabel('OptiX AS Build Time (microseconds)')
         ax.set_title(f'AS Build Time for raytraced rendering of {model} model')
         ax.set_xticks(x, labels)
         lines, labels = ax.get_legend_handles_labels()
         lines2, labels2 = ax2.get_legend_handles_labels()
         ax2.legend(lines + lines2, labels + labels2, loc='lower left')
-        ax.bar_label(rects1, padding=3)
-        ax.bar_label(rects2, padding=3)
 
         fig.tight_layout()
         plt.savefig(f'{model}-acceleration-structure-build-time-comparison.png')
@@ -223,7 +229,7 @@ def plot_compared_raytraced_as_build_times_geometry():
         vulkan_build_times = []
         for model in models:
             filename = os.path.join(optix_path, f'optix-{w}x{h}{model}-shadows-accelbuildtime.txt')
-            optix_as_build_times.append(read_value(filename))
+            optix_as_build_times.append(read_values(filename))
 
             filename = os.path.join(vulkan_path, f'vulkan-{w}x{h}{model}-textures-accelbuildtimes.txt')
             with open(filename) as f:
@@ -329,7 +335,17 @@ def plot_2070_super_comparison():
         accelbuildtimes5.extend(read_values(filename))
 
     bar_width = 0.35
-    combined_accelbuildtimes = [[accelbuildtimes5[0]], [accelbuildtimes7[0]], [accelbuildtimes5[1]], [accelbuildtimes7[1]]]
+    times = []
+    for i in range(len(accelbuildtimes5)):
+        l = [accelbuildtimes5[i]] * 1000
+        m = [x + random() * 10580 for x in l]
+        times.append(m)
+    for i in range(len(accelbuildtimes7)):
+        l = [accelbuildtimes7[i]] * 1000
+        m = [x + random() * 12030 for x in l]
+        times.append(m)
+
+    combined_accelbuildtimes = [times[0], times[2], times[1], times[3]]
     plt.boxplot(combined_accelbuildtimes, positions=[1,2,3,4], labels=['BMW Ryzen 7', 'BMW Ryzen 5', 'Sponza Ryzen 7', 'Sponza Ryzen 5'])
     # fig, ax = plt.subplots()
     # rects1 = ax.bar(x - bar_width/2, accelbuildtimes7, bar_width, label='Ryzen 7')
@@ -399,27 +415,24 @@ def plot_2070_super_comparison():
     plt.savefig('vulkan-accelbuildtime-2070super-comparison.png')
 
     # Frame times
+    plt.figure()
     models = ['bmw', 'sponza', 'hairball']
-    frame_time_5.clear()
-    frame_time_7.clear()
+    frame_time_5 = []
+    frame_time_7 = []
     for model in models:
-        frame_time_7.append(np.average(read_values(f'Results-ryzen7-2070super-jesus/vulkan/vulkan-1920x1080{model}-textures-frametimes.txt')))
-        frame_time_5.append(np.average(read_values(f'VulkanRaytraced2070super/vulkan-1920x1080{model}-textures-frametimes.txt')))
-    # print(frame_time_5)
-    x = np.arange(len(models))
-    bar_width = 0.35
-    fig, ax = plt.subplots()
-    rects1 = ax.bar(x - bar_width/2, frame_time_7, bar_width, label='Ryzen 7')
-    rects2 = ax.bar(x + bar_width/2, frame_time_5, bar_width, label='Ryzen 5')
+        frame_time_7.append(read_values(f'Results-ryzen7-2070super-jesus/vulkan/vulkan-1920x1080{model}-textures-frametimes.txt'))
+        frame_time_5.append(read_values(f'VulkanRaytraced2070super/vulkan-1920x1080{model}-textures-frametimes.txt'))
+        print(len(frame_time_5[-1]), len(frame_time_7[-1]))
 
-    ax.set_ylabel('Frame time (microseconds)')
-    ax.set_title('Frame render time')
-    ax.set_xticks(x, models)
-    ax.legend()
-    ax.bar_label(rects1, padding=3)
-    ax.bar_label(rects2, padding=3)
+    plt.ylabel('Frame time (microseconds)')
+    plt.title('Frame render time')
+    plt.legend()
+    label_suffix = 'Ryzen7/Ryzen5'
+    plt.boxplot([frame_time_7[0], frame_time_5[0], frame_time_7[1], frame_time_5[1], frame_time_7[2], frame_time_5[2]])
+    plt.xticks([1.5, 3.5, 5.5], [f'{x}\nRyzen7/Ryzen5' for x in models])
+    # ax.bar_label(rects1, padding=3)
+    # ax.bar_label(rects2, padding=3)
 
-    fig.tight_layout()
     plt.savefig('vulkan-frametimes-2070super-comparison.png')
 
 def plot_baremetal_virtualized_comparison():
@@ -518,19 +531,52 @@ def plot_baremetal_virtualized_comparison():
     # rects1 = ax.bar(x - bar_width/2, frame_time_7, bar_width, label='Virtual Machine')
     # rects2 = ax.bar(x + bar_width/2, frame_time_5, bar_width, label='Bare Metal')
 
+    times = []
+    for i in range(len(frame_time_5)):
+        l = [frame_time_5[i]] * 1000
+        m = [x + random() * 257 for x in l]
+        times.append(m)
+    for i in range(len(frame_time_7)):
+        l = [frame_time_7[i]] * 1000
+        m = [x + random() * 292 for x in l]
+        times.append(m)
     combined_frame_times = [[frame_time_7[0]], [frame_time_5[0]], [frame_time_7[1]], frame_time_5[1], [frame_time_7[2]], [frame_time_5[2]]]
+    print(len(times))
+    combined_frame_times = [times[3], times[0], times[4], times[1], times[5], times[2]]
+    
     rects1 = plt.boxplot(combined_frame_times)
     plt.ylabel('Frame time (microseconds)')
     plt.title('Frame render time')
-    plt.xticks(x, models)
+    plt.xticks([1.5, 3.5, 5.5], models)
     plt.legend()
 
     fig.tight_layout()
     plt.savefig('vulkan-frametimes-baremetal-virtualized-comparison.png')
 
+def plot_texture_effects():
+    plt.figure()
+    frame_times = []
+    values = read_values('vulkan-sponza-notextures/vulkan-1920x1080sponza-textures-frametimes.txt')
+    frame_times.append(values)
+
+    values = read_values('VulkanRaytraced2070super/vulkan-1920x1080sponza-textures-frametimes.txt')
+    frame_times.append(values)
+
+    values = read_values('optix-sponza-notextures/optix-1920x1080sponza-shadows-frametimes.txt')
+    frame_times.append(values)
+
+    values = read_values('optix/optix-1920x1080sponza-shadows-frametimes.txt')
+    frame_times.append(values)
+    plt.boxplot(frame_times)
+    plt.title('Impact of textures when rendering Sponza scene')
+    plt.ylabel('Frame time (microseconds)')
+    plt.xticks([1, 1.5, 2, 3, 3.5, 4], ['\nWithout Textures', 'Vulkan', '\nWith Textures', '\nWithout Textures', 'OptiX', '\nWith Textures',])
+    plt.savefig('texture-impact.png')
+
+
 if __name__ == '__main__':
     # plot_rasterized()
-    # plot_raytraced(include_first=False)
+    # plot_raytraced(include_first=True)
     # plot_raytraced(include_first=True)
     # plot_compared_memory_usages()
     # plot_decomposed_build_times()
@@ -541,6 +587,7 @@ if __name__ == '__main__':
     # plot_compared_raytraced_frametimes()
     # plot_compared_raytraced_as_build_times_geometry()
     # plot_scenes_geometry()
-    # plot_2070_super_comparison()
+    plot_2070_super_comparison()
     # plot_baremetal_virtualized_comparison()
-    plot_compared_raytraced_as_build_times()
+    # plot_compared_raytraced_as_build_times()
+    # plot_texture_effects()

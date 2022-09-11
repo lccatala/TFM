@@ -25,6 +25,11 @@
 \citation{*}
 \bibstyle{apacite}
 \babel@aux{spanish}{}
+\citation{rileymulti}
+\citation{wei2022model}
+\citation{lext2001benchmark}
+\citation{foley2005kd}
+\citation{wald2007ray}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -146,37 +151,41 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {3840x2160}}}{36}{subfigure.5.4}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Acceleration Structure Build Times for each model, divided between the TLAS and BLAS phases. We see great discrepancies in the distribution of time in each case.}}{37}{figure.6.6}\protected@file@percent }
 \newlabel{as-build-time-decomposed}{{6.6}{37}{Acceleration Structure Build Times for each model, divided between the TLAS and BLAS phases. We see great discrepancies in the distribution of time in each case}{figure.6.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Acceleration Structure Build Times divided between the TLAS and BLAS phases for the extra set of models (Human, ISCV2 and Gallery). We see how the presence of textures makes for a longer TLAS build time.}}{37}{figure.6.7}\protected@file@percent }
-\newlabel{as-extra-build-time-decomposed}{{6.7}{37}{Acceleration Structure Build Times divided between the TLAS and BLAS phases for the extra set of models (Human, ISCV2 and Gallery). We see how the presence of textures makes for a longer TLAS build time}{figure.6.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Frame Time}{38}{section.6.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We see how the first frame takes much longer than the rest of them to draw.}}{38}{figure.6.8}\protected@file@percent }
-\newlabel{frametimes-outlier-graph}{{6.8}{38}{Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We see how the first frame takes much longer than the rest of them to draw}{figure.6.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We have removed the first frame time since it took too long to draw in comparison with the rest.}}{39}{figure.6.9}\protected@file@percent }
-\newlabel{frametimes-no-outlier-graph}{{6.9}{39}{Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We have removed the first frame time since it took too long to draw in comparison with the rest}{figure.6.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Frame rendering times for each 3D model (BMW, Hairball and Sponza) across both libraries and 4 reasonable resolutions, from 720p to 4k.}}{40}{figure.6.10}\protected@file@percent }
-\newlabel{frametimes-overview-graph}{{6.10}{40}{Frame rendering times for each 3D model (BMW, Hairball and Sponza) across both libraries and 4 reasonable resolutions, from 720p to 4k}{figure.6.10}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {BMW}}}{40}{subfigure.10.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Sponza}}}{40}{subfigure.10.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Hairball}}}{40}{subfigure.10.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Acceleration Structure Build Time and Frame Render Time comparison in OptiX when using an Nvidia 2070 Super in two systems with different CPUs. We see how a faster CPU means better performance in both cases.}}{41}{figure.6.11}\protected@file@percent }
-\newlabel{optix-2070-super-comparison}{{6.11}{41}{Acceleration Structure Build Time and Frame Render Time comparison in OptiX when using an Nvidia 2070 Super in two systems with different CPUs. We see how a faster CPU means better performance in both cases}{figure.6.11}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Acceleration Structure Build Time}}}{41}{subfigure.11.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Frame Times}}}{41}{subfigure.11.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Hardware comparison}{41}{section.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}Same GPU, changing CPU}{41}{subsection.6.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Acceleration Structure Build Time and Frame Render Time comparison in Vulkan when using an Nvidia 2070 Super in two systems with different CPUs. We see more variation in which system does better, in contrast with the previous OptiX test.}}{42}{figure.6.12}\protected@file@percent }
-\newlabel{vulkan-2070-super-comparison}{{6.12}{42}{Acceleration Structure Build Time and Frame Render Time comparison in Vulkan when using an Nvidia 2070 Super in two systems with different CPUs. We see more variation in which system does better, in contrast with the previous OptiX test}{figure.6.12}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Acceleration Structure Build Time}}}{42}{subfigure.12.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Frame Times}}}{42}{subfigure.12.2}\protected@file@percent }
-\newlabel{vulkan-accelbuildtime-bm-vm-comparison}{{6.5.2}{43}{Virtualization effects}{subsection.6.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}Virtualization effects}{43}{subsection.6.5.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Frame render times in Vulkan across two machines with the same GPU (Nvidia 3080). One of them is running the renderer under a virtual machine and the other is doing so bare metal. We see a slight advantage towards the virtualized approach in this side, which could be due to a mere coincidence. This would make the GPU the only important element when drawing a given scene.}}{44}{figure.6.13}\protected@file@percent }
-\newlabel{vulkan-frame-times-bm-vm-comparison}{{6.13}{44}{Frame render times in Vulkan across two machines with the same GPU (Nvidia 3080). One of them is running the renderer under a virtual machine and the other is doing so bare metal. We see a slight advantage towards the virtualized approach in this side, which could be due to a mere coincidence. This would make the GPU the only important element when drawing a given scene}{figure.6.13}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusions}{45}{chapter.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Acceleration Structure Build Times divided between the TLAS and BLAS phases for the extra set of models (Human, ISCV2 and Gallery).}}{37}{figure.6.7}\protected@file@percent }
+\newlabel{as-extra-build-time-decomposed}{{6.7}{37}{Acceleration Structure Build Times divided between the TLAS and BLAS phases for the extra set of models (Human, ISCV2 and Gallery)}{figure.6.7}{}}
+\newlabel{blas-count-table}{{6.3}{38}{Acceleration Structure Build Time}{figure.6.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Number of Bottom Level Acceleration Structures in each scene tested. We see how Sponza, despite having the highest triangle count, has the biggest ammount of BLASes. This explains why it's the scene taking the longest to build an Acceleration Structure.}}{38}{table.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Frame Time}{39}{section.6.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We see how the first frame takes much longer than the rest of them to draw.}}{39}{figure.6.8}\protected@file@percent }
+\newlabel{frametimes-outlier-graph}{{6.8}{39}{Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We see how the first frame takes much longer than the rest of them to draw}{figure.6.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We have removed the first frame time since it took too long to draw in comparison with the rest.}}{40}{figure.6.9}\protected@file@percent }
+\newlabel{frametimes-no-outlier-graph}{{6.9}{40}{Time taken for rendering 1000 frames when drawing the BMW 3D model at 1280x720, using ray tracing. We have removed the first frame time since it took too long to draw in comparison with the rest}{figure.6.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Frame rendering times for each 3D model (BMW, Hairball and Sponza) across both libraries and 4 reasonable resolutions, from 720p to 4k.}}{41}{figure.6.10}\protected@file@percent }
+\newlabel{frametimes-overview-graph}{{6.10}{41}{Frame rendering times for each 3D model (BMW, Hairball and Sponza) across both libraries and 4 reasonable resolutions, from 720p to 4k}{figure.6.10}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {BMW}}}{41}{subfigure.10.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Sponza}}}{41}{subfigure.10.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Hairball}}}{41}{subfigure.10.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Sponza scene rendered in Vulkan and OptiX, both with and without textures, to compare how these affect render times.}}{42}{figure.6.11}\protected@file@percent }
+\newlabel{texture-impact-graph}{{6.11}{42}{Sponza scene rendered in Vulkan and OptiX, both with and without textures, to compare how these affect render times}{figure.6.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Acceleration Structure Build Time and Frame Render Time comparison in OptiX when using an Nvidia 2070 Super in two systems with different CPUs. We see how a faster CPU means better performance in both cases.}}{43}{figure.6.12}\protected@file@percent }
+\newlabel{optix-2070-super-comparison}{{6.12}{43}{Acceleration Structure Build Time and Frame Render Time comparison in OptiX when using an Nvidia 2070 Super in two systems with different CPUs. We see how a faster CPU means better performance in both cases}{figure.6.12}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Acceleration Structure Build Time}}}{43}{subfigure.12.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Frame Times}}}{43}{subfigure.12.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Hardware comparison}{43}{section.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}Same GPU, changing CPU}{43}{subsection.6.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Acceleration Structure Build Time and Frame Render Time comparison in Vulkan when using an Nvidia 2070 Super in two systems with different CPUs. We see more variation in which system does better, in contrast with the previous OptiX test.}}{44}{figure.6.13}\protected@file@percent }
+\newlabel{vulkan-2070-super-comparison}{{6.13}{44}{Acceleration Structure Build Time and Frame Render Time comparison in Vulkan when using an Nvidia 2070 Super in two systems with different CPUs. We see more variation in which system does better, in contrast with the previous OptiX test}{figure.6.13}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Acceleration Structure Build Time}}}{44}{subfigure.13.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Frame Times}}}{44}{subfigure.13.2}\protected@file@percent }
+\newlabel{vulkan-accelbuildtime-bm-vm-comparison}{{6.5.2}{45}{Virtualization effects}{subsection.6.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}Virtualization effects}{45}{subsection.6.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Frame render times in Vulkan across two machines with the same GPU (Nvidia 3080). One of them is running the renderer under a virtual machine and the other is doing so bare metal. We see a slight advantage towards the virtualized approach in this side, which could be due to a mere coincidence. This would make the GPU the only important element when drawing a given scene.}}{46}{figure.6.14}\protected@file@percent }
+\newlabel{vulkan-frame-times-bm-vm-comparison}{{6.14}{46}{Frame render times in Vulkan across two machines with the same GPU (Nvidia 3080). One of them is running the renderer under a virtual machine and the other is doing so bare metal. We see a slight advantage towards the virtualized approach in this side, which could be due to a mere coincidence. This would make the GPU the only important element when drawing a given scene}{figure.6.14}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusions}{47}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \citation{Kallweit22}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Future work}{46}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Future work}{49}{section.7.1}\protected@file@percent }
 \bibdata{bibliografia}
 \bibcite{ScratchPixel}{\citeauthoryear {{\em  3D Basic Rendering\/}}{{\em  3D Basic Rendering\/}}{{\APACyear {2022}}}}
 \APACbibcite{ScratchPixel}{\citeauthoryear {{\em  3D Basic Rendering\/}}{{\em  3D Basic Rendering\/}}{{\APACyear {2022}}}}
@@ -190,12 +199,16 @@
 \APACbibcite{felbecker2012electromagnetic}{\citeauthoryear {Felbecker, Raschkowski, Keusgen,{}\ \BBA{} Peter}{Felbecker\ \BOthers {.}}{{\APACyear {2012}}}}
 \bibcite{WikimediaRT}{\citeauthoryear {{\em  File:Ray trace diagram.svg\/}}{{\em  File:Ray trace diagram.svg\/}}{{\APACyear {2022}}}}
 \APACbibcite{WikimediaRT}{\citeauthoryear {{\em  File:Ray trace diagram.svg\/}}{{\em  File:Ray trace diagram.svg\/}}{{\APACyear {2022}}}}
+\bibcite{foley2005kd}{\citeauthoryear {Foley\ \BBA{} Sugerman}{Foley\ \BBA{} Sugerman}{{\APACyear {2005}}}}
+\APACbibcite{foley2005kd}{\citeauthoryear {Foley\ \BBA{} Sugerman}{Foley\ \BBA{} Sugerman}{{\APACyear {2005}}}}
 \bibcite{hursky2013reverberation}{\citeauthoryear {Hursky\ \BBA{} Abawi}{Hursky\ \BBA{} Abawi}{{\APACyear {2013}}}}
 \APACbibcite{hursky2013reverberation}{\citeauthoryear {Hursky\ \BBA{} Abawi}{Hursky\ \BBA{} Abawi}{{\APACyear {2013}}}}
 \bibcite{Kallweit22}{\citeauthoryear {Kallweit\ \BOthers {.}}{Kallweit\ \BOthers {.}}{{\APACyear {2022}}}}
 \APACbibcite{Kallweit22}{\citeauthoryear {Kallweit\ \BOthers {.}}{Kallweit\ \BOthers {.}}{{\APACyear {2022}}}}
 \bibcite{VulkanRaytracingTutorial}{\citeauthoryear {Lefrançois}{Lefrançois}{{\APACyear {{\bibnodate {}}}}}}
 \APACbibcite{VulkanRaytracingTutorial}{\citeauthoryear {Lefrançois}{Lefrançois}{{\APACyear {{\bibnodate {}}}}}}
+\bibcite{lext2001benchmark}{\citeauthoryear {Lext, Assarsson,{}\ \BBA{} Moller}{Lext\ \BOthers {.}}{{\APACyear {2001}}}}
+\APACbibcite{lext2001benchmark}{\citeauthoryear {Lext, Assarsson,{}\ \BBA{} Moller}{Lext\ \BOthers {.}}{{\APACyear {2001}}}}
 \bibcite{Mantle}{\citeauthoryear {{\em  Mantle, Wikipedia\/}}{{\em  Mantle, Wikipedia\/}}{{\APACyear {2022}}}}
 \APACbibcite{Mantle}{\citeauthoryear {{\em  Mantle, Wikipedia\/}}{{\em  Mantle, Wikipedia\/}}{{\APACyear {2022}}}}
 \bibcite{McGuire2022Data}{\citeauthoryear {McGuire}{McGuire}{{\APACyear {2022}}}}
@@ -212,17 +225,21 @@
 \APACbibcite{parker2010optix}{\citeauthoryear {Parker\ \BOthers {.}}{Parker\ \BOthers {.}}{{\APACyear {2010}}}}
 \bibcite{WikipediaRT}{\citeauthoryear {{\em  Ray Tracing (graphics)\/}}{{\em  Ray Tracing (graphics)\/}}{{\APACyear {2022}}}}
 \APACbibcite{WikipediaRT}{\citeauthoryear {{\em  Ray Tracing (graphics)\/}}{{\em  Ray Tracing (graphics)\/}}{{\APACyear {2022}}}}
+\@writefile{toc}{\contentsline {section}{Referencias}{50}{section*.5}\protected@file@percent }
 \bibcite{rileymulti}{\citeauthoryear {Riley, Diefes, Bechtold,{}\ \BBA{} Barry}{Riley\ \BOthers {.}}{{\APACyear {{\bibnodate {}}}}}}
 \APACbibcite{rileymulti}{\citeauthoryear {Riley, Diefes, Bechtold,{}\ \BBA{} Barry}{Riley\ \BOthers {.}}{{\APACyear {{\bibnodate {}}}}}}
 \bibcite{GpuMemUsageVulkan}{\citeauthoryear {Sawichi}{Sawichi}{{\APACyear {{\bibnodate {}}}}}}
 \APACbibcite{GpuMemUsageVulkan}{\citeauthoryear {Sawichi}{Sawichi}{{\APACyear {{\bibnodate {}}}}}}
-\@writefile{toc}{\contentsline {section}{Referencias}{47}{section*.5}\protected@file@percent }
 \bibcite{van2022novel}{\citeauthoryear {Van\unhbox \voidb@x \nobreak  \ Bogaert, Bonatto, Fachada,{}\ \BBA{} Lafruit}{Van\unhbox \voidb@x \nobreak  \ Bogaert\ \BOthers {.}}{{\APACyear {2022}}}}
 \APACbibcite{van2022novel}{\citeauthoryear {Van\unhbox \voidb@x \nobreak  \ Bogaert, Bonatto, Fachada,{}\ \BBA{} Lafruit}{Van\unhbox \voidb@x \nobreak  \ Bogaert\ \BOthers {.}}{{\APACyear {2022}}}}
 \bibcite{vassilev2012collision}{\citeauthoryear {Vassilev}{Vassilev}{{\APACyear {2012}}}}
 \APACbibcite{vassilev2012collision}{\citeauthoryear {Vassilev}{Vassilev}{{\APACyear {2012}}}}
 \bibcite{OptixCourse}{\citeauthoryear {Wald}{Wald}{{\APACyear {2022}}}}
 \APACbibcite{OptixCourse}{\citeauthoryear {Wald}{Wald}{{\APACyear {2022}}}}
+\bibcite{wald2007ray}{\citeauthoryear {Wald, Boulos,{}\ \BBA{} Shirley}{Wald\ \BOthers {.}}{{\APACyear {2007}}}}
+\APACbibcite{wald2007ray}{\citeauthoryear {Wald, Boulos,{}\ \BBA{} Shirley}{Wald\ \BOthers {.}}{{\APACyear {2007}}}}
+\bibcite{wei2022model}{\citeauthoryear {Wei\ \BOthers {.}}{Wei\ \BOthers {.}}{{\APACyear {2022}}}}
+\APACbibcite{wei2022model}{\citeauthoryear {Wei\ \BOthers {.}}{Wei\ \BOthers {.}}{{\APACyear {2022}}}}
 \bibcite{DXGI}{\citeauthoryear {White\ \BOthers {.}}{White\ \BOthers {.}}{{\APACyear {{\bibnodate {}}}}}}
 \APACbibcite{DXGI}{\citeauthoryear {White\ \BOthers {.}}{White\ \BOthers {.}}{{\APACyear {{\bibnodate {}}}}}}
-\gdef \@abspage@last{58}
+\gdef \@abspage@last{61}

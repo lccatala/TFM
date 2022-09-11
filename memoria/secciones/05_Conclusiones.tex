@@ -13,9 +13,24 @@ This master's degree has a bigger focus on machine learning than computer graphi
 
 This discrepancy between development and running time could very well compensate itself, making the total amount of time dedicated to a project in one field or the other pretty much equivalent.
 
+Most importantly, the conclusions from comparing both APIs, in no particular order of importance, are the following:
+\begin{itemize}
+  \item[*]{Vulkan has an overall longer development time required to achieve equivalent results as the ones we could get in OptiX. The explicitness it requires for seamingly trivial tasks, while guaranteeing a higher degree of control over what the driver is optimizing for, require the programmer to either depend on more third party libraries for tasks like managing memory or configuring the graphics pipeline, or spend longer amounts of time developing that logic themselves than if they were using OptiX.}
+  \item[*]{The aforementioned explicitness required for coding in Vulkan also allows it to have an overall better performance, both in processing time and in memory consumption, as we shall now break down.}
+  \item[*]{Ray Tracing takes much longer than Rasterization to render a frame independently of screen resolution, at least inside the reasonable range of them we tested. It also has a much higher video memory consumption, sometimes by orders of magnitude.}
+  \item[*]{The most used metrics used to evaluate performance of a ray tracing renderer are Acceleration Structure Build Time, Memory Consumption and Frame Render Time.}
+  \item[*]{Vulkan takes longer to build the Acceleration Structure for a scene as the ammount of triangles in the scene increases. OptiX, on the other hand, takes longer to build it as the number of Bottom Level Acceleration Structures (i. e. individual meshes) in said scene increases.}
+  \item[*]{Independently of the last point, and in all the scenes we tested, OptiX always takes longer to build the AS for a given scene than Vulkan does.}
+  \item[*]{Both libraries take longer to render a frame as the resolution increases.}
+  \item[*]{In the testing we did, OptiX took fractionary longer to render a scene when this included textures than when it didn't, while Vulkan took effectively the same amount of time to render both, independently of the presence of textures.}
+  \item[*]{Independently of the last point and in the testing we did, when rendering the same frame, OptiX always takes longer than Vulkan to do so.}
+  \item[*]{Both Vulkan and OptiX can work without issue in a virtualized environment with GPU passthrough. In the testing we did, virtualized environments had performance on-par with bare-metal systems with the same GPU. The main difference between both was the CPU, which we'll discuss next.}
+  \item[*]{While common knowledge may lead us to believe that a better CPU may significantly increase performance, rendering is primarily GPU-bound. In the testing we did, systems with more powerful GPUs only registered a marginally faster performance. This probably due to the CPU being mostly idle once all the required data has been uploaded to the GPU, at least in static scenes.}
+\end{itemize}
+
 An unrelated note on a completely personal tone: this work has made me realize how behind are the typical development tools in the graphics industry in comparison to others. The most typical development environment for computer graphics, aside from a few exceptions, is Visual Studio running on Windows. Coming from the Unix-based world, these tools seem sluggish, tight and slow in comparison, as well as hard to learn in some cases. And I use Vim.
 
-Finally, being forced to code in Vulkan is something equivalent to using PyTorch for Deep Learning. The low level and explicit approach of these libraries helps you understand in greater detail how some processes work. In the same way that PyTorch makes you understand how a neural network is trained in comparison to running \textit{model.fit} in Keras, configuring every step of the graphics pipeline in Vulkan makes you understand it in greater depth. The same goes for the modern ray tracing pipeline and both libraries I used here, with OptiX having a (relatively) higher level approach, serving as a gentle introduction. In this way it could be considered an equivalent to OpenGL.
+Finally, the experience of coding in Vulkan is something equivalent to using PyTorch for Deep Learning. The low level and explicit approach of these libraries helps you understand in greater detail how some processes work. In the same way that PyTorch makes you understand how a neural network is trained in comparison to running \textit{model.fit} in Keras, configuring every step of the graphics pipeline in Vulkan makes you understand it in greater depth. The same goes for the modern ray tracing pipeline and both libraries I used here, with OptiX having a (relatively) higher level approach, serving as a gentle introduction. In this way it could be considered an equivalent to OpenGL.
 
 \section{Future work}
 
