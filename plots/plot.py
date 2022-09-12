@@ -205,21 +205,20 @@ def plot_compared_raytraced_as_build_times():
         bar_width = 0.35
         fig, ax = plt.subplots()
         rects2 = ax.bar(x + bar_width/2, vulkan_build_times, bar_width, label='Vulkan')
-        ax2 = ax.twinx()
-        rects1 = ax2.bar(x - bar_width/2, optix_as_build_times, bar_width, label='OptiX', color='C1')
+        rects1 = ax.bar(x - bar_width/2, optix_as_build_times, bar_width, label='OptiX', color='C1')
 
-        ax2.bar_label(rects1, padding=3)
+        ax.bar_label(rects1, padding=3)
         ax.bar_label(rects2, padding=3)
         ax.set_ylabel('Vulkan AS Build Time (microseconds)')
-        ax2.set_ylabel('OptiX AS Build Time (microseconds)')
+        ax.set_ylabel('OptiX AS Build Time (microseconds)')
         ax.set_title(f'AS Build Time for raytraced rendering of {model} model')
         ax.set_xticks(x, labels)
-        lines, labels = ax.get_legend_handles_labels()
-        lines2, labels2 = ax2.get_legend_handles_labels()
-        ax2.legend(lines + lines2, labels + labels2, loc='lower left')
+        ax.legend(loc='center left')
+        plt.yscale('log')
 
         fig.tight_layout()
         plt.savefig(f'{model}-acceleration-structure-build-time-comparison.png')
+        plt.show()
 
 def plot_compared_raytraced_as_build_times_geometry():
     optix_path = 'optix'
@@ -508,8 +507,8 @@ def plot_baremetal_virtualized_comparison():
 
     plt.ylabel('Build time (microseconds)')
     plt.title('Acceleration Structure build time')
-    plt.xticks(x, models)
     plt.legend()
+    # plt.show()
     # ax.bar_label(rects1, padding=3)
     # ax.bar_label(rects2, padding=3)
 
@@ -547,10 +546,8 @@ def plot_baremetal_virtualized_comparison():
     rects1 = plt.boxplot(combined_frame_times)
     plt.ylabel('Frame time (microseconds)')
     plt.title('Frame render time')
-    plt.xticks([1.5, 3.5, 5.5], models)
-    plt.legend()
+    plt.xticks([1, 1.5, 2, 3, 3.5, 4, 5, 5.5, 6], ['\nBare Metal', 'BMW', '\nVM', '\nBare Metal', 'Sponza', '\nVM', '\nBare Metal', 'Hairball', '\nVM'])
 
-    fig.tight_layout()
     plt.savefig('vulkan-frametimes-baremetal-virtualized-comparison.png')
 
 def plot_texture_effects():
@@ -573,6 +570,41 @@ def plot_texture_effects():
     plt.xticks([1, 1.5, 2, 3, 3.5, 4], ['\nWithout Textures', 'Vulkan', '\nWith Textures', '\nWithout Textures', 'OptiX', '\nWith Textures',])
     plt.savefig('texture-impact.png')
 
+def plot_astimes():
+    times = []
+    for model in models:
+        for api in ['vulkan', 'optix']:
+            print(f'{api}-{model}')
+            times.append(read_values(f'{api}-{model}-astimes.txt'))
+    plt.boxplot(times)
+    plt.xticks([1, 1.5, 2, 3, 3.5, 4, 5, 5.5, 6], ['\nVulkan', 'BMW', '\nOptiX', '\nVulkan', 'Sponza', '\nOptiX', '\nVulkan', 'Hairball', '\nOptiX'])
+    plt.title('Acceleration Structure Build Times')
+    plt.show()
+
+def get_outliers(data):
+    d = np.abs(data - np.median(data))
+    mdev = np.median(d)
+    s = d/mdev if mdev else 0.
+    m = 1.5
+    outliers = np.asarray(data)[s>m]
+    print('Outlier percentage:', len(outliers)/10)
+    avg = np.average(data)
+    print('Bigger than average:', len(outliers[outliers>avg]))
+    print('Smaller than average:', len(outliers[outliers<avg]))
+
+    median = np.median(data)
+    print('Bigger than median:', len(outliers[outliers>median]))
+    print('Smaller than median:', len(outliers[outliers<median]))
+    print()
+
+def analyze_frametime_distribution():
+    frame_time_7 = read_values('Results-ryzen7-2070super-jesus/optix/optix-1920x1080sponza-shadows-frametimes.txt')
+    frame_time_5 = read_values('optix/optix-1920x1080sponza-shadows-frametimes.txt')
+    print('Ryzen 7')
+    get_outliers(frame_time_7)
+    print('Ryzen 5')
+    get_outliers(frame_time_5)
+
 
 if __name__ == '__main__':
     # plot_rasterized()
@@ -587,7 +619,9 @@ if __name__ == '__main__':
     # plot_compared_raytraced_frametimes()
     # plot_compared_raytraced_as_build_times_geometry()
     # plot_scenes_geometry()
-    plot_2070_super_comparison()
+    # plot_2070_super_comparison()
     # plot_baremetal_virtualized_comparison()
     # plot_compared_raytraced_as_build_times()
     # plot_texture_effects()
+    # plot_astimes()
+    analyze_frametime_distribution()

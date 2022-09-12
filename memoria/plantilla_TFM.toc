@@ -33,7 +33,7 @@
 \contentsline {section}{\numberline {6.4}Frame Time}{39}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Hardware comparison}{43}{section.6.5}%
 \contentsline {subsection}{\numberline {6.5.1}Same GPU, changing CPU}{43}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Virtualization effects}{45}{subsection.6.5.2}%
-\contentsline {chapter}{\numberline {7}Conclusions}{47}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Future work}{49}{section.7.1}%
-\contentsline {section}{Referencias}{50}{section*.5}%
+\contentsline {subsection}{\numberline {6.5.2}Virtualization effects}{46}{subsection.6.5.2}%
+\contentsline {chapter}{\numberline {7}Conclusions}{49}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Future work}{51}{section.7.1}%
+\contentsline {section}{Referencias}{52}{section*.5}%

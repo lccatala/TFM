@@ -45,7 +45,7 @@ This is the first example of a trend we will start seeing throughout this chapte
 \section{Acceleration Structure Build Time}
 Next up we will be looking at the Acceleration Structure Build time across both libraries. Although in our experiments this was only done once per program execution, applications that perform animations or other form of dynamic geometry may need to partly rebuild their AS as frequent as once per frame. Thus, the time it takes to do so (although not all of it) could be counting towards the total time it takes to process a full application cycle (along with rendering, and simulation, etc.).
 
-If we plot the Acceleration Structure Building Times in the same way as we did with the memory consumption, we get the graphs at figure \ref{as-build-time-comparison-graph}.
+If we plot the Acceleration Structure Building Times in the same way as we did with the memory consumption, we get the graphs at figure \ref{as-build-time-comparison-graph}. Mind the logarithmic scale being used.
 
 \begin{figure}
     \subfloat[BMW]{\includegraphics[width = 3in]{figuras/bmw-acceleration-structure-build-time-comparison.png}}
@@ -156,8 +156,27 @@ As mentioned in the Development chapter, we ran our software in all the machines
 \subsection{Same GPU, changing CPU}
 We'll start by comparing how a difference in CPU power affects all the metrics we're monitoring, except for memory usage of course. We have a couple of pairs of systems with the same GPUs and different processors. We will be looking at two systems. One has an AMD Ryzen 5 3700 BOX and the other an Intel Core i9-12900F. Both of them are using an Nvidia 2070 Super. %On the one hand we have two \textit{2070 Super}'s with an AMD Ryzen 5 3700 BOX and 7 3800x respectively, and on the other we have two \textit{2600}'s, one with an Intel Core i9-12900F and the other with a % TODO 
 
-We will start with OptiX. In graph \ref{optix-2070-super-comparison} we see how acceleration structure build time and frame times compare to one another when using two machines with a \textit{2070 Super} and AMD Ryzen 5 and 7 processors respectively. Some of the results data went missing when trying to get the software to run on other people's systems, so we will not be comparing all the models' metrics every time. Additionally, we have only compared the render time averages at a 1920x1080 resolution to simplify the graphs.
+We will start with OptiX. In graph \ref{optix-2070-super-comparison} we see how acceleration structure build time and frame times compare to one another when using two machines with a \textit{2070 Super} and AMD Ryzen 5 and 7 processors respectively. Some of the results data went missing when trying to get the software to run on other people's systems, so we will not be comparing all the models' metrics every time. Additionally, we have only compared the render times at a 1920x1080 resolution to simplify the graphs. 
 
+In sight of the great number of statistical outliers present in said plot, we decided to analyze our sample in further detail. The results we found can be seen in table \ref{frametimes-statistics-table}. Here we observe a high fraction of data points are indeed outliers, between a third and a half of the samples in the two studied sets. Also we see how each of the outlier sets tend towards a different end of its sample's median, with the most powerful (Ryzen 7) CPU having a greater count of \textit{slower} outliers, while the more modest one (Ryzen 5) tends to have relatively \textit{faster} ones. Since there is no discernable pattern, we theorize this variance is due to different system workload amounts during the rendering tests.
+
+\begin{center}
+  \begin{table}
+    \begin{tabular}{ | m{5cm}| m{1.5cm} | m{1.5cm} |}
+  \hline
+      & Ryzen 7& Ryzen 5\\
+  \hline
+  \textbf{Outlier percentage}& 41.7& 31.8\\
+  \hline
+  \textbf{Bigger than median}& 308& 95\\
+  \hline
+  \textbf{Smaller than median}& 109& 223\\
+  \hline
+\end{tabular}
+  \label{frametimes-statistics-table}
+  \caption{Statistical analysis of frame times when comparing a Ryzen 7 and Ryzen 5 processor using the same 2070 Super model of GPU.}
+\end{table}
+\end{center}
 In both cases we see a marginal increase in performance (less time consumption) in the system with the more powerful CPU. In all cases it's small enough that it could be considered noise, being a difference smaller than a 10\% every time. However, since it happens accross all tested models and all the averages in render time, we can determine it does have an impact on render and acceleration structure build times.
 
 \begin{figure}
@@ -166,6 +185,7 @@ In both cases we see a marginal increase in performance (less time consumption) 
     \caption{Acceleration Structure Build Time and Frame Render Time comparison in OptiX when using an Nvidia 2070 Super in two systems with different CPUs. We see how a faster CPU means better performance in both cases.}
     \label{optix-2070-super-comparison}
 \end{figure}
+
 
 In Figure \ref{vulkan-2070-super-comparison} we see the same comparison for Vulkan, only this time using a larger pool of models. Note how in this case the model of CPU doesn't seem as important, with both of them registering shorter times depending on the metric and scene. We assume from this that Vulkan is not as dependent on the CPU as OptiX when it comes to building an acceleration structure or rendering.
 

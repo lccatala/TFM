@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.31)  11 SEP 2022 19:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.31)  12 SEP 2022 20:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1091,18 +1091,21 @@ File: figuras/optix-extra-accelbuildtimes-decomposed.png Graphic file (type png
 Package pdftex.def Info: figuras/optix-extra-accelbuildtimes-decomposed.png  us
 ed on input line 87.
 (pdftex.def)             Requested size: 317.0764pt x 237.81816pt.
-LaTeX Info: Redefining \. on input line 93.
-LaTeX Info: Redefining \% on input line 93.
+LaTeX Info: Redefining \. on input line 90.
+LaTeX Info: Redefining \% on input line 90.
  [36 <./figuras/1280x720-acceleration-structure-geometry-build-time-comparison.
 png> <./figuras/1920x1080-acceleration-structure-geometry-build-time-comparison
 .png> <./figuras/2560x1440-acceleration-structure-geometry-build-time-compariso
 n.png> <./figuras/3840x2160-acceleration-structure-geometry-build-time-comparis
 on.png>]
-LaTeX Info: Redefining \. on input line 107.
-LaTeX Info: Redefining \% on input line 107.
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
 
 [37 <./figuras/optix-accelbuildtimes-decomposed.png> <./figuras/optix-extra-acc
-elbuildtimes-decomposed.png>] [38]
+elbuildtimes-decomposed.png>]
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
+ [38]
 <figuras/frametimes-outlier.png, id=640, 462.528pt x 346.896pt>
 File: figuras/frametimes-outlier.png Graphic file (type png)
 <use figuras/frametimes-outlier.png>
@@ -1115,8 +1118,6 @@ File: figuras/frametimes-no-outlier.png Graphic file (type png)
 Package pdftex.def Info: figuras/frametimes-no-outlier.png  used on input line 
 126.
 (pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
-LaTeX Info: Redefining \. on input line 132.
-LaTeX Info: Redefining \% on input line 132.
  [39
 
  <./figuras/frametimes-outlier.png>]
@@ -1152,74 +1153,80 @@ LaTeX Info: Redefining \% on input line 152.
  [41 <./figuras/bmw-frametimes-comparison.png> <./figuras/sponza-frametimes-com
 parison.png> <./figuras/hairball-frametimes-comparison.png>] [42 <./figuras/tex
 ture-impact.png>]
-<figuras/accelbuildtime-2070super-comparison.png, id=681, 462.528pt x 346.896pt
+<figuras/accelbuildtime-2070super-comparison.png, id=682, 462.528pt x 346.896pt
 >
 File: figuras/accelbuildtime-2070super-comparison.png Graphic file (type png)
 <use figuras/accelbuildtime-2070super-comparison.png>
 Package pdftex.def Info: figuras/accelbuildtime-2070super-comparison.png  used 
-on input line 164.
+on input line 183.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-<figuras/frametimes-2070super-comparison.png, id=682, 462.528pt x 346.896pt>
+<figuras/frametimes-2070super-comparison.png, id=683, 462.528pt x 346.896pt>
 File: figuras/frametimes-2070super-comparison.png Graphic file (type png)
 <use figuras/frametimes-2070super-comparison.png>
 Package pdftex.def Info: figuras/frametimes-2070super-comparison.png  used on i
-nput line 165.
+nput line 184.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--166
+Underfull \hbox (badness 10000) in paragraph at lines 183--185
 
  []
 
-LaTeX Info: Redefining \. on input line 171.
-LaTeX Info: Redefining \% on input line 171.
-[43
-
- <./figuras/accelbuildtime-2070super-comparison.png> <./figuras/frametimes-2070
-super-comparison.png>]
-<figuras/vulkan-accelbuildtime-2070super-comparison.png, id=694, 462.528pt x 34
+<figuras/vulkan-accelbuildtime-2070super-comparison.png, id=685, 462.528pt x 34
 6.896pt>
 File: figuras/vulkan-accelbuildtime-2070super-comparison.png Graphic file (type
  png)
 <use figuras/vulkan-accelbuildtime-2070super-comparison.png>
 Package pdftex.def Info: figuras/vulkan-accelbuildtime-2070super-comparison.png
-  used on input line 173.
+  used on input line 193.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
-<figuras/vulkan-frametimes-2070super-comparison.png, id=695, 462.528pt x 346.89
+<figuras/vulkan-frametimes-2070super-comparison.png, id=686, 462.528pt x 346.89
 6pt>
 File: figuras/vulkan-frametimes-2070super-comparison.png Graphic file (type png
 )
 <use figuras/vulkan-frametimes-2070super-comparison.png>
 Package pdftex.def Info: figuras/vulkan-frametimes-2070super-comparison.png  us
-ed on input line 174.
+ed on input line 194.
 (pdftex.def)             Requested size: 216.81pt x 162.60709pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--175
+Underfull \hbox (badness 10000) in paragraph at lines 193--195
 
  []
 
-LaTeX Info: Redefining \. on input line 180.
-LaTeX Info: Redefining \% on input line 180.
-[44 <./figuras/vulkan-accelbuildtime-2070super-comparison.png> <./figuras/vulka
-n-frametimes-2070super-comparison.png>]
-<figuras/vulkan-frametimes-baremetal-virtualized-comparison.png, id=706, 462.52
+LaTeX Info: Redefining \. on input line 197.
+LaTeX Info: Redefining \% on input line 197.
+[43
+
+]
+LaTeX Info: Redefining \. on input line 200.
+LaTeX Info: Redefining \% on input line 200.
+ [44 <./figuras/accelbuildtime-2070super-comparison.png> <./figuras/frametimes-
+2070super-comparison.png>] [45 <./figuras/vulkan-accelbuildtime-2070super-compa
+rison.png> <./figuras/vulkan-frametimes-2070super-comparison.png>]
+<figuras/vulkan-frametimes-baremetal-virtualized-comparison.png, id=713, 462.52
 8pt x 346.896pt>
 File: figuras/vulkan-frametimes-baremetal-virtualized-comparison.png Graphic fi
 le (type png)
 <use figuras/vulkan-frametimes-baremetal-virtualized-comparison.png>
 Package pdftex.def Info: figuras/vulkan-frametimes-baremetal-virtualized-compar
-ison.png  used on input line 214.
+ison.png  used on input line 234.
 (pdftex.def)             Requested size: 452.96826pt x 339.74402pt.
-) (./secciones/05_Conclusiones.tex
-[45
+)
+(./secciones/05_Conclusiones.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [46
 
-] [46 <./figuras/vulkan-frametimes-baremetal-virtualized-comparison.png>]
+] [47 <./figuras/vulkan-frametimes-baremetal-virtualized-comparison.png>]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [48
+
+]
 Chapter 7.
-[47
-
-] [48])
+[49] [50])
 LaTeX Info: Redefining \. on input line 54.
 LaTeX Info: Redefining \% on input line 54.
- [49] (./plantilla_TFM.bbl
+ [51] (./plantilla_TFM.bbl
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 16
 .
 
@@ -1244,12 +1251,12 @@ File: ts1pbk.fd 2001/06/04 font definitions for TS1/pbk.
 )
 LaTeX Font Info:    Font shape `TS1/pbk/m/n' in size <10.95> not available
 (Font)              Font shape `TS1/pbk/l/n' tried instead on input line 40.
- [50
+ [52
 
 ])
 LaTeX Info: Redefining \. on input line 59.
 LaTeX Info: Redefining \% on input line 59.
- [51]
+ [53]
 (./plantilla_TFM.aux
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
@@ -1258,10 +1265,10 @@ Package rerunfilecheck Info: File `plantilla_TFM.out' has not changed.
 (rerunfilecheck)             Checksum: 2F65D2E43450F6B0E4767F817A4E4134;5000.
  ) 
 Here is how much of TeX's memory you used:
- 17049 strings out of 478268
- 276803 string characters out of 5846347
- 594092 words of memory out of 5000000
- 34720 multiletter control sequences out of 15000+600000
+ 17053 strings out of 478268
+ 276855 string characters out of 5846347
+ 594149 words of memory out of 5000000
+ 34721 multiletter control sequences out of 15000+600000
  498379 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,15n,66p,1211b,657s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1278,10 +1285,10 @@ texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
 f-dist/fonts/type1/urw/bookman/ubkl8a.pfb></usr/local/texlive/2022/texmf-dist/f
 onts/type1/urw/bookman/ubkli8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
 pe1/urw/courier/ucrr8a.pfb>
-Output written on plantilla_TFM.pdf (61 pages, 5990477 bytes).
+Output written on plantilla_TFM.pdf (63 pages, 5974174 bytes).
 PDF statistics:
- 869 PDF objects out of 1000 (max. 8388607)
- 702 compressed objects within 8 object streams
- 204 named destinations out of 1000 (max. 500000)
+ 880 PDF objects out of 1000 (max. 8388607)
+ 711 compressed objects within 8 object streams
+ 207 named destinations out of 1000 (max. 500000)
  495 words of extra memory for PDF output out of 10000 (max. 10000000)
 

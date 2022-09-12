@@ -167,25 +167,27 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Hairball}}}{41}{subfigure.10.3}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Sponza scene rendered in Vulkan and OptiX, both with and without textures, to compare how these affect render times.}}{42}{figure.6.11}\protected@file@percent }
 \newlabel{texture-impact-graph}{{6.11}{42}{Sponza scene rendered in Vulkan and OptiX, both with and without textures, to compare how these affect render times}{figure.6.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Acceleration Structure Build Time and Frame Render Time comparison in OptiX when using an Nvidia 2070 Super in two systems with different CPUs. We see how a faster CPU means better performance in both cases.}}{43}{figure.6.12}\protected@file@percent }
-\newlabel{optix-2070-super-comparison}{{6.12}{43}{Acceleration Structure Build Time and Frame Render Time comparison in OptiX when using an Nvidia 2070 Super in two systems with different CPUs. We see how a faster CPU means better performance in both cases}{figure.6.12}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Acceleration Structure Build Time}}}{43}{subfigure.12.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Frame Times}}}{43}{subfigure.12.2}\protected@file@percent }
+\newlabel{frametimes-statistics-table}{{6.5.1}{43}{Same GPU, changing CPU}{subsection.6.5.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Statistical analysis of frame times when comparing a Ryzen 7 and Ryzen 5 processor using the same 2070 Super model of GPU.}}{43}{table.6.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6.5}Hardware comparison}{43}{section.6.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}Same GPU, changing CPU}{43}{subsection.6.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Acceleration Structure Build Time and Frame Render Time comparison in Vulkan when using an Nvidia 2070 Super in two systems with different CPUs. We see more variation in which system does better, in contrast with the previous OptiX test.}}{44}{figure.6.13}\protected@file@percent }
-\newlabel{vulkan-2070-super-comparison}{{6.13}{44}{Acceleration Structure Build Time and Frame Render Time comparison in Vulkan when using an Nvidia 2070 Super in two systems with different CPUs. We see more variation in which system does better, in contrast with the previous OptiX test}{figure.6.13}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Acceleration Structure Build Time}}}{44}{subfigure.13.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Frame Times}}}{44}{subfigure.13.2}\protected@file@percent }
-\newlabel{vulkan-accelbuildtime-bm-vm-comparison}{{6.5.2}{45}{Virtualization effects}{subsection.6.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}Virtualization effects}{45}{subsection.6.5.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Frame render times in Vulkan across two machines with the same GPU (Nvidia 3080). One of them is running the renderer under a virtual machine and the other is doing so bare metal. We see a slight advantage towards the virtualized approach in this side, which could be due to a mere coincidence. This would make the GPU the only important element when drawing a given scene.}}{46}{figure.6.14}\protected@file@percent }
-\newlabel{vulkan-frame-times-bm-vm-comparison}{{6.14}{46}{Frame render times in Vulkan across two machines with the same GPU (Nvidia 3080). One of them is running the renderer under a virtual machine and the other is doing so bare metal. We see a slight advantage towards the virtualized approach in this side, which could be due to a mere coincidence. This would make the GPU the only important element when drawing a given scene}{figure.6.14}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusions}{47}{chapter.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Acceleration Structure Build Time and Frame Render Time comparison in OptiX when using an Nvidia 2070 Super in two systems with different CPUs. We see how a faster CPU means better performance in both cases.}}{44}{figure.6.12}\protected@file@percent }
+\newlabel{optix-2070-super-comparison}{{6.12}{44}{Acceleration Structure Build Time and Frame Render Time comparison in OptiX when using an Nvidia 2070 Super in two systems with different CPUs. We see how a faster CPU means better performance in both cases}{figure.6.12}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Acceleration Structure Build Time}}}{44}{subfigure.12.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Frame Times}}}{44}{subfigure.12.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Acceleration Structure Build Time and Frame Render Time comparison in Vulkan when using an Nvidia 2070 Super in two systems with different CPUs. We see more variation in which system does better, in contrast with the previous OptiX test.}}{45}{figure.6.13}\protected@file@percent }
+\newlabel{vulkan-2070-super-comparison}{{6.13}{45}{Acceleration Structure Build Time and Frame Render Time comparison in Vulkan when using an Nvidia 2070 Super in two systems with different CPUs. We see more variation in which system does better, in contrast with the previous OptiX test}{figure.6.13}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Acceleration Structure Build Time}}}{45}{subfigure.13.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Frame Times}}}{45}{subfigure.13.2}\protected@file@percent }
+\newlabel{vulkan-accelbuildtime-bm-vm-comparison}{{6.5.2}{46}{Virtualization effects}{subsection.6.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}Virtualization effects}{46}{subsection.6.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Frame render times in Vulkan across two machines with the same GPU (Nvidia 3080). One of them is running the renderer under a virtual machine and the other is doing so bare metal. We see a slight advantage towards the virtualized approach in this side, which could be due to a mere coincidence. This would make the GPU the only important element when drawing a given scene.}}{47}{figure.6.14}\protected@file@percent }
+\newlabel{vulkan-frame-times-bm-vm-comparison}{{6.14}{47}{Frame render times in Vulkan across two machines with the same GPU (Nvidia 3080). One of them is running the renderer under a virtual machine and the other is doing so bare metal. We see a slight advantage towards the virtualized approach in this side, which could be due to a mere coincidence. This would make the GPU the only important element when drawing a given scene}{figure.6.14}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusions}{49}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \citation{Kallweit22}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Future work}{49}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Future work}{51}{section.7.1}\protected@file@percent }
 \bibdata{bibliografia}
 \bibcite{ScratchPixel}{\citeauthoryear {{\em  3D Basic Rendering\/}}{{\em  3D Basic Rendering\/}}{{\APACyear {2022}}}}
 \APACbibcite{ScratchPixel}{\citeauthoryear {{\em  3D Basic Rendering\/}}{{\em  3D Basic Rendering\/}}{{\APACyear {2022}}}}
@@ -225,7 +227,7 @@
 \APACbibcite{parker2010optix}{\citeauthoryear {Parker\ \BOthers {.}}{Parker\ \BOthers {.}}{{\APACyear {2010}}}}
 \bibcite{WikipediaRT}{\citeauthoryear {{\em  Ray Tracing (graphics)\/}}{{\em  Ray Tracing (graphics)\/}}{{\APACyear {2022}}}}
 \APACbibcite{WikipediaRT}{\citeauthoryear {{\em  Ray Tracing (graphics)\/}}{{\em  Ray Tracing (graphics)\/}}{{\APACyear {2022}}}}
-\@writefile{toc}{\contentsline {section}{Referencias}{50}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{Referencias}{52}{section*.5}\protected@file@percent }
 \bibcite{rileymulti}{\citeauthoryear {Riley, Diefes, Bechtold,{}\ \BBA{} Barry}{Riley\ \BOthers {.}}{{\APACyear {{\bibnodate {}}}}}}
 \APACbibcite{rileymulti}{\citeauthoryear {Riley, Diefes, Bechtold,{}\ \BBA{} Barry}{Riley\ \BOthers {.}}{{\APACyear {{\bibnodate {}}}}}}
 \bibcite{GpuMemUsageVulkan}{\citeauthoryear {Sawichi}{Sawichi}{{\APACyear {{\bibnodate {}}}}}}
@@ -242,4 +244,4 @@
 \APACbibcite{wei2022model}{\citeauthoryear {Wei\ \BOthers {.}}{Wei\ \BOthers {.}}{{\APACyear {2022}}}}
 \bibcite{DXGI}{\citeauthoryear {White\ \BOthers {.}}{White\ \BOthers {.}}{{\APACyear {{\bibnodate {}}}}}}
 \APACbibcite{DXGI}{\citeauthoryear {White\ \BOthers {.}}{White\ \BOthers {.}}{{\APACyear {{\bibnodate {}}}}}}
-\gdef \@abspage@last{61}
+\gdef \@abspage@last{63}
