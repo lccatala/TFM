@@ -37,6 +37,7 @@ def store_rasterized_memory_usage(filename):
 
 def plot_memory_usage(memory_usage_values, mode):
     plt.figure()
+    plt.ylim([0, 1400])
     x_values = [x for x in range(len(memory_usage_values))]
     plt.xticks(x_values, [f'{x[0]}x{x[1]}' for x in resolutions])
     plt.bar(x_values, memory_usage_values)
@@ -177,7 +178,7 @@ def plot_compared_frame_times():
         combined_times.append(ras)
         combined_times.append(ray)
 
-    plt.ylim([0, 1500])
+    # plt.ylim([0, 1500])
     plt.boxplot(combined_times)
 
     plt.ylabel('Frame time (microseconds)')
@@ -240,8 +241,9 @@ def plot_compared_raytraced_as_build_times_geometry():
         x = np.arange(len(labels))
         bar_width = 0.35
         fig, ax = plt.subplots()
-        rects2 = ax.bar(x + bar_width/2, vulkan_build_times, bar_width, label='Vulkan')
-        rects1 = ax.bar(x - bar_width/2, optix_as_build_times, bar_width, label='OptiX')
+        rects2 = ax.bar(x + bar_width/2, np.average(vulkan_build_times), bar_width, label='Vulkan')
+        rects1 = ax.bar(x - bar_width/2, np.average(optix_as_build_times), bar_width, label='OptiX')
+        plt.ylim([0, 11000])
 
         ax.set_ylabel('AS Build Time (microseconds)')
         ax.set_title(f'AS Build Time for raytraced rendering at resolution {w}x{h}')
@@ -249,8 +251,9 @@ def plot_compared_raytraced_as_build_times_geometry():
         ax.legend(loc='center right')
         ax.bar_label(rects1, padding=3)
         ax.bar_label(rects2, padding=3)
+        ax.xlim([0, 14000])
 
-        fig.tight_layout()
+        # fig.tight_layout()
         plt.savefig(f'{w}x{h}-acceleration-structure-geometry-build-time-comparison.png')
 
 def read_values(filename):
@@ -273,8 +276,8 @@ def plot_decomposed_build_times():
 
     indices = np.arange(len(models))
 
-    p1 = plt.bar(indices, blas_times)
-    p2 = plt.bar(indices, tlas_times, bottom=blas_times)
+    p1 = plt.bar(indices, blas_times, color='red')
+    p2 = plt.bar(indices, tlas_times, color='green', bottom=blas_times)
 
     plt.ylabel('AS Build Time (microseconds)')
     plt.title('AS Build Times separated by stage')
@@ -617,11 +620,11 @@ if __name__ == '__main__':
     # plot_compared_frame_times()
     # plot_compared_raytraced_memory_usages()
     # plot_compared_raytraced_frametimes()
-    # plot_compared_raytraced_as_build_times_geometry()
+    plot_compared_raytraced_as_build_times_geometry()
     # plot_scenes_geometry()
     # plot_2070_super_comparison()
     # plot_baremetal_virtualized_comparison()
     # plot_compared_raytraced_as_build_times()
     # plot_texture_effects()
     # plot_astimes()
-    analyze_frametime_distribution()
+    # analyze_frametime_distribution()
